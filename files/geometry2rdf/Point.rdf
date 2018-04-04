@@ -1,0 +1,17 @@
+﻿<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://geo.linkeddata.es/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.1="http://www.w3.org/2003/01/geo/wgs84_pos#" > 
+    <rdf:Description rdf:about="http://geo.linkeddata.es/resource/Municipio/Madrid">
+        <geo:geometry rdf:resource="http://geo.linkeddata.es/resource/wgs84/40.4178488946733_-3.70225217644804"/>
+        <rdfs:label xml:lang="es">Madrid</rdfs:label>
+        <rdf:type rdf:resource="http://geo.linkeddata.es/ontology/Municipio"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://geo.linkeddata.es/resource/NOMGEO/wgs84/40.4178488946733_-3.70225217644804">
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-3.70225217644804</j.2:long>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.4178488946733</j.2:lat>
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </rdf:Description>
+</rdf:RDF>

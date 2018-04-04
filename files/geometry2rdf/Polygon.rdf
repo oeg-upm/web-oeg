@@ -1,0 +1,37 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:georesource="http://geo.linkeddata.es/resource/"
+    xmlns:dc="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:geontology="http://geo.linkeddata.es/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+    
+    <rdf:Description rdf:about="http://geo.linkeddata.es/resource/Pozo/Pozo%20de%20Bodas%20">
+        <rdf:type rdf:resource="http://geo.linkeddata.es/ontology/Pozo"/>
+        <rdfs:label xml:lang="es">Pozo de Bodas </rdfs:label>
+        <geo:geometry rdf:resource="http://geo.linkeddata.es/resource/ac5f815fdc8f546c688c2bbc6f58c8773e2663d9"/>
+    </rdf:Description>
+  
+    <rdf:Description rdf:about="http://geo.linkeddata.es/resource/ac5f815fdc8f546c688c2bbc6f58c8773e2663d9">
+        <rdf:type rdf:resource="http://geo.linkeddata.es/ontology/Curva"/>
+        <geontology:gml>LINESTRING (-4.9855268321687225 39.72102326325248, -4.985369052206227 39.720809753299534)</geontology:gml>
+        <geontology:formadoPor rdf:resource="http://geo.linkeddata.es/resource/wgs84/39.72102326325248_-4.9855268321687225"/>
+        <geontology:formadoPor rdf:resource="http://geo.linkeddata.es/resource/wgs84/39.720809753299534_-4.985369052206227"/>
+    </rdf:Description>
+      
+    <rdf:Description rdf:about="http://geo.linkeddata.es/resource/wgs84/39.72102326325248_-4.9855268321687225>
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.72102326325248</geo:lat>
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-4.9855268321687225</geo:long>
+        <geontology:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</geontology:order>
+    </rdf:Description>    
+   
+    <rdf:Description rdf:about="http://geo.linkeddata.es/resource/wgs84/39.720809753299534_-4.985369052206227">
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">39.720809753299534</geo:lat>
+        <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-4.9855268321687225</geo:long>
+        <geontology:order rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</geontology:order>
+    </rdf:Description>
+
+</rdf:RDF>
