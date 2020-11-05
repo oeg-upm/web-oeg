@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <title>Characteristics of the analysed queries</title>
+    <link rel="stylesheet" type="text/css" href="files/style.css" />
+    <script src="files/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="files/highlighter.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <a href="http://www.oeg-upm.net/"><img style="float:left" src="files/Logo_OEG.png" /></a>
+    <h2>Evaluation results for query rewriting</h2>
+    <p>This page contains the results obtained from the analysis of the queries usually considered for query rewriting evaluation. Choose the ontologies to compare and check the results. The queries are visible when hovering and the ontologies are downloadable from the menu on the left. For more information check the <a href="./index.html">main page</a>. If you have questions or suggestions please write me at <img id="mail" src="files/youshoulddothistoo.png" /></p>
+    <div id="menu"><div>Choose your options.</div><br/ >
+      <div><b>Ontologies:</b></div>
+      <div><input type="checkbox" name="ontology" value="A" /><a href="./files/A.owl">A</a></div>
+      <div><input type="checkbox" name="ontology" value="AX" /><a href="./files/AX.owl">AX</a></div>
+      <div><input type="checkbox" name="ontology" value="AXE" /><a href="./files/AXE.owl">AXE</a></div>
+      <div><input type="checkbox" name="ontology" value="AXEb" /><a href="./files/AXEb.owl">AXEb</a></div>
+      <div><input type="checkbox" name="ontology" value="AXEc" /><a href="./files/AXEc.owl">AXEc</a></div>
+      <div><input type="checkbox" name="ontology" value="P1" /><a href="./files/P1.owl">P1</a></div>
+      <div><input type="checkbox" name="ontology" value="P5" /><a href="./files/P5.owl">P5</a></div>
+      <div><input type="checkbox" name="ontology" value="P5X" /><a href="./files/P5X.owl">P5X</a></div>
+      <div><input type="checkbox" name="ontology" value="P5XE" /><a href="./files/P5XE.owl">P5XE</a></div>
+      <div><input type="checkbox" name="ontology" value="S" /><a href="./files/S.owl">S</a></div>
+      <div><input type="checkbox" name="ontology" value="U" /><a href="./files/U.owl">U</a></div>
+      <div><input type="checkbox" name="ontology" value="UX" /><a href="./files/UX.owl">UX</a></div>
+      <div><input type="checkbox" name="ontology" value="UXE" /><a href="./files/UXE.owl">UXE</a></div>
+      <div><input type="checkbox" name="ontology" value="V" /><a href="./files/V.owl">V</a></div>
+      <div><input type="checkbox" name="ontology" value="core" /><a href="./files/core.owl">core</a></div>
+      <div><input type="checkbox" name="ontology" value="galen" /><a href="./files/galen.owl">galen</a></div>
+      <div><input type="checkbox" name="ontology" value="galen-lite" /><a href="./files/galen-lite.owl">galen-lite</a></div>
+    </div>
+    <div id="tablecontainer">
+      <table>
+        <colgroup>
+          <col />
+          <col />
+          <col class="startsSystem" />
+          <col class="startsSystem" />
+          <col />
+          <col />
+          <col class="startsSystem" />
+          <col />
+          <col />
+          <col />
+          <col />
+          <col class="startsSystem" />
+          <col class="startsSystem" />
+          <col />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>O</th>
+            <th>q</th>
+            <th>Length</th>
+            <th>Distinguished variables</th>
+            <th>Hanging variables</th>
+            <th>Existential join variables</th>
+            <th>Total number of paths</th>
+            <th>Open paths</th>
+            <th>Closed paths</th>
+            <th>Joined paths</th>
+            <th>Average path length</th>
+            <th>Subquery divisibility</th>
+            <th>q</th>
+            <th>O</th>
+          <tr>
+        </thead>
+        <tbody>
+        <tr class="firstrow hidden" ontology="A" query="Q(?0) <- Device(?0), assistsWith(?0,?1)"><td>A</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>A</td></tr>
+        <tr class="  hidden" ontology="A" query="Q(?0) <- Device(?0), assistsWith(?0,?1), UpperLimbMobility(?1)"><td>A</td><td>2</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>2</td><td>A</td></tr>
+        <tr class="  hidden" ontology="A" query="Q(?0) <- Device(?0), assistsWith(?0,?1), Hear(?1), affects(?2,?1), Autism(?2)"><td>A</td><td>3</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>3</td><td>A</td></tr>
+        <tr class="  hidden" ontology="A" query="Q(?0) <- Device(?0), assistsWith(?0,?1), PhysicalAbility(?1)"><td>A</td><td>4</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>4</td><td>A</td></tr>
+        <tr class="  hidden" ontology="A" query="Q(?0) <- Device(?0), assistsWith(?0,?1), PhysicalAbility(?1), affects(?2,?1), Quadriplegia(?2)"><td>A</td><td>5</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>5</td><td>A</td></tr>
+        <tr class="  hidden" ontology="A" query="Q(?0) <- Device(?0), assistsWith(?0,?1), ReadingDevice(?1)"><td>A</td><td>6</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>6</td><td>A</td></tr>
+        <tr class="  hidden" ontology="A" query="Q(?0) <- Device(?0), assistsWith(?0,?1), ReadingDevice(?1), assistsWith(?1,?2), SpeechAbility(?2)"><td>A</td><td>7</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>7</td><td>A</td></tr>
+        <tr class="firstrow hidden" ontology="AX" query="Q(?0) <- Device(?0), assistsWith(?0,?1)"><td>AX</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>AX</td></tr>
+        <tr class="  hidden" ontology="AX" query="Q(?0) <- Device(?0), assistsWith(?0,?1), UpperLimbMobility(?1)"><td>AX</td><td>2</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>2</td><td>AX</td></tr>
+        <tr class="  hidden" ontology="AX" query="Q(?0) <- Device(?0), assistsWith(?0,?1), Hear(?1), affects(?2,?1), Autism(?2)"><td>AX</td><td>3</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>3</td><td>AX</td></tr>
+        <tr class="  hidden" ontology="AX" query="Q(?0) <- Device(?0), assistsWith(?0,?1), PhysicalAbility(?1)"><td>AX</td><td>4</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>4</td><td>AX</td></tr>
+        <tr class="  hidden" ontology="AX" query="Q(?0) <- Device(?0), assistsWith(?0,?1), PhysicalAbility(?1), affects(?2,?1), Quadriplegia(?2)"><td>AX</td><td>5</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>5</td><td>AX</td></tr>
+        <tr class="  hidden" ontology="AX" query="Q(?0) <- Device(?0), assistsWith(?0,?1), ReadingDevice(?1)"><td>AX</td><td>6</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>6</td><td>AX</td></tr>
+        <tr class="  hidden" ontology="AX" query="Q(?0) <- Device(?0), assistsWith(?0,?1), ReadingDevice(?1), assistsWith(?1,?2), SpeechAbility(?2)"><td>AX</td><td>7</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>7</td><td>AX</td></tr>
+        <tr class="firstrow hidden" ontology="AXE" query="Q(?0) <- Device(?0), assistsWith(?0,?1)"><td>AXE</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>AXE</td></tr>
+        <tr class="  hidden" ontology="AXE" query="Q(?0) <- Device(?0), assistsWith(?0,?1), UpperLimbMobility(?1)"><td>AXE</td><td>2</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>2</td><td>AXE</td></tr>
+        <tr class="  hidden" ontology="AXE" query="Q(?0) <- Device(?0), assistsWith(?0,?1), Hear(?1), affects(?2,?1), Autism(?2)"><td>AXE</td><td>3</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>3</td><td>AXE</td></tr>
+        <tr class="  hidden" ontology="AXE" query="Q(?0) <- Device(?0), assistsWith(?0,?1), PhysicalAbility(?1)"><td>AXE</td><td>4</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>4</td><td>AXE</td></tr>
+        <tr class="  hidden" ontology="AXE" query="Q(?0) <- Device(?0), assistsWith(?0,?1), PhysicalAbility(?1), affects(?2,?1), Quadriplegia(?2)"><td>AXE</td><td>5</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>5</td><td>AXE</td></tr>
+        <tr class="  hidden" ontology="AXE" query="Q(?0) <- Device(?0), assistsWith(?0,?1), ReadingDevice(?1)"><td>AXE</td><td>6</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>6</td><td>AXE</td></tr>
+        <tr class="  hidden" ontology="AXE" query="Q(?0) <- Device(?0), assistsWith(?0,?1), ReadingDevice(?1), assistsWith(?1,?2), SpeechAbility(?2)"><td>AXE</td><td>7</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>7</td><td>AXE</td></tr>
+        <tr class="firstrow hidden" ontology="AXEb" query="Q(?0) <- Device(?0), assistsWith(?0,?1)"><td>AXEb</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>AXEb</td></tr>
+        <tr class="  hidden" ontology="AXEb" query="Q(?0) <- Device(?0), assistsWith(?0,?1), UpperLimbMobility(?1)"><td>AXEb</td><td>2</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>2</td><td>AXEb</td></tr>
+        <tr class="  hidden" ontology="AXEb" query="Q(?0) <- Device(?0), assistsWith(?0,?1), Hear(?1), affects(?2,?1), Autism(?2)"><td>AXEb</td><td>3</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>3</td><td>AXEb</td></tr>
+        <tr class="  hidden" ontology="AXEb" query="Q(?0) <- Device(?0), assistsWith(?0,?1), PhysicalAbility(?1)"><td>AXEb</td><td>4</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>4</td><td>AXEb</td></tr>
+        <tr class="  hidden" ontology="AXEb" query="Q(?0) <- Device(?0), assistsWith(?0,?1), PhysicalAbility(?1), affects(?2,?1), Quadriplegia(?2)"><td>AXEb</td><td>5</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>5</td><td>AXEb</td></tr>
+        <tr class="  hidden" ontology="AXEb" query="Q(?0) <- Device(?0), assistsWith(?0,?1), ReadingDevice(?1)"><td>AXEb</td><td>6</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>6</td><td>AXEb</td></tr>
+        <tr class="  hidden" ontology="AXEb" query="Q(?0) <- Device(?0), assistsWith(?0,?1), ReadingDevice(?1), assistsWith(?1,?2), SpeechAbility(?2)"><td>AXEb</td><td>7</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>7</td><td>AXEb</td></tr>
+        <tr class="firstrow hidden" ontology="AXEc" query="Q(?0) <- Device(?0), assistsWith(?0,?1)"><td>AXEc</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>AXEc</td></tr>
+        <tr class="  hidden" ontology="AXEc" query="Q(?0) <- Device(?0), assistsWith(?0,?1), UpperLimbMobility(?1)"><td>AXEc</td><td>2</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>2</td><td>AXEc</td></tr>
+        <tr class="  hidden" ontology="AXEc" query="Q(?0) <- Device(?0), assistsWith(?0,?1), Hear(?1), affects(?2,?1), Autism(?2)"><td>AXEc</td><td>3</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>3</td><td>AXEc</td></tr>
+        <tr class="  hidden" ontology="AXEc" query="Q(?0) <- Device(?0), assistsWith(?0,?1), PhysicalAbility(?1)"><td>AXEc</td><td>4</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>4</td><td>AXEc</td></tr>
+        <tr class="  hidden" ontology="AXEc" query="Q(?0) <- Device(?0), assistsWith(?0,?1), PhysicalAbility(?1), affects(?2,?1), Quadriplegia(?2)"><td>AXEc</td><td>5</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>5</td><td>AXEc</td></tr>
+        <tr class="  hidden" ontology="AXEc" query="Q(?0) <- Device(?0), assistsWith(?0,?1), ReadingDevice(?1)"><td>AXEc</td><td>6</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>6</td><td>AXEc</td></tr>
+        <tr class="  hidden" ontology="AXEc" query="Q(?0) <- Device(?0), assistsWith(?0,?1), ReadingDevice(?1), assistsWith(?1,?2), SpeechAbility(?2)"><td>AXEc</td><td>7</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>7</td><td>AXEc</td></tr>
+        <tr class="firstrow hidden" ontology="P1" query="Q(?0) <- edge(?0,?1)"><td>P1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>P1</td></tr>
+        <tr class="  hidden" ontology="P1" query="Q(?0) <- edge(?0,?1), edge(?1,?2)"><td>P1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>P1</td></tr>
+        <tr class="  hidden" ontology="P1" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3)"><td>P1</td><td>3</td><td>3</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>3</td><td>P1</td></tr>
+        <tr class="  hidden" ontology="P1" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3), edge(?3,?4)"><td>P1</td><td>4</td><td>4</td><td>1</td><td>1</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>1</td><td>4</td><td>P1</td></tr>
+        <tr class="  hidden" ontology="P1" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3), edge(?3,?4), edge(?4,?5)"><td>P1</td><td>5</td><td>5</td><td>1</td><td>1</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td><td>4</td><td>1</td><td>5</td><td>P1</td></tr>
+        <tr class="firstrow hidden" ontology="P5" query="Q(?0) <- edge(?0,?1)"><td>P5</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>P5</td></tr>
+        <tr class="  hidden" ontology="P5" query="Q(?0) <- edge(?0,?1), edge(?1,?2)"><td>P5</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>P5</td></tr>
+        <tr class="  hidden" ontology="P5" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3)"><td>P5</td><td>3</td><td>3</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>3</td><td>P5</td></tr>
+        <tr class="  hidden" ontology="P5" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3), edge(?3,?4)"><td>P5</td><td>4</td><td>4</td><td>1</td><td>1</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>1</td><td>4</td><td>P5</td></tr>
+        <tr class="  hidden" ontology="P5" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3), edge(?3,?4), edge(?4,?5)"><td>P5</td><td>5</td><td>5</td><td>1</td><td>1</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td><td>4</td><td>1</td><td>5</td><td>P5</td></tr>
+        <tr class="firstrow hidden" ontology="P5X" query="Q(?0) <- edge(?0,?1)"><td>P5X</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>P5X</td></tr>
+        <tr class="  hidden" ontology="P5X" query="Q(?0) <- edge(?0,?1), edge(?1,?2)"><td>P5X</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>P5X</td></tr>
+        <tr class="  hidden" ontology="P5X" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3)"><td>P5X</td><td>3</td><td>3</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>3</td><td>P5X</td></tr>
+        <tr class="  hidden" ontology="P5X" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3), edge(?3,?4)"><td>P5X</td><td>4</td><td>4</td><td>1</td><td>1</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>1</td><td>4</td><td>P5X</td></tr>
+        <tr class="  hidden" ontology="P5X" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3), edge(?3,?4), edge(?4,?5)"><td>P5X</td><td>5</td><td>5</td><td>1</td><td>1</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td><td>4</td><td>1</td><td>5</td><td>P5X</td></tr>
+        <tr class="firstrow hidden" ontology="P5XE" query="Q(?0) <- edge(?0,?1)"><td>P5XE</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>P5XE</td></tr>
+        <tr class="  hidden" ontology="P5XE" query="Q(?0) <- edge(?0,?1), edge(?1,?2)"><td>P5XE</td><td>2</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td>P5XE</td></tr>
+        <tr class="  hidden" ontology="P5XE" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3)"><td>P5XE</td><td>3</td><td>3</td><td>1</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>1</td><td>3</td><td>P5XE</td></tr>
+        <tr class="  hidden" ontology="P5XE" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3), edge(?3,?4)"><td>P5XE</td><td>4</td><td>4</td><td>1</td><td>1</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>1</td><td>4</td><td>P5XE</td></tr>
+        <tr class="  hidden" ontology="P5XE" query="Q(?0) <- edge(?0,?1), edge(?1,?2), edge(?2,?3), edge(?3,?4), edge(?4,?5)"><td>P5XE</td><td>5</td><td>5</td><td>1</td><td>1</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td><td>4</td><td>1</td><td>5</td><td>P5XE</td></tr>
+        <tr class="firstrow hidden" ontology="S" query="Q(?0) <- StockExchangeMember(?0)"><td>S</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>S</td></tr>
+        <tr class="  hidden" ontology="S" query="Q(?0,?1) <- Person(?0), hasStock(?0,?1), Stock(?1)"><td>S</td><td>2</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>2</td><td>S</td></tr>
+        <tr class="  hidden" ontology="S" query="Q(?0,?1,?2) <- FinantialInstrument(?0), belongsToCompany(?0,?1), Company(?1), hasStock(?1,?2), Stock(?2)"><td>S</td><td>3</td><td>5</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>3</td><td>S</td></tr>
+        <tr class="  hidden" ontology="S" query="Q(?0,?1,?2) <- Person(?0), hasStock(?0,?1), Stock(?1), isListedIn(?1,?2), StockExchangeList(?2)"><td>S</td><td>4</td><td>5</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>4</td><td>S</td></tr>
+        <tr class="  hidden" ontology="S" query="Q(?0,?1,?2,?3) <- FinantialInstrument(?0), belongsToCompany(?0,?1), Company(?1), hasStock(?1,?2), Stock(?2), isListedIn(?1,?3), StockExchangeList(?3)"><td>S</td><td>5</td><td>7</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>7</td><td>5</td><td>S</td></tr>
+        <tr class="  hidden" ontology="S" query="Q(?0,?1) <- StockExchangeMember(?0), tradesOnBehalfOf(?0,?1), Company(?1), hasAddress(?1,?2)"><td>S</td><td>6</td><td>4</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>6</td><td>S</td></tr>
+        <tr class="  hidden" ontology="S" query="Q(?0) <- isExecutedBy(?0,?1), isExecutedFor(?0,?2), StockExchangeMember(?2), hasAddress(?2,?3), inverseofhasAddress(?3,?1)"><td>S</td><td>7</td><td>5</td><td>1</td><td>0</td><td>3</td><td>2</td><td>0</td><td>1</td><td>1</td><td>3</td><td>1</td><td>7</td><td>S</td></tr>
+        <tr class="  hidden" ontology="S" query="Q(?0) <- Investor(?0), hasStock(?0,?1), Stock(?1), Company(?2), hasStock(?2,?1)"><td>S</td><td>8</td><td>5</td><td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>8</td><td>S</td></tr>
+        <tr class="  hidden" ontology="S" query="Q(?0,?1,?2) <- Investor(?0),  StockExchangeList(?1), Company(?2), hasStock(?2,?3), hasStock(?0,?3), Stock(?3), isListedIn(?3,?1)"><td>S</td><td>9</td><td>7</td><td>3</td><td>0</td><td>1</td><td>3</td><td>0</td><td>3</td><td>0</td><td>1</td><td>4</td><td>9</td><td>S</td></tr>
+        <tr class="firstrow hidden" ontology="U" query="Q(?0) <- worksFor(?0,?1), affiliatedOrganizationOf(?1,?2)"><td>U</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>U</td></tr>
+        <tr class="  hidden" ontology="U" query="Q(?0,?1) <- Person(?0), teacherOf(?0,?1), Course(?1)"><td>U</td><td>2</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>2</td><td>U</td></tr>
+        <tr class="  hidden" ontology="U" query="Q(?0,?1,?2) <- Student(?0), advisor(?0,?1), FacultyStaff(?1), takesCourse(?0,?2), teacherOf(?1,?2), Course(?2)"><td>U</td><td>3</td><td>6</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>3</td><td>U</td></tr>
+        <tr class="  hidden" ontology="U" query="Q(?0,?1) <- Person(?0), worksFor(?0,?1), Organization(?1)"><td>U</td><td>4</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>4</td><td>U</td></tr>
+        <tr class="  hidden" ontology="U" query="Q(?0) <- Person(?0), worksFor(?0,?1), University(?1), hasAlumnus(?1,?0)"><td>U</td><td>5</td><td>4</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>5</td><td>U</td></tr>
+        <tr class="  hidden" ontology="U" query="Q(?0,?1) <- FacultyStaff(?0), headOf(?0,?2), College(?2), worksFor(?1,?2)"><td>U</td><td>6</td><td>4</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>6</td><td>U</td></tr>
+        <tr class="  hidden" ontology="U" query="Q(?0,?1) <- FacultyStaff(?0), headOf(?0,?2), Organization(?2), worksFor(?1,?2)"><td>U</td><td>7</td><td>4</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>7</td><td>U</td></tr>
+        <tr class="  hidden" ontology="U" query="Q(?0,?1) <- Professor(?0), teacherOf(?0,?1), GraduateCourse(?1)"><td>U</td><td>8</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>8</td><td>U</td></tr>
+        <tr class="  hidden" ontology="U" query="Q(?0,?1) <- Student(?0), Professor(?1), worksFor(?1,?2), memberOf(?0,?2), Faculty(?2)"><td>U</td><td>9</td><td>5</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>3</td><td>9</td><td>U</td></tr>
+        <tr class="firstrow hidden" ontology="UX" query="Q(?0) <- worksFor(?0,?1), affiliatedOrganizationOf(?1,?2)"><td>UX</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>UX</td></tr>
+        <tr class="  hidden" ontology="UX" query="Q(?0,?1) <- Person(?0), teacherOf(?0,?1), Course(?1)"><td>UX</td><td>2</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>2</td><td>UX</td></tr>
+        <tr class="  hidden" ontology="UX" query="Q(?0,?1,?2) <- Student(?0), advisor(?0,?1), FacultyStaff(?1), takesCourse(?0,?2), teacherOf(?1,?2), Course(?2)"><td>UX</td><td>3</td><td>6</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>3</td><td>UX</td></tr>
+        <tr class="  hidden" ontology="UX" query="Q(?0,?1) <- Person(?0), worksFor(?0,?1), Organization(?1)"><td>UX</td><td>4</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>4</td><td>UX</td></tr>
+        <tr class="  hidden" ontology="UX" query="Q(?0) <- Person(?0), worksFor(?0,?1), University(?1), hasAlumnus(?1,?0)"><td>UX</td><td>5</td><td>4</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>5</td><td>UX</td></tr>
+        <tr class="  hidden" ontology="UX" query="Q(?0,?1) <- FacultyStaff(?0), headOf(?0,?2), College(?2), worksFor(?1,?2)"><td>UX</td><td>6</td><td>4</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>6</td><td>UX</td></tr>
+        <tr class="  hidden" ontology="UX" query="Q(?0,?1) <- FacultyStaff(?0), headOf(?0,?2), Organization(?2), worksFor(?1,?2)"><td>UX</td><td>7</td><td>4</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>7</td><td>UX</td></tr>
+        <tr class="  hidden" ontology="UX" query="Q(?0,?1) <- Professor(?0), teacherOf(?0,?1), GraduateCourse(?1)"><td>UX</td><td>8</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>8</td><td>UX</td></tr>
+        <tr class="  hidden" ontology="UX" query="Q(?0,?1) <- Student(?0), Professor(?1), worksFor(?1,?2), memberOf(?0,?2), Faculty(?2)"><td>UX</td><td>9</td><td>5</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>3</td><td>9</td><td>UX</td></tr>
+        <tr class="firstrow hidden" ontology="UXE" query="Q(?0) <- worksFor(?0,?1), affiliatedOrganizationOf(?1,?2)"><td>UXE</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>UXE</td></tr>
+        <tr class="  hidden" ontology="UXE" query="Q(?0,?1) <- Person(?0), teacherOf(?0,?1), Course(?1)"><td>UXE</td><td>2</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>2</td><td>UXE</td></tr>
+        <tr class="  hidden" ontology="UXE" query="Q(?0,?1,?2) <- Student(?0), advisor(?0,?1), FacultyStaff(?1), takesCourse(?0,?2), teacherOf(?1,?2), Course(?2)"><td>UXE</td><td>3</td><td>6</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>3</td><td>UXE</td></tr>
+        <tr class="  hidden" ontology="UXE" query="Q(?0,?1) <- Person(?0), worksFor(?0,?1), Organization(?1)"><td>UXE</td><td>4</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>4</td><td>UXE</td></tr>
+        <tr class="  hidden" ontology="UXE" query="Q(?0) <- Person(?0), worksFor(?0,?1), University(?1), hasAlumnus(?1,?0)"><td>UXE</td><td>5</td><td>4</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>5</td><td>UXE</td></tr>
+        <tr class="  hidden" ontology="UXE" query="Q(?0,?1) <- FacultyStaff(?0), headOf(?0,?2), College(?2), worksFor(?1,?2)"><td>UXE</td><td>6</td><td>4</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>6</td><td>UXE</td></tr>
+        <tr class="  hidden" ontology="UXE" query="Q(?0,?1) <- FacultyStaff(?0), headOf(?0,?2), Organization(?2), worksFor(?1,?2)"><td>UXE</td><td>7</td><td>4</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>7</td><td>UXE</td></tr>
+        <tr class="  hidden" ontology="UXE" query="Q(?0,?1) <- Professor(?0), teacherOf(?0,?1), GraduateCourse(?1)"><td>UXE</td><td>8</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>8</td><td>UXE</td></tr>
+        <tr class="  hidden" ontology="UXE" query="Q(?0,?1) <- Student(?0), Professor(?1), worksFor(?1,?2), memberOf(?0,?2), Faculty(?2)"><td>UXE</td><td>9</td><td>5</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>3</td><td>9</td><td>UXE</td></tr>
+        <tr class="firstrow hidden" ontology="V" query="Q(?0) <- Location(?0)"><td>V</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>V</td></tr>
+        <tr class="  hidden" ontology="V" query="Q(?0,?1) <- Military-Person(?0), hasRole(?1,?0), related(?0,?2)"><td>V</td><td>2</td><td>3</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>2</td><td>V</td></tr>
+        <tr class="  hidden" ontology="V" query="Q(?0,?1) <- Time-Dependent-Relation(?0), hasRelationMember(?0,?1), Event(?1)"><td>V</td><td>3</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>3</td><td>V</td></tr>
+        <tr class="  hidden" ontology="V" query="Q(?0,?1) <- Object(?0), hasRole(?0,?1), Symbol(?1)"><td>V</td><td>4</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>4</td><td>V</td></tr>
+        <tr class="  hidden" ontology="V" query="Q(?0) <- Individual(?0), hasRole(?0,?1), Scientist(?1), hasRole(?0,?2), Discoverer(?2), hasRole(?0,?3), Inventor(?3)"><td>V</td><td>5</td><td>7</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>5</td><td>V</td></tr>
+        <tr class="  hidden" ontology="V" query="Q(?0,?1,?2) <- Person(?0), hasRole(?0,?1), Leader(?1), exists(?1,?2)"><td>V</td><td>6</td><td>4</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>6</td><td>V</td></tr>
+        <tr class="  hidden" ontology="V" query="Q(?0,?1,?2) <- Person(?0), hasRole(?0,?1), Leader(?1), exists(?1,?2), TemporalInterval(?2), related(?0,?3), Country(?3)"><td>V</td><td>7</td><td>7</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>7</td><td>V</td></tr>
+        <tr class="firstrow hidden" ontology="core" query="Q(?0) <- userAdministeredBy(?0,?1), hasShopClass(?0,?2)"><td>core</td><td>1</td><td>2</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>core</td></tr>
+        <tr class="  hidden" ontology="core" query="Q(?0) <- bookItemHasBook(?0,?1), User(?0), hasShopClass(?0,?2)"><td>core</td><td>2</td><td>3</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>2</td><td>core</td></tr>
+        <tr class="  hidden" ontology="core" query="Q(?0) <- ShopEvent(?0), User(?1), hasRole(?0,?1)"><td>core</td><td>3</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>3</td><td>core</td></tr>
+        <tr class="  hidden" ontology="core" query="Q(?0) <- ShopEvent(?0), User(?1), hasRole(?0,?1), hasRole(?0,?1), Sport(?2)"><td>core</td><td>4</td><td>5</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>3</td><td>4</td><td>core</td></tr>
+        <tr class="firstrow hidden" ontology="galen" query="Q(?0) <- Horn(?1), hasState(?0,?1), CellMorphologyState(?0)"><td>galen</td><td>1</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>galen</td></tr>
+        <tr class="  hidden" ontology="galen" query="Q(?0) <- ShortBone(?1), CellMorphologyState(?1), hasState(?0,?1)"><td>galen</td><td>2</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>galen</td></tr>
+        <tr class="  hidden" ontology="galen" query="Q(?0) <- hasState(?0,?1), TemporalUnit(?1), Tissue(?0)"><td>galen</td><td>3</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>3</td><td>galen</td></tr>
+        <tr class="  hidden" ontology="galen" query="Q(?0) <- contains(?0,?1), contains(?0,?2), Metal(?1), Protozoa(?0), Steroid(?2)"><td>galen</td><td>4</td><td>5</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>4</td><td>galen</td></tr>
+        <tr class="firstrow hidden" ontology="galen-lite" query="Q(?0) <- Horn(?1), hasState(?0,?1), CellMorphologyState(?0)"><td>galen-lite</td><td>1</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>galen-lite</td></tr>
+        <tr class="  hidden" ontology="galen-lite" query="Q(?0) <- ShortBone(?1), CellMorphologyState(?1), hasState(?0,?1)"><td>galen-lite</td><td>2</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>galen-lite</td></tr>
+        <tr class="  hidden" ontology="galen-lite" query="Q(?0) <- hasState(?0,?1), TemporalUnit(?1), Tissue(?0)"><td>galen-lite</td><td>3</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>3</td><td>galen-lite</td></tr>
+        <tr class="  hidden" ontology="galen-lite" query="Q(?0) <- contains(?0,?1), contains(?0,?2), Metal(?1), Protozoa(?0), Steroid(?2)"><td>galen-lite</td><td>4</td><td>5</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>4</td><td>galen-lite</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="container"><div id="querysnippet"> </div></div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+  </body>
+</html>

@@ -1,0 +1,1725 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY ontology "http://vicodi.org/ontology#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://vicodi.org/ontology#"
+     xml:base="http://vicodi.org/ontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ontology="http://vicodi.org/ontology#">
+    <owl:Ontology rdf:about="http://vicodi.org/ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vicodi.org/ontology#exists -->
+
+    <owl:ObjectProperty rdf:about="&ontology;exists">
+        <rdfs:range rdf:resource="&ontology;Time"/>
+        <rdfs:domain rdf:resource="&ontology;Time-Dependent"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;related"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vicodi.org/ontology#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="&ontology;hasCategory">
+        <rdfs:range rdf:resource="&ontology;Category"/>
+        <rdfs:domain rdf:resource="&ontology;Time-Dependent"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;related"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vicodi.org/ontology#hasLocationContainerMember -->
+
+    <owl:ObjectProperty rdf:about="&ontology;hasLocationContainerMember">
+        <rdfs:range rdf:resource="&ontology;Location"/>
+        <rdfs:domain rdf:resource="&ontology;Location-Part-Relation"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;hasRelationMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vicodi.org/ontology#hasLocationPartMember -->
+
+    <owl:ObjectProperty rdf:about="&ontology;hasLocationPartMember">
+        <rdfs:range rdf:resource="&ontology;Location"/>
+        <rdfs:domain rdf:resource="&ontology;Location-Part-Relation"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;hasRelationMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vicodi.org/ontology#hasRelationMember -->
+
+    <owl:ObjectProperty rdf:about="&ontology;hasRelationMember">
+        <rdfs:range rdf:resource="&ontology;Time-Dependent"/>
+        <rdfs:domain rdf:resource="&ontology;Time-Dependent-Relation"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;related"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vicodi.org/ontology#hasRole -->
+
+    <owl:ObjectProperty rdf:about="&ontology;hasRole">
+        <rdfs:domain rdf:resource="&ontology;Flavour"/>
+        <rdfs:range rdf:resource="&ontology;Role"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;related"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vicodi.org/ontology#isLocationContainerMemberOf -->
+
+    <owl:ObjectProperty rdf:about="&ontology;isLocationContainerMemberOf">
+        <rdfs:domain rdf:resource="&ontology;Location"/>
+        <rdfs:range rdf:resource="&ontology;Location-Part-Relation"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;isRelationMemberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vicodi.org/ontology#isLocationPartMemberOf -->
+
+    <owl:ObjectProperty rdf:about="&ontology;isLocationPartMemberOf">
+        <rdfs:domain rdf:resource="&ontology;Location"/>
+        <rdfs:range rdf:resource="&ontology;Location-Part-Relation"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;isRelationMemberOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vicodi.org/ontology#isRelationMemberOf -->
+
+    <owl:ObjectProperty rdf:about="&ontology;isRelationMemberOf">
+        <rdfs:domain rdf:resource="&ontology;Time-Dependent"/>
+        <rdfs:range rdf:resource="&ontology;Time-Dependent-Relation"/>
+        <rdfs:subPropertyOf rdf:resource="&ontology;related"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vicodi.org/ontology#isRestrictedTo -->
+
+    <owl:ObjectProperty rdf:about="&ontology;isRestrictedTo">
+        <rdfs:subPropertyOf rdf:resource="&ontology;hasRelationMember"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vicodi.org/ontology#related -->
+
+    <owl:ObjectProperty rdf:about="&ontology;related">
+        <rdfs:range rdf:resource="&ontology;VicodiOI"/>
+        <rdfs:domain rdf:resource="&ontology;VicodiOI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vicodi.org/ontology#Abbey -->
+
+    <owl:Class rdf:about="&ontology;Abbey">
+        <rdfs:subClassOf rdf:resource="&ontology;Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Abstract-Notion -->
+
+    <owl:Class rdf:about="&ontology;Abstract-Notion">
+        <rdfs:subClassOf rdf:resource="&ontology;Flavour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Actor -->
+
+    <owl:Class rdf:about="&ontology;Actor">
+        <rdfs:subClassOf rdf:resource="&ontology;Entertainer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Animal -->
+
+    <owl:Class rdf:about="&ontology;Animal">
+        <rdfs:subClassOf rdf:resource="&ontology;Natural-Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Architect -->
+
+    <owl:Class rdf:about="&ontology;Architect">
+        <rdfs:subClassOf rdf:resource="&ontology;Creator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Armament -->
+
+    <owl:Class rdf:about="&ontology;Armament">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Art-Form -->
+
+    <owl:Class rdf:about="&ontology;Art-Form">
+        <rdfs:subClassOf rdf:resource="&ontology;Abstract-Notion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Artefact -->
+
+    <owl:Class rdf:about="&ontology;Artefact">
+        <rdfs:subClassOf rdf:resource="&ontology;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Artist -->
+
+    <owl:Class rdf:about="&ontology;Artist">
+        <rdfs:subClassOf rdf:resource="&ontology;Creator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Artistic-Movement -->
+
+    <owl:Class rdf:about="&ontology;Artistic-Movement">
+        <rdfs:subClassOf rdf:resource="&ontology;Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Artistic-Style -->
+
+    <owl:Class rdf:about="&ontology;Artistic-Style">
+        <rdfs:subClassOf rdf:resource="&ontology;Abstract-Notion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Astronaut -->
+
+    <owl:Class rdf:about="&ontology;Astronaut">
+        <rdfs:subClassOf rdf:resource="&ontology;Discoverer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Author -->
+
+    <owl:Class rdf:about="&ontology;Author">
+        <rdfs:subClassOf rdf:resource="&ontology;Creator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Badge -->
+
+    <owl:Class rdf:about="&ontology;Badge">
+        <rdfs:subClassOf rdf:resource="&ontology;Conceptual-Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Battle -->
+
+    <owl:Class rdf:about="&ontology;Battle">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Board -->
+
+    <owl:Class rdf:about="&ontology;Board">
+        <rdfs:subClassOf rdf:resource="&ontology;Management-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Book -->
+
+    <owl:Class rdf:about="&ontology;Book">
+        <rdfs:subClassOf rdf:resource="&ontology;Writing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Building -->
+
+    <owl:Class rdf:about="&ontology;Building">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Business-Leader -->
+
+    <owl:Class rdf:about="&ontology;Business-Leader">
+        <rdfs:subClassOf rdf:resource="&ontology;Magnate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Category -->
+
+    <owl:Class rdf:about="&ontology;Category">
+        <rdfs:subClassOf rdf:resource="&ontology;VicodiOI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Cathedral -->
+
+    <owl:Class rdf:about="&ontology;Cathedral">
+        <rdfs:subClassOf rdf:resource="&ontology;Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Church -->
+
+    <owl:Class rdf:about="&ontology;Church">
+        <rdfs:subClassOf rdf:resource="&ontology;Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Church-Reformer -->
+
+    <owl:Class rdf:about="&ontology;Church-Reformer">
+        <rdfs:subClassOf rdf:resource="&ontology;Religious-Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#City -->
+
+    <owl:Class rdf:about="&ontology;City">
+        <rdfs:subClassOf rdf:resource="&ontology;Settlement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Cleric -->
+
+    <owl:Class rdf:about="&ontology;Cleric">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Clerical-Leader -->
+
+    <owl:Class rdf:about="&ontology;Clerical-Leader">
+        <rdfs:subClassOf rdf:resource="&ontology;Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Clothing -->
+
+    <owl:Class rdf:about="&ontology;Clothing">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Commodity -->
+
+    <owl:Class rdf:about="&ontology;Commodity">
+        <rdfs:subClassOf rdf:resource="&ontology;Natural-Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Composer -->
+
+    <owl:Class rdf:about="&ontology;Composer">
+        <rdfs:subClassOf rdf:resource="&ontology;Artist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Conceptual-Object -->
+
+    <owl:Class rdf:about="&ontology;Conceptual-Object">
+        <rdfs:subClassOf rdf:resource="&ontology;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Conductor -->
+
+    <owl:Class rdf:about="&ontology;Conductor">
+        <rdfs:subClassOf rdf:resource="&ontology;Entertainer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Country -->
+
+    <owl:Class rdf:about="&ontology;Country">
+        <rdfs:subClassOf rdf:resource="&ontology;Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Creator -->
+
+    <owl:Class rdf:about="&ontology;Creator">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Crime -->
+
+    <owl:Class rdf:about="&ontology;Crime">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Criminal -->
+
+    <owl:Class rdf:about="&ontology;Criminal">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Cultural-Agreement -->
+
+    <owl:Class rdf:about="&ontology;Cultural-Agreement">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Cultural-Organisation -->
+
+    <owl:Class rdf:about="&ontology;Cultural-Organisation">
+        <rdfs:subClassOf rdf:resource="&ontology;Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Dancer -->
+
+    <owl:Class rdf:about="&ontology;Dancer">
+        <rdfs:subClassOf rdf:resource="&ontology;Entertainer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Diplomat -->
+
+    <owl:Class rdf:about="&ontology;Diplomat">
+        <rdfs:subClassOf rdf:resource="&ontology;Functionary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Disaster -->
+
+    <owl:Class rdf:about="&ontology;Disaster">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Discoverer -->
+
+    <owl:Class rdf:about="&ontology;Discoverer">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Disease -->
+
+    <owl:Class rdf:about="&ontology;Disease">
+        <rdfs:subClassOf rdf:resource="&ontology;Natural-Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Dramaturge -->
+
+    <owl:Class rdf:about="&ontology;Dramaturge">
+        <rdfs:subClassOf rdf:resource="&ontology;Creator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Dynasty -->
+
+    <owl:Class rdf:about="&ontology;Dynasty">
+        <rdfs:subClassOf rdf:resource="&ontology;Social-Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Ecclesiarch -->
+
+    <owl:Class rdf:about="&ontology;Ecclesiarch">
+        <rdfs:subClassOf rdf:resource="&ontology;Religious-Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Economic-Enterprise -->
+
+    <owl:Class rdf:about="&ontology;Economic-Enterprise">
+        <rdfs:subClassOf rdf:resource="&ontology;Economic-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Economic-Organisation -->
+
+    <owl:Class rdf:about="&ontology;Economic-Organisation">
+        <rdfs:subClassOf rdf:resource="&ontology;Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Economic-Process -->
+
+    <owl:Class rdf:about="&ontology;Economic-Process">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Economic-Symbol -->
+
+    <owl:Class rdf:about="&ontology;Economic-Symbol">
+        <rdfs:subClassOf rdf:resource="&ontology;Symbol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Economist -->
+
+    <owl:Class rdf:about="&ontology;Economist">
+        <rdfs:subClassOf rdf:resource="&ontology;Scientist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Educational-Organisation -->
+
+    <owl:Class rdf:about="&ontology;Educational-Organisation">
+        <rdfs:subClassOf rdf:resource="&ontology;Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Election -->
+
+    <owl:Class rdf:about="&ontology;Election">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Emperor -->
+
+    <owl:Class rdf:about="&ontology;Emperor">
+        <rdfs:subClassOf rdf:resource="&ontology;Head-of-State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Engineer -->
+
+    <owl:Class rdf:about="&ontology;Engineer">
+        <rdfs:subClassOf rdf:resource="&ontology;Creator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Entertainer -->
+
+    <owl:Class rdf:about="&ontology;Entertainer">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Environment -->
+
+    <owl:Class rdf:about="&ontology;Environment">
+        <rdfs:subClassOf rdf:resource="&ontology;Natural-Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Ethnic-Group -->
+
+    <owl:Class rdf:about="&ontology;Ethnic-Group">
+        <rdfs:subClassOf rdf:resource="&ontology;Social-Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Event -->
+
+    <owl:Class rdf:about="&ontology;Event">
+        <rdfs:subClassOf rdf:resource="&ontology;Flavour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Fictional-Event -->
+
+    <owl:Class rdf:about="&ontology;Fictional-Event">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Fictional-Person -->
+
+    <owl:Class rdf:about="&ontology;Fictional-Person">
+        <rdfs:subClassOf rdf:resource="&ontology;Individual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Field-of-Knowledge -->
+
+    <owl:Class rdf:about="&ontology;Field-of-Knowledge">
+        <rdfs:subClassOf rdf:resource="&ontology;Intellectual-Construct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Film-Maker -->
+
+    <owl:Class rdf:about="&ontology;Film-Maker">
+        <rdfs:subClassOf rdf:resource="&ontology;Creator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Flavour -->
+
+    <owl:Class rdf:about="&ontology;Flavour">
+        <rdfs:subClassOf rdf:resource="&ontology;Time-Dependent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Food -->
+
+    <owl:Class rdf:about="&ontology;Food">
+        <rdfs:subClassOf rdf:resource="&ontology;Natural-Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Foreign-Minister -->
+
+    <owl:Class rdf:about="&ontology;Foreign-Minister">
+        <rdfs:subClassOf rdf:resource="&ontology;Minister"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Functionary -->
+
+    <owl:Class rdf:about="&ontology;Functionary">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#FuzzyTemporalInterval -->
+
+    <owl:Class rdf:about="&ontology;FuzzyTemporalInterval">
+        <rdfs:subClassOf rdf:resource="&ontology;Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Geographer -->
+
+    <owl:Class rdf:about="&ontology;Geographer">
+        <rdfs:subClassOf rdf:resource="&ontology;Scientist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Geographical-Discovery -->
+
+    <owl:Class rdf:about="&ontology;Geographical-Discovery">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Geographical-Feature -->
+
+    <owl:Class rdf:about="&ontology;Geographical-Feature">
+        <rdfs:subClassOf rdf:resource="&ontology;Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Geographical-Region -->
+
+    <owl:Class rdf:about="&ontology;Geographical-Region">
+        <rdfs:subClassOf rdf:resource="&ontology;Geographical-Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Governmental-Organisation -->
+
+    <owl:Class rdf:about="&ontology;Governmental-Organisation">
+        <rdfs:subClassOf rdf:resource="&ontology;Political-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Head-of-Government -->
+
+    <owl:Class rdf:about="&ontology;Head-of-Government">
+        <rdfs:subClassOf rdf:resource="&ontology;Secular-Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Head-of-State -->
+
+    <owl:Class rdf:about="&ontology;Head-of-State">
+        <rdfs:subClassOf rdf:resource="&ontology;Secular-Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Idea -->
+
+    <owl:Class rdf:about="&ontology;Idea">
+        <rdfs:subClassOf rdf:resource="&ontology;Abstract-Notion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Ideology -->
+
+    <owl:Class rdf:about="&ontology;Ideology">
+        <rdfs:subClassOf rdf:resource="&ontology;Abstract-Notion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Illness -->
+
+    <owl:Class rdf:about="&ontology;Illness">
+        <rdfs:subClassOf rdf:resource="&ontology;Life-Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Individual -->
+
+    <owl:Class rdf:about="&ontology;Individual">
+        <rdfs:subClassOf rdf:resource="&ontology;Flavour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Intellectual-Construct -->
+
+    <owl:Class rdf:about="&ontology;Intellectual-Construct">
+        <rdfs:subClassOf rdf:resource="&ontology;Abstract-Notion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Intellectual-Movement -->
+
+    <owl:Class rdf:about="&ontology;Intellectual-Movement">
+        <rdfs:subClassOf rdf:resource="&ontology;Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#International-Alliance -->
+
+    <owl:Class rdf:about="&ontology;International-Alliance">
+        <rdfs:subClassOf rdf:resource="&ontology;Political-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#International-Organisation -->
+
+    <owl:Class rdf:about="&ontology;International-Organisation">
+        <rdfs:subClassOf rdf:resource="&ontology;Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Intra-State-Group -->
+
+    <owl:Class rdf:about="&ontology;Intra-State-Group">
+        <rdfs:subClassOf rdf:resource="&ontology;Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Inventor -->
+
+    <owl:Class rdf:about="&ontology;Inventor">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Journal -->
+
+    <owl:Class rdf:about="&ontology;Journal">
+        <rdfs:subClassOf rdf:resource="&ontology;Writing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Journalist -->
+
+    <owl:Class rdf:about="&ontology;Journalist">
+        <rdfs:subClassOf rdf:resource="&ontology;Creator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Jurist -->
+
+    <owl:Class rdf:about="&ontology;Jurist">
+        <rdfs:subClassOf rdf:resource="&ontology;Functionary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#King -->
+
+    <owl:Class rdf:about="&ontology;King">
+        <rdfs:subClassOf rdf:resource="&ontology;Head-of-State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Landmark -->
+
+    <owl:Class rdf:about="&ontology;Landmark">
+        <rdfs:subClassOf rdf:resource="&ontology;Geographical-Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Language -->
+
+    <owl:Class rdf:about="&ontology;Language">
+        <rdfs:subClassOf rdf:resource="&ontology;Abstract-Notion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Leader -->
+
+    <owl:Class rdf:about="&ontology;Leader">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#League -->
+
+    <owl:Class rdf:about="&ontology;League">
+        <rdfs:subClassOf rdf:resource="&ontology;Political-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Legislation -->
+
+    <owl:Class rdf:about="&ontology;Legislation">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Life-Event -->
+
+    <owl:Class rdf:about="&ontology;Life-Event">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Liturgical-Object -->
+
+    <owl:Class rdf:about="&ontology;Liturgical-Object">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Location -->
+
+    <owl:Class rdf:about="&ontology;Location">
+        <rdfs:subClassOf rdf:resource="&ontology;Flavour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Location-Part-Relation -->
+
+    <owl:Class rdf:about="&ontology;Location-Part-Relation">
+        <rdfs:subClassOf rdf:resource="&ontology;Time-Dependent-Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Magnate -->
+
+    <owl:Class rdf:about="&ontology;Magnate">
+        <rdfs:subClassOf rdf:resource="&ontology;Secular-Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Management-Organisation -->
+
+    <owl:Class rdf:about="&ontology;Management-Organisation">
+        <rdfs:subClassOf rdf:resource="&ontology;Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Masonic-Lodge -->
+
+    <owl:Class rdf:about="&ontology;Masonic-Lodge">
+        <rdfs:subClassOf rdf:resource="&ontology;Cultural-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Measurable-Trend -->
+
+    <owl:Class rdf:about="&ontology;Measurable-Trend">
+        <rdfs:subClassOf rdf:resource="&ontology;Abstract-Notion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Meeting -->
+
+    <owl:Class rdf:about="&ontology;Meeting">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Military-Organisation -->
+
+    <owl:Class rdf:about="&ontology;Military-Organisation">
+        <rdfs:subClassOf rdf:resource="&ontology;Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Military-Person -->
+
+    <owl:Class rdf:about="&ontology;Military-Person">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Military-Unit -->
+
+    <owl:Class rdf:about="&ontology;Military-Unit">
+        <rdfs:subClassOf rdf:resource="&ontology;Military-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Minister -->
+
+    <owl:Class rdf:about="&ontology;Minister">
+        <rdfs:subClassOf rdf:resource="&ontology;Functionary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Monastery -->
+
+    <owl:Class rdf:about="&ontology;Monastery">
+        <rdfs:subClassOf rdf:resource="&ontology;Building"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Movement -->
+
+    <owl:Class rdf:about="&ontology;Movement">
+        <rdfs:subClassOf rdf:resource="&ontology;Social-Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Musician -->
+
+    <owl:Class rdf:about="&ontology;Musician">
+        <rdfs:subClassOf rdf:resource="&ontology;Entertainer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#National-Symbol -->
+
+    <owl:Class rdf:about="&ontology;National-Symbol">
+        <rdfs:subClassOf rdf:resource="&ontology;Symbol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Natural-Object -->
+
+    <owl:Class rdf:about="&ontology;Natural-Object">
+        <rdfs:subClassOf rdf:resource="&ontology;Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Newspaper -->
+
+    <owl:Class rdf:about="&ontology;Newspaper">
+        <rdfs:subClassOf rdf:resource="&ontology;Writing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Non-Military-Conflict -->
+
+    <owl:Class rdf:about="&ontology;Non-Military-Conflict">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Object -->
+
+    <owl:Class rdf:about="&ontology;Object">
+        <rdfs:subClassOf rdf:resource="&ontology;Flavour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Organisation -->
+
+    <owl:Class rdf:about="&ontology;Organisation">
+        <rdfs:subClassOf rdf:resource="&ontology;Flavour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Other-Religious-Leader -->
+
+    <owl:Class rdf:about="&ontology;Other-Religious-Leader">
+        <rdfs:subClassOf rdf:resource="&ontology;Religious-Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Other-Religious-Person -->
+
+    <owl:Class rdf:about="&ontology;Other-Religious-Person">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Painter -->
+
+    <owl:Class rdf:about="&ontology;Painter">
+        <rdfs:subClassOf rdf:resource="&ontology;Artist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Painting -->
+
+    <owl:Class rdf:about="&ontology;Painting">
+        <rdfs:subClassOf rdf:resource="&ontology;Work-of-Art"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Pamphlet -->
+
+    <owl:Class rdf:about="&ontology;Pamphlet">
+        <rdfs:subClassOf rdf:resource="&ontology;Writing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Party -->
+
+    <owl:Class rdf:about="&ontology;Party">
+        <rdfs:subClassOf rdf:resource="&ontology;Political-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Pastime -->
+
+    <owl:Class rdf:about="&ontology;Pastime">
+        <rdfs:subClassOf rdf:resource="&ontology;Conceptual-Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Period -->
+
+    <owl:Class rdf:about="&ontology;Period">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Period-in-Office -->
+
+    <owl:Class rdf:about="&ontology;Period-in-Office">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Person -->
+
+    <owl:Class rdf:about="&ontology;Person">
+        <rdfs:subClassOf rdf:resource="&ontology;Individual"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Person-Role -->
+
+    <owl:Class rdf:about="&ontology;Person-Role">
+        <rdfs:subClassOf rdf:resource="&ontology;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Philanthropist -->
+
+    <owl:Class rdf:about="&ontology;Philanthropist">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Philosopher -->
+
+    <owl:Class rdf:about="&ontology;Philosopher">
+        <rdfs:subClassOf rdf:resource="&ontology;Scientist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Physician -->
+
+    <owl:Class rdf:about="&ontology;Physician">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Piece-of-Music -->
+
+    <owl:Class rdf:about="&ontology;Piece-of-Music">
+        <rdfs:subClassOf rdf:resource="&ontology;Work-of-Art"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Political-Organisation -->
+
+    <owl:Class rdf:about="&ontology;Political-Organisation">
+        <rdfs:subClassOf rdf:resource="&ontology;Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Political-Region -->
+
+    <owl:Class rdf:about="&ontology;Political-Region">
+        <rdfs:subClassOf rdf:resource="&ontology;Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Political-Symbol -->
+
+    <owl:Class rdf:about="&ontology;Political-Symbol">
+        <rdfs:subClassOf rdf:resource="&ontology;Symbol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Politician -->
+
+    <owl:Class rdf:about="&ontology;Politician">
+        <rdfs:subClassOf rdf:resource="&ontology;Functionary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Pollution -->
+
+    <owl:Class rdf:about="&ontology;Pollution">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Pope -->
+
+    <owl:Class rdf:about="&ontology;Pope">
+        <rdfs:subClassOf rdf:resource="&ontology;Religious-Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Population-Movement -->
+
+    <owl:Class rdf:about="&ontology;Population-Movement">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Prince -->
+
+    <owl:Class rdf:about="&ontology;Prince">
+        <rdfs:subClassOf rdf:resource="&ontology;Head-of-State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Professor -->
+
+    <owl:Class rdf:about="&ontology;Professor">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Psychologist -->
+
+    <owl:Class rdf:about="&ontology;Psychologist">
+        <rdfs:subClassOf rdf:resource="&ontology;Scientist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Public-Oration -->
+
+    <owl:Class rdf:about="&ontology;Public-Oration">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Publisher -->
+
+    <owl:Class rdf:about="&ontology;Publisher">
+        <rdfs:subClassOf rdf:resource="&ontology;Creator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Queen -->
+
+    <owl:Class rdf:about="&ontology;Queen">
+        <rdfs:subClassOf rdf:resource="&ontology;Head-of-State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Relic -->
+
+    <owl:Class rdf:about="&ontology;Relic">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Religious-Community -->
+
+    <owl:Class rdf:about="&ontology;Religious-Community">
+        <rdfs:subClassOf rdf:resource="&ontology;Religious-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Religious-Ideology -->
+
+    <owl:Class rdf:about="&ontology;Religious-Ideology">
+        <rdfs:subClassOf rdf:resource="&ontology;Ideology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Religious-Leader -->
+
+    <owl:Class rdf:about="&ontology;Religious-Leader">
+        <rdfs:subClassOf rdf:resource="&ontology;Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Religious-Movement -->
+
+    <owl:Class rdf:about="&ontology;Religious-Movement">
+        <rdfs:subClassOf rdf:resource="&ontology;Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Religious-Order -->
+
+    <owl:Class rdf:about="&ontology;Religious-Order">
+        <rdfs:subClassOf rdf:resource="&ontology;Religious-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Religious-Organisation -->
+
+    <owl:Class rdf:about="&ontology;Religious-Organisation">
+        <rdfs:subClassOf rdf:resource="&ontology;Cultural-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Religious-Practice -->
+
+    <owl:Class rdf:about="&ontology;Religious-Practice">
+        <rdfs:subClassOf rdf:resource="&ontology;Conceptual-Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Religious-Symbol -->
+
+    <owl:Class rdf:about="&ontology;Religious-Symbol">
+        <rdfs:subClassOf rdf:resource="&ontology;Symbol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Representative-Institution -->
+
+    <owl:Class rdf:about="&ontology;Representative-Institution">
+        <rdfs:subClassOf rdf:resource="&ontology;Political-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Ritual -->
+
+    <owl:Class rdf:about="&ontology;Ritual">
+        <rdfs:subClassOf rdf:resource="&ontology;Conceptual-Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Role -->
+
+    <owl:Class rdf:about="&ontology;Role">
+        <rdfs:subClassOf rdf:resource="&ontology;Time-Dependent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Saint -->
+
+    <owl:Class rdf:about="&ontology;Saint">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Scandal -->
+
+    <owl:Class rdf:about="&ontology;Scandal">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Scientific-Instrument -->
+
+    <owl:Class rdf:about="&ontology;Scientific-Instrument">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Scientist -->
+
+    <owl:Class rdf:about="&ontology;Scientist">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Sculptor -->
+
+    <owl:Class rdf:about="&ontology;Sculptor">
+        <rdfs:subClassOf rdf:resource="&ontology;Artist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Sculpture -->
+
+    <owl:Class rdf:about="&ontology;Sculpture">
+        <rdfs:subClassOf rdf:resource="&ontology;Work-of-Art"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Secular-Ideology -->
+
+    <owl:Class rdf:about="&ontology;Secular-Ideology">
+        <rdfs:subClassOf rdf:resource="&ontology;Ideology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Secular-Leader -->
+
+    <owl:Class rdf:about="&ontology;Secular-Leader">
+        <rdfs:subClassOf rdf:resource="&ontology;Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Secular-Movement -->
+
+    <owl:Class rdf:about="&ontology;Secular-Movement">
+        <rdfs:subClassOf rdf:resource="&ontology;Movement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Settlement -->
+
+    <owl:Class rdf:about="&ontology;Settlement">
+        <rdfs:subClassOf rdf:resource="&ontology;Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Ship -->
+
+    <owl:Class rdf:about="&ontology;Ship">
+        <rdfs:subClassOf rdf:resource="&ontology;Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Social-Group -->
+
+    <owl:Class rdf:about="&ontology;Social-Group">
+        <rdfs:subClassOf rdf:resource="&ontology;Flavour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Social-Stratum -->
+
+    <owl:Class rdf:about="&ontology;Social-Stratum">
+        <rdfs:subClassOf rdf:resource="&ontology;Social-Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Sportsman -->
+
+    <owl:Class rdf:about="&ontology;Sportsman">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Stereotype-Group -->
+
+    <owl:Class rdf:about="&ontology;Stereotype-Group">
+        <rdfs:subClassOf rdf:resource="&ontology;Social-Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Structure -->
+
+    <owl:Class rdf:about="&ontology;Structure">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Sultan -->
+
+    <owl:Class rdf:about="&ontology;Sultan">
+        <rdfs:subClassOf rdf:resource="&ontology;Head-of-State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Symbol -->
+
+    <owl:Class rdf:about="&ontology;Symbol">
+        <rdfs:subClassOf rdf:resource="&ontology;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Technical-Scientific-Advance -->
+
+    <owl:Class rdf:about="&ontology;Technical-Scientific-Advance">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#TemporalInterval -->
+
+    <owl:Class rdf:about="&ontology;TemporalInterval">
+        <rdfs:subClassOf rdf:resource="&ontology;Time"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Theologian -->
+
+    <owl:Class rdf:about="&ontology;Theologian">
+        <rdfs:subClassOf rdf:resource="&ontology;Person-Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Time -->
+
+    <owl:Class rdf:about="&ontology;Time">
+        <rdfs:subClassOf rdf:resource="&ontology;VicodiOI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Time-Dependent -->
+
+    <owl:Class rdf:about="&ontology;Time-Dependent">
+        <rdfs:subClassOf rdf:resource="&ontology;VicodiOI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Time-Dependent-Relation -->
+
+    <owl:Class rdf:about="&ontology;Time-Dependent-Relation">
+        <rdfs:subClassOf rdf:resource="&ontology;Time-Dependent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Trade-Association -->
+
+    <owl:Class rdf:about="&ontology;Trade-Association">
+        <rdfs:subClassOf rdf:resource="&ontology;Economic-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Trades-Union -->
+
+    <owl:Class rdf:about="&ontology;Trades-Union">
+        <rdfs:subClassOf rdf:resource="&ontology;Economic-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Trades-Unionist -->
+
+    <owl:Class rdf:about="&ontology;Trades-Unionist">
+        <rdfs:subClassOf rdf:resource="&ontology;Secular-Leader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Train -->
+
+    <owl:Class rdf:about="&ontology;Train">
+        <rdfs:subClassOf rdf:resource="&ontology;Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Treaty -->
+
+    <owl:Class rdf:about="&ontology;Treaty">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Trial -->
+
+    <owl:Class rdf:about="&ontology;Trial">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#University -->
+
+    <owl:Class rdf:about="&ontology;University">
+        <rdfs:subClassOf rdf:resource="&ontology;Educational-Organisation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Uprising -->
+
+    <owl:Class rdf:about="&ontology;Uprising">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Vehicle -->
+
+    <owl:Class rdf:about="&ontology;Vehicle">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#VicodiOI -->
+
+    <owl:Class rdf:about="&ontology;VicodiOI"/>
+    
+
+
+    <!-- http://vicodi.org/ontology#Village -->
+
+    <owl:Class rdf:about="&ontology;Village">
+        <rdfs:subClassOf rdf:resource="&ontology;Settlement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#War -->
+
+    <owl:Class rdf:about="&ontology;War">
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Water -->
+
+    <owl:Class rdf:about="&ontology;Water">
+        <rdfs:subClassOf rdf:resource="&ontology;Geographical-Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Work-of-Art -->
+
+    <owl:Class rdf:about="&ontology;Work-of-Art">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vicodi.org/ontology#Writing -->
+
+    <owl:Class rdf:about="&ontology;Writing">
+        <rdfs:subClassOf rdf:resource="&ontology;Artefact"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <rdfs:subClassOf rdf:resource="&ontology;Event"/>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="&ontology;isRestrictedTo"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="&ontology;Time-Dependent-Relation"/>
+    </owl:Restriction>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+	<!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY ontology "http://omv.ontoware.org/2005/05/ontology#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY nmv "http://mccarthy.dia.fi.upm.es/normv/normv.owl#">
+]>
+<rdf:RDF xml:base="http://mccarthy.dia.fi.upm.es/normv/normv.owl" xmlns="http://mccarthy.dia.fi.upm.es/normv/normv.owl#" xmlns:normv="http://mccarthy.dia.fi.upm.es/normv/normv.owl#" xmlns:ontology="http://omv.ontoware.org/2005/05/ontology#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<owl:Ontology rdf:about="">
+		<owl:imports rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
+	</owl:Ontology>
+	<!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#builtByReusing -->
+	<owl:ObjectProperty rdf:about="#builtByReusing">
+		<rdfs:range rdf:resource="#NOR"/>
+		<rdfs:domain rdf:resource="&ontology;Ontology"/>
+	</owl:ObjectProperty>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#hasDataModel -->
+	<owl:ObjectProperty rdf:about="#hasDataModel">
+		<rdfs:range rdf:resource="#DataModel"/>
+		<rdfs:domain rdf:resource="#NOR"/>
+	</owl:ObjectProperty>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#hasDomain -->
+	<owl:ObjectProperty rdf:about="#hasDomain">
+		<rdfs:range rdf:resource="#Domain"/>
+		<rdfs:domain rdf:resource="#NOR"/>
+	</owl:ObjectProperty>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#hasImplementation -->
+	<owl:ObjectProperty rdf:about="#hasImplementation">
+		<rdfs:range rdf:resource="#Implementation"/>
+		<rdfs:domain rdf:resource="#NOR"/>
+	</owl:ObjectProperty>
+	<!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#name -->
+	<owl:DatatypeProperty rdf:about="#name">
+		<rdfs:range rdf:resource="&xsd;string"/>
+		<rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="#DataModel"/>
+					<rdf:Description rdf:about="#Domain"/>
+					<rdf:Description rdf:about="#Implementation"/>
+					<rdf:Description rdf:about="#NOR"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+	</owl:DatatypeProperty>
+	<!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#AdjacencyList -->
+	<owl:Class rdf:about="#AdjacencyList">
+		<rdfs:subClassOf rdf:resource="#DataModel"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#ClassificationScheme -->
+	<owl:Class rdf:about="#ClassificationScheme">
+		<rdfs:subClassOf rdf:resource="#NOR"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#DataModel -->
+	<owl:Class rdf:about="#DataModel"/>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#Database -->
+	<owl:Class rdf:about="#Database">
+		<rdfs:subClassOf rdf:resource="#Implementation"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#Domain -->
+	<owl:Class rdf:about="#Domain"/>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#FlatFile -->
+	<owl:Class rdf:about="#FlatFile">
+		<rdfs:subClassOf rdf:resource="#Implementation"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#Flattened -->
+	<owl:Class rdf:about="#Flattened">
+		<rdfs:subClassOf rdf:resource="#DataModel"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#Implementation -->
+	<owl:Class rdf:about="#Implementation"/>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#Lexicon -->
+	<owl:Class rdf:about="#Lexicon">
+		<rdfs:subClassOf rdf:resource="#NOR"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#NOR -->
+	<owl:Class rdf:about="#NOR"/>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#PathEnumeration -->
+	<owl:Class rdf:about="#PathEnumeration">
+		<rdfs:subClassOf rdf:resource="#DataModel"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#RecordBased -->
+	<owl:Class rdf:about="#RecordBased">
+		<rdfs:subClassOf rdf:resource="#DataModel"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#RelationBased -->
+	<owl:Class rdf:about="#RelationBased">
+		<rdfs:subClassOf rdf:resource="#DataModel"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#Snowflake -->
+	<owl:Class rdf:about="#Snowflake">
+		<rdfs:subClassOf rdf:resource="#DataModel"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#Spreadsheet -->
+	<owl:Class rdf:about="#Spreadsheet">
+		<rdfs:subClassOf rdf:resource="#Implementation"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#Thesaurus -->
+	<owl:Class rdf:about="#Thesaurus">
+		<rdfs:subClassOf rdf:resource="#NOR"/>
+	</owl:Class>
+	<!-- http://mccarthy.dia.fi.upm.es/ontologies/nmv.owl#XML -->
+	<owl:Class rdf:about="#XML">
+		<rdfs:subClassOf rdf:resource="#Implementation"/>
+	</owl:Class>
+	<!-- http://omv.ontoware.org/2005/05/ontology#Ontology -->
+	<owl:Class rdf:about="&ontology;Ontology"/>
+</rdf:RDF>
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->

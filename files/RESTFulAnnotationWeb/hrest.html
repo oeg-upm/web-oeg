@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<div class="service" id="g">
+
+<title>geonames</title>
+</div>
+</head>
+<body>
+<span class="label">
+<h1>geonames</h1>
+</span>
+<ul>
+<li>
+<a href="#resources">Resources</a>
+<ul>
+<li>
+<div class="operation" id="op1">
+<a href="#http://ws.geonames.org#countryInfo">http://ws.geonames.org/countryInfo</a>
+</div>
+<code class="address">
+http://ws.geonames.org/countryInfo
+</code>
+</li>
+</ul>
+</li>
+<li>
+<a href="#representations">Representations</a>
+<ul>
+<li>
+<a href="#N20025">Status Code 200 - text/xml (<abbr title="{http://wadl.dev.java.net/2009/02} ">geonames</abbr>)</a>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<div class="resource">
+<h3 id="http://ws.geonames.org#countryInfo">countryInfo</h3>
+<h6>Methods</h6>
+<div class="methods">
+<div class="method">
+<h4 id="http://ws.geonames.org#Method 1"><span class="method">GET</span></h4>
+<h6>request query parameters</h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<span class="input">
+<strong>country</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+</table>
+<h6>response parameters</h6>
+<table>
+<tr>
+<th>parameter</th>
+<th>value</th>
+<th>description</th>
+</tr>
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>countryCode</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>countryName</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>isoNumeric</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#positiveInteger">integer</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>isoAlpha3</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#positiveInteger">integer</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>fipsCode</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>continent</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>capital</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>areaInSqKm</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>population</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#positiveInteger">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>currencyCode</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>languages</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>geonameId</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#string">string</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+
+<tr>
+<td>
+<p>
+<span class="output">
+<strong>bBoxWest</strong>
+</span>
+</p>
+</td>
+<td>
+<p>
+<em>
+<a href="http://www.w3.org/TR/xmlschema-2/#decimal">decimal</a>
+</em>
+</p>
+<p>Default: <tt>ES</tt>
+</p>
+</td>
+<td />
+</tr>
+</table>
+<p>
+<em>available response representations:</em>
+</p>
+<ul>
+<li>
+<a href="#N20025">Status Code 200 - text/xml (<abbr title="{http://wadl.dev.java.net/2009/02} ">geonames</abbr>)</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="representations">Representations</h2>
+<h3 id="N20025">Status Code 200 - text/xml (<abbr title="{http://wadl.dev.java.net/2009/02} ">geonames</abbr>)</h3>
+<div class="representation">
+<h6>XML Schema</h6>
+<p>
+<em>Source: <a href="" />
+</em>
+</p>
+<pre />
+</div>
+</body>
+</html>
