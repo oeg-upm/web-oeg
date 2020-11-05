@@ -1,0 +1,531 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "This workflow will take SOLiD data files, convert to fastq, map with BOWTIE, filter only mapped reads and then do an analysis of Crosslinked vs Non Crosslinked DNA to identify potential open chromatin regions (FAIRE method).  It uses MACS to find these regions, so it is not perfect, but it does appear to work.", 
+    "format-version": "0.1", 
+    "name": "SOLiD Conversion Mapping for FAIRE", 
+    "steps": {
+        "0": {
+            "annotation": "Input fasta file for formaldehyde crosslinked sample.", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Input fasta file for formaldehyde crosslinked sample.", 
+                    "name": "Crosslinked FASTA"
+                }
+            ], 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 234.26666259765625, 
+                "top": 361.83334350585938
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Crosslinked FASTA\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": []
+        }, 
+        "1": {
+            "annotation": "Input qual file for formaldehyde crosslinked sample.", 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Input qual file for formaldehyde crosslinked sample.", 
+                    "name": "Crosslinked Qual"
+                }
+            ], 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 234.26666259765625, 
+                "top": 443.83332824707031
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Crosslinked Qual\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": []
+        }, 
+        "2": {
+            "annotation": "Input fasta file for formaldehyde crosslinked sample.", 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Input fasta file for formaldehyde crosslinked sample.", 
+                    "name": "Not Crosslinked FASTA"
+                }
+            ], 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 238.10000610351562, 
+                "top": 200
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Not Crosslinked FASTA\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": []
+        }, 
+        "3": {
+            "annotation": "Input qual file for Non-crosslinked sample.", 
+            "id": 3, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Input qual file for Non-crosslinked sample.", 
+                    "name": "Not Crosslinked Qual"
+                }
+            ], 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 239.10000610351562, 
+                "top": 268
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Not Crosslinked Qual\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": []
+        }, 
+        "4": {
+            "annotation": "Non-Crosslinked Fastq", 
+            "id": 4, 
+            "input_connections": {
+                "input1": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "input2": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Convert", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "fastqcssanger"
+                }, 
+                {
+                    "name": "out_file2", 
+                    "type": "fastqcssanger"
+                }
+            ], 
+            "position": {
+                "left": 442.76667785644531, 
+                "top": 385.26667785644531
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "HideDatasetActionout_file2": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file2"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "solid2fastq", 
+            "tool_state": "{\"input2\": \"null\", \"__page__\": 0, \"input1\": \"null\", \"qual\": \"\\\"10\\\"\", \"is_run\": \"{\\\"paired\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"trim_name\": \"\\\"\\\"\", \"double_encode\": \"\\\"\\\"\", \"trim_first_base\": \"\\\"\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "5": {
+            "annotation": "Crosslinked Fastq", 
+            "id": 5, 
+            "input_connections": {
+                "input1": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "input2": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Convert", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "fastqcssanger"
+                }, 
+                {
+                    "name": "out_file2", 
+                    "type": "fastqcssanger"
+                }
+            ], 
+            "position": {
+                "left": 455.60000610351562, 
+                "top": 216
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "HideDatasetActionout_file2": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file2"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "solid2fastq", 
+            "tool_state": "{\"input2\": \"null\", \"__page__\": 0, \"input1\": \"null\", \"qual\": \"\\\"10\\\"\", \"is_run\": \"{\\\"paired\\\": \\\"no\\\", \\\"__current_case__\\\": 1}\", \"trim_name\": \"\\\"\\\"\", \"double_encode\": \"\\\"\\\"\", \"trim_first_base\": \"\\\"\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "6": {
+            "annotation": "Maps Non Crosslinked reads to hg18", 
+            "id": 6, 
+            "input_connections": {
+                "singlePaired|sInput1": {
+                    "id": 4, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Map with Bowtie for SOLiD", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "sam"
+                }, 
+                {
+                    "name": "output_suppressed_reads_l", 
+                    "type": "fastqcssanger"
+                }, 
+                {
+                    "name": "output_suppressed_reads_r", 
+                    "type": "fastqcssanger"
+                }, 
+                {
+                    "name": "output_unmapped_reads_l", 
+                    "type": "fastqcssanger"
+                }, 
+                {
+                    "name": "output_unmapped_reads_r", 
+                    "type": "fastqcssanger"
+                }
+            ], 
+            "position": {
+                "left": 672.26667785644531, 
+                "top": 435.83332824707031
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie_color_wrappers/bowtie_color_wrapper/1.1.2", 
+            "tool_state": "{\"suppressHeader\": \"\\\"True\\\"\", \"__page__\": 0, \"refGenomeSource\": \"{\\\"genomeSource\\\": \\\"indexed\\\", \\\"index\\\": \\\"/galaxy/data/hg18/bowtie_index/cs/hg18\\\", \\\"__current_case__\\\": 0}\", \"singlePaired\": \"{\\\"sInput1\\\": null, \\\"sParams\\\": {\\\"sSettingsType\\\": \\\"preSet\\\", \\\"__current_case__\\\": 0}, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "7": {
+            "annotation": "Maps Crosslinked to hg18", 
+            "id": 7, 
+            "input_connections": {
+                "singlePaired|sInput1": {
+                    "id": 5, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Map with Bowtie for SOLiD", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "sam"
+                }, 
+                {
+                    "name": "output_suppressed_reads_l", 
+                    "type": "fastqcssanger"
+                }, 
+                {
+                    "name": "output_suppressed_reads_r", 
+                    "type": "fastqcssanger"
+                }, 
+                {
+                    "name": "output_unmapped_reads_l", 
+                    "type": "fastqcssanger"
+                }, 
+                {
+                    "name": "output_unmapped_reads_r", 
+                    "type": "fastqcssanger"
+                }
+            ], 
+            "position": {
+                "left": 680.60000610351562, 
+                "top": 223
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie_color_wrappers/bowtie_color_wrapper/1.1.2", 
+            "tool_state": "{\"suppressHeader\": \"\\\"True\\\"\", \"__page__\": 0, \"refGenomeSource\": \"{\\\"genomeSource\\\": \\\"indexed\\\", \\\"index\\\": \\\"/galaxy/data/hg18/bowtie_index/cs/hg18\\\", \\\"__current_case__\\\": 0}\", \"singlePaired\": \"{\\\"sInput1\\\": null, \\\"sParams\\\": {\\\"sSettingsType\\\": \\\"preSet\\\", \\\"__current_case__\\\": 0}, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "8": {
+            "annotation": "Counts total number of reads for QC.", 
+            "id": 8, 
+            "input_connections": {
+                "input": {
+                    "id": 6, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Count", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 701.43333435058594, 
+                "top": 545.51667785644531
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Count1", 
+            "tool_state": "{\"column\": \"{\\\"__class__\\\": \\\"UnvalidatedValue\\\", \\\"value\\\": [\\\"3\\\"]}\", \"input\": \"null\", \"delim\": \"\\\"T\\\"\", \"__page__\": 0}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "9": {
+            "annotation": "Only mapped reads Non-Crosslinked.", 
+            "id": 9, 
+            "input_connections": {
+                "input1": {
+                    "id": 6, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Filter SAM", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "sam"
+                }
+            ], 
+            "position": {
+                "left": 943.26666259765625, 
+                "top": 462.83332824707031
+            }, 
+            "post_job_actions": {
+                "EmailActionout_file1": {
+                    "action_arguments": {
+                        "host": "main.g2.bx.psu.edu"
+                    }, 
+                    "action_type": "EmailAction", 
+                    "output_name": "out_file1"
+                }, 
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "Non Crosslinked Mapped"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "sam_bw_filter", 
+            "tool_state": "{\"__page__\": 0, \"input1\": \"null\", \"bits\": \"[{\\\"states\\\": \\\"0\\\", \\\"__index__\\\": 0, \\\"flags\\\": \\\"--0x0004\\\"}]\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "10": {
+            "annotation": "Only mapped reads Crosslinked.", 
+            "id": 10, 
+            "input_connections": {
+                "input1": {
+                    "id": 7, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Filter SAM", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "sam"
+                }
+            ], 
+            "position": {
+                "left": 938.933349609375, 
+                "top": 251.48333740234375
+            }, 
+            "post_job_actions": {
+                "EmailActionout_file1": {
+                    "action_arguments": {
+                        "host": "main.g2.bx.psu.edu"
+                    }, 
+                    "action_type": "EmailAction", 
+                    "output_name": "out_file1"
+                }, 
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "Crosslinked Mapped"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "sam_bw_filter", 
+            "tool_state": "{\"__page__\": 0, \"input1\": \"null\", \"bits\": \"[{\\\"states\\\": \\\"0\\\", \\\"__index__\\\": 0, \\\"flags\\\": \\\"--0x0004\\\"}]\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "11": {
+            "annotation": "Counts total number of reads for QC.", 
+            "id": 11, 
+            "input_connections": {
+                "input": {
+                    "id": 7, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Count", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 708.53334045410156, 
+                "top": 328.94999694824219
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "Count1", 
+            "tool_state": "{\"column\": \"{\\\"__class__\\\": \\\"UnvalidatedValue\\\", \\\"value\\\": [\\\"3\\\"]}\", \"input\": \"null\", \"delim\": \"\\\"T\\\"\", \"__page__\": 0}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "12": {
+            "annotation": "Compares Crosslinked to non-Crosslnked mapped reads using mfold=5.  This may not be the best way to analyze the data, but it seems to work first pass.", 
+            "id": 12, 
+            "input_connections": {
+                "input_type|input_chipseq_file1": {
+                    "id": 10, 
+                    "output_name": "out_file1"
+                }, 
+                "input_type|input_control_file1": {
+                    "id": 9, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "MACS", 
+            "outputs": [
+                {
+                    "name": "output_bed_file", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "output_xls_to_interval_peaks_file", 
+                    "type": "interval"
+                }, 
+                {
+                    "name": "output_xls_to_interval_negative_peaks_file", 
+                    "type": "interval"
+                }, 
+                {
+                    "name": "output_treatment_wig_file", 
+                    "type": "wig"
+                }, 
+                {
+                    "name": "output_control_wig_file", 
+                    "type": "wig"
+                }, 
+                {
+                    "name": "output_extra_files", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 1164.433349609375, 
+                "top": 271
+            }, 
+            "post_job_actions": {
+                "EmailActionoutput_bed_file": {
+                    "action_arguments": {
+                        "host": "main.g2.bx.psu.edu"
+                    }, 
+                    "action_type": "EmailAction", 
+                    "output_name": "output_bed_file"
+                }, 
+                "HideDatasetActionoutput_control_wig_file": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_control_wig_file"
+                }, 
+                "HideDatasetActionoutput_treatment_wig_file": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_treatment_wig_file"
+                }, 
+                "HideDatasetActionoutput_xls_to_interval_negative_peaks_file": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_xls_to_interval_negative_peaks_file"
+                }, 
+                "HideDatasetActionoutput_xls_to_interval_peaks_file": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_xls_to_interval_peaks_file"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "peakcalling_macs", 
+            "tool_state": "{\"gsize\": \"\\\"2700000000.0\\\"\", \"tsize\": \"\\\"25\\\"\", \"futurefdr\": \"\\\"False\\\"\", \"__page__\": 0, \"diag_type\": \"{\\\"diag_type_selector\\\": \\\"no_diag\\\", \\\"__current_case__\\\": 1}\", \"input_type\": \"{\\\"input_control_file1\\\": null, \\\"input_chipseq_file1\\\": null, \\\"input_type_selector\\\": \\\"single_end\\\", \\\"__current_case__\\\": 1}\", \"wig_type\": \"{\\\"wig_type_selector\\\": \\\"no_wig\\\", \\\"__current_case__\\\": 1}\", \"nolambda\": \"\\\"False\\\"\", \"experiment_name\": \"\\\"FAIRE using MACS\\\"\", \"bw\": \"\\\"300\\\"\", \"xls_to_interval\": \"\\\"False\\\"\", \"nomodel_type\": \"{\\\"nomodel_type_selector\\\": \\\"create_model\\\", \\\"__current_case__\\\": 1}\", \"mfold\": \"\\\"5\\\"\", \"lambdaset\": \"\\\"1000,5000,10000\\\"\", \"pvalue\": \"\\\"1e-05\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }
+    }
+}

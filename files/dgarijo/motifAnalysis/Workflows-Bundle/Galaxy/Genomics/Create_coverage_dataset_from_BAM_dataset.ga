@@ -1,0 +1,89 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "Creates a simple coverage file from a BAM dataset input.", 
+    "format-version": "0.1", 
+    "name": "Create coverage dataset from BAM dataset", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "BAM Dataset"
+                }
+            ], 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 117, 
+                "top": 205
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"BAM Dataset\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "id": 1, 
+            "input_connections": {
+                "refOrHistory|input1": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Generate pileup", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 310, 
+                "top": 283
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "sam_pileup", 
+            "tool_state": "{\"__page__\": 0, \"c\": \"{\\\"consensus\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"indels\": \"\\\"no\\\"\", \"refOrHistory\": \"{\\\"input1\\\": null, \\\"reference\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"lastCol\": \"\\\"no\\\"\", \"mapCap\": \"\\\"60\\\"\"}", 
+            "tool_version": "1.1.1", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "id": 2, 
+            "input_connections": {
+                "input": {
+                    "id": 1, 
+                    "output_name": "output1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Cut", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 578, 
+                "top": 403
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "Cut1", 
+            "tool_state": "{\"columnList\": \"\\\"c1,c2,c4\\\"\", \"input\": \"null\", \"delimiter\": \"\\\"T\\\"\", \"__page__\": 0}", 
+            "tool_version": "1.0.1", 
+            "type": "tool", 
+            "user_outputs": []
+        }
+    }
+}

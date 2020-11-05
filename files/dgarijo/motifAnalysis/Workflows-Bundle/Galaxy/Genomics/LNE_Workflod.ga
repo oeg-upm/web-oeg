@@ -1,0 +1,69 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "Workflow genome collaboration", 
+    "format-version": "0.1", 
+    "name": "imported: LNE Workflod_test_lj", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "name": "Wiggle-to-Interval", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "interval"
+                }
+            ], 
+            "position": {
+                "left": 311.0999755859375, 
+                "top": 452
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "wiggle2simple1", 
+            "tool_state": "{\"input\": \"null\", \"__page__\": 0}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "1": {
+            "annotation": "Test", 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "name": "Add column", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 612.5, 
+                "top": 418.5
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "test"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "addValue", 
+            "tool_state": "{\"__page__\": 0, \"input\": \"null\", \"exp\": \"\\\"1\\\"\", \"iterate\": \"\\\"no\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }
+    }
+}

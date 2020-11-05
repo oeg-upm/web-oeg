@@ -1,0 +1,102 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "This workflow will allow you to trim out the 3' adaptor sequence, then filter your data based on size and quality.  It will output in FASTA format for use with miRanalyzer.", 
+    "format-version": "0.1", 
+    "name": "miRNA Secondary Analysis", 
+    "steps": {
+        "0": {
+            "annotation": "This step trims out the 3' adaptor sequence from Illumina reads and also cuts out 'junk' that is less than 15 bp.", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "name": "Clip", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 200, 
+                "top": 200
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "cshl_fastx_clipper", 
+            "tool_state": "{\"__page__\": 0, \"minlength\": \"\\\"15\\\"\", \"keepdelta\": \"\\\"0\\\"\", \"clip_source\": \"{\\\"clip_source_list\\\": \\\"user\\\", \\\"clip_sequence\\\": \\\"TCGTATGCCGTCTTCTGCTT\\\", \\\"__current_case__\\\": 0}\", \"KEEP_N\": \"\\\"-n\\\"\", \"DISCARD_OPTIONS\": \"\\\"-c\\\"\", \"input\": \"null\"}", 
+            "tool_version": "1.0.1", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "1": {
+            "annotation": "This step filters out low-quality data (a threshold of 20 ensures 99% accuracy) and also ensures trimmed sequences are still at least 15 bp long.", 
+            "id": 1, 
+            "input_connections": {
+                "input_file": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Filter FASTQ", 
+            "outputs": [
+                {
+                    "name": "output_file", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 379, 
+                "top": 306
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput_file": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_file"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "fastq_filter", 
+            "tool_state": "{\"__page__\": 0, \"max_num_deviants\": \"\\\"3\\\"\", \"paired_end\": \"\\\"False\\\"\", \"fastq_filters\": \"[]\", \"input_file\": \"null\", \"min_size\": \"\\\"15\\\"\", \"max_quality\": \"\\\"0.0\\\"\", \"min_quality\": \"\\\"20.0\\\"\", \"max_size\": \"\\\"0\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "2": {
+            "annotation": "This step converts your filtered dataset to FASTA format for use in miRanalyzer.", 
+            "id": 2, 
+            "input_connections": {
+                "input_file": {
+                    "id": 1, 
+                    "output_name": "output_file"
+                }
+            }, 
+            "inputs": [], 
+            "name": "FASTQ to FASTA", 
+            "outputs": [
+                {
+                    "name": "output_file", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 564, 
+                "top": 416
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "fastq_to_fasta_python", 
+            "tool_state": "{\"__page__\": 0, \"input_file\": \"null\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }
+    }
+}

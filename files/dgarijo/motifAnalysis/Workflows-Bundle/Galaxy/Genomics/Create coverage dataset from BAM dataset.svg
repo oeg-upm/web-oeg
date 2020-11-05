@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="stroke:black; fill:none; stroke-width:1px; stroke-linejoin:round; text-anchor:left" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, FreeSans, Sans, sans, sans-serif" height="703px" width="908.5px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 908.5 703">
+
+<g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M224.25 245L300 328"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M590.5 354L568 448"/>
+
+</g>
+
+</g>
+
+<g>
+
+<path d="M112 205L219.25 205L219.25 235L112 235Z" fill="#EBD9B2"/>
+
+<path d="M112 235L219.25 235L219.25 256L112 256Z" fill="#ffffff"/>
+
+<path d="M305 283L585.5 283L585.5 313L305 313Z" fill="#EBD9B2"/>
+
+<path d="M305 313L585.5 313L585.5 365L305 365Z" fill="#ffffff"/>
+
+<path d="M573 403L622.5 403L622.5 433L573 433Z" fill="#EBD9B2"/>
+
+<path d="M573 433L622.5 433L622.5 485L573 485Z" fill="#ffffff"/>
+
+</g>
+
+<g>
+
+<text y="225" x="117" stroke="none" font-size="14px" fill="black">Input dataset</text>
+
+<text y="250" x="117" stroke="none" font-size="10px" fill="black">output</text>
+
+<text y="303" x="310" stroke="none" font-size="14px" fill="black">Generate pileup</text>
+
+<text y="328" x="310" stroke="none" font-size="10px" fill="black">Select the BAM file to generate the pileup file for</text>
+
+<text y="359" x="310" stroke="none" font-size="10px" fill="black">output1</text>
+
+<text y="423" x="578" stroke="none" font-size="14px" fill="black">Cut</text>
+
+<text y="448" x="578" stroke="none" font-size="10px" fill="black">From</text>
+
+<text y="479" x="578" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<path d="M305 339L585.5 339"/>
+
+<circle cy="245" cx="219.25" r="5" fill="#ffffff"/>
+
+<path d="M573 459L622.5 459"/>
+
+<circle cy="354" cx="585.5" r="5" fill="#ffffff"/>
+
+</g>
+
+</svg>

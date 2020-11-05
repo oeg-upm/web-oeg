@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="stroke:black; fill:none; stroke-width:1px; stroke-linejoin:round; text-anchor:left" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, FreeSans, Sans, sans, sans-serif" height="501px" width="1361.0px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1361.0 501">
+
+<g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M307.25 240L415 246"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M529.5 272L630 245"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M706 271L850 245"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M964.5 271L1070 245"/>
+
+</g>
+
+</g>
+
+<g>
+
+<path d="M195 200L302.25 200L302.25 230L195 230Z" fill="#EBD9B2"/>
+
+<path d="M195 230L302.25 230L302.25 251L195 251Z" fill="#ffffff"/>
+
+<path d="M420 201L524.5 201L524.5 231L420 231Z" fill="#EBD9B2"/>
+
+<path d="M420 231L524.5 231L524.5 283L420 283Z" fill="#ffffff"/>
+
+<path d="M635 200L701 200L701 230L635 230Z" fill="#EBD9B2"/>
+
+<path d="M635 230L701 230L701 282L635 282Z" fill="#ffffff"/>
+
+<path d="M855 200L959.5 200L959.5 230L855 230Z" fill="#EBD9B2"/>
+
+<path d="M855 230L959.5 230L959.5 282L855 282Z" fill="#ffffff"/>
+
+<path d="M1075 200L1306 200L1306 230L1075 230Z" fill="#EBD9B2"/>
+
+<path d="M1075 230L1306 230L1306 378L1075 378Z" fill="#ffffff"/>
+
+</g>
+
+<g>
+
+<text y="220" x="200" stroke="none" font-size="14px" fill="black">Input dataset</text>
+
+<text y="245" x="200" stroke="none" font-size="10px" fill="black">output</text>
+
+<text y="221" x="425" stroke="none" font-size="14px" fill="black">BAM-to-SAM</text>
+
+<text y="246" x="425" stroke="none" font-size="10px" fill="black">BAM File to Convert</text>
+
+<text y="277" x="425" stroke="none" font-size="10px" fill="black">output1</text>
+
+<text y="220" x="640" stroke="none" font-size="14px" fill="black">Sort</text>
+
+<text y="245" x="640" stroke="none" font-size="10px" fill="black">Sort Dataset</text>
+
+<text y="276" x="640" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<text y="220" x="860" stroke="none" font-size="14px" fill="black">SAM-to-BAM</text>
+
+<text y="245" x="860" stroke="none" font-size="10px" fill="black">SAM File to Convert</text>
+
+<text y="276" x="860" stroke="none" font-size="10px" fill="black">output1</text>
+
+<text y="220" x="1080" stroke="none" font-size="14px" fill="black">MACS</text>
+
+<text y="245" x="1080" stroke="none" font-size="10px" fill="black">ChIP-Seq Tag File</text>
+
+<text y="261" x="1080" stroke="none" font-size="10px" fill="black">ChIP-Seq Control File</text>
+
+<text y="292" x="1080" stroke="none" font-size="10px" fill="black">output_bed_file</text>
+
+<text y="308" x="1080" stroke="none" font-size="10px" fill="black">output_xls_to_interval_peaks_file</text>
+
+<text y="324" x="1080" stroke="none" font-size="10px" fill="black">output_xls_to_interval_negative_peaks_file</text>
+
+<text y="340" x="1080" stroke="none" font-size="10px" fill="black">output_treatment_wig_file</text>
+
+<text y="356" x="1080" stroke="none" font-size="10px" fill="black">output_control_wig_file</text>
+
+<text y="372" x="1080" stroke="none" font-size="10px" fill="black">output_extra_files</text>
+
+<path d="M420 257L524.5 257"/>
+
+<circle cy="240" cx="302.25" r="5" fill="#ffffff"/>
+
+<path d="M635 256L701 256"/>
+
+<circle cy="272" cx="524.5" r="5" fill="#ffffff"/>
+
+<path d="M855 256L959.5 256"/>
+
+<circle cy="271" cx="701.0" r="5" fill="#ffffff"/>
+
+<path d="M1075 272L1306 272"/>
+
+<circle cy="271" cx="959.5" r="5" fill="#ffffff"/>
+
+</g>
+
+</svg>

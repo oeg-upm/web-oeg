@@ -1,0 +1,182 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "From the RNA-Seq analysis tutorial during the Functional Genomics Workshop 2012 https://caps.osu.edu/pfg-workshop", 
+    "format-version": "0.1", 
+    "name": "Alignment Mejia", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Reads wild type in FASTQ format"
+                }
+            ], 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 196, 
+                "top": 109
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Reads wild type in FASTQ format\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Reads from mutant in FASTQ format"
+                }
+            ], 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 198, 
+                "top": 306
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Reads from mutant in FASTQ format\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": []
+        }, 
+        "2": {
+            "annotation": "Alignment of cleanned reads to the Zea mays B73 genome", 
+            "id": 2, 
+            "input_connections": {
+                "input1": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Tophat for Illumina", 
+            "outputs": [
+                {
+                    "name": "insertions", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "deletions", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "junctions", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "accepted_hits", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 447, 
+                "top": 133
+            }, 
+            "post_job_actions": {
+                "HideDatasetActiondeletions": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "deletions"
+                }, 
+                "HideDatasetActioninsertions": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "insertions"
+                }, 
+                "HideDatasetActionjunctions": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "junctions"
+                }, 
+                "RenameDatasetActionaccepted_hits": {
+                    "action_arguments": {
+                        "newname": "Reads_WT_aligned.bam"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "accepted_hits"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "tophat", 
+            "tool_state": "{\"__page__\": 0, \"input1\": \"null\", \"refGenomeSource\": \"{\\\"genomeSource\\\": \\\"indexed\\\", \\\"index\\\": \\\"Zea_mays_B73_RefGen_v2\\\", \\\"__current_case__\\\": 0}\", \"singlePaired\": \"{\\\"sParams\\\": {\\\"sSettingsType\\\": \\\"preSet\\\", \\\"__current_case__\\\": 0}, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "1.5.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "3": {
+            "annotation": "Alignment of cleanned reads to the Zea mays B73 genome", 
+            "id": 3, 
+            "input_connections": {
+                "input1": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Tophat for Illumina", 
+            "outputs": [
+                {
+                    "name": "insertions", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "deletions", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "junctions", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "accepted_hits", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 445, 
+                "top": 374
+            }, 
+            "post_job_actions": {
+                "HideDatasetActiondeletions": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "deletions"
+                }, 
+                "HideDatasetActioninsertions": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "insertions"
+                }, 
+                "HideDatasetActionjunctions": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "junctions"
+                }, 
+                "RenameDatasetActionaccepted_hits": {
+                    "action_arguments": {
+                        "newname": "Reads_MUT_aligned.bam"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "accepted_hits"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "tophat", 
+            "tool_state": "{\"__page__\": 0, \"input1\": \"null\", \"refGenomeSource\": \"{\\\"genomeSource\\\": \\\"indexed\\\", \\\"index\\\": \\\"Zea_mays_B73_RefGen_v2\\\", \\\"__current_case__\\\": 0}\", \"singlePaired\": \"{\\\"sParams\\\": {\\\"sSettingsType\\\": \\\"preSet\\\", \\\"__current_case__\\\": 0}, \\\"sPaired\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "1.5.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }
+    }
+}

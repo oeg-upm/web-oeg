@@ -1,0 +1,167 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "Sort BAM files by Chrom Start and send to NGS:Peak Calling:\n MACS.", 
+    "format-version": "0.1", 
+    "name": "Sort BAM", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Input Dataset"
+                }
+            ], 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 200
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Input Dataset\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "id": 1, 
+            "input_connections": {
+                "input1": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "BAM-to-SAM", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "sam"
+                }
+            ], 
+            "position": {
+                "left": 425, 
+                "top": 201
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "bam_to_sam", 
+            "tool_state": "{\"header\": \"\\\"False\\\"\", \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/rn4.len\\\"\", \"__page__\": 0}", 
+            "tool_version": "1.0.3", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "id": 2, 
+            "input_connections": {
+                "input": {
+                    "id": 1, 
+                    "output_name": "output1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Sort", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 640, 
+                "top": 200
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "sort1", 
+            "tool_state": "{\"__page__\": 0, \"style\": \"\\\"num\\\"\", \"column\": \"{\\\"__class__\\\": \\\"UnvalidatedValue\\\", \\\"value\\\": \\\"3\\\"}\", \"order\": \"\\\"DESC\\\"\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/rn4.len\\\"\", \"column_set\": \"[{\\\"other_order\\\": \\\"DESC\\\", \\\"__index__\\\": 0, \\\"other_column\\\": {\\\"__class__\\\": \\\"UnvalidatedValue\\\", \\\"value\\\": \\\"4\\\"}, \\\"other_style\\\": \\\"num\\\"}]\"}", 
+            "tool_version": "1.0.1", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "id": 3, 
+            "input_connections": {
+                "source|input1": {
+                    "id": 2, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "SAM-to-BAM", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 860, 
+                "top": 200
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "sam_to_bam", 
+            "tool_state": "{\"source\": \"{\\\"index_source\\\": \\\"cached\\\", \\\"input1\\\": null, \\\"__current_case__\\\": 0}\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/rn4.len\\\"\", \"__page__\": 0}", 
+            "tool_version": "1.1.2", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "id": 4, 
+            "input_connections": {
+                "input_type|input_chipseq_file1": {
+                    "id": 3, 
+                    "output_name": "output1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "MACS", 
+            "outputs": [
+                {
+                    "name": "output_bed_file", 
+                    "type": "bed"
+                }, 
+                {
+                    "name": "output_xls_to_interval_peaks_file", 
+                    "type": "interval"
+                }, 
+                {
+                    "name": "output_xls_to_interval_negative_peaks_file", 
+                    "type": "interval"
+                }, 
+                {
+                    "name": "output_treatment_wig_file", 
+                    "type": "wig"
+                }, 
+                {
+                    "name": "output_control_wig_file", 
+                    "type": "wig"
+                }, 
+                {
+                    "name": "output_extra_files", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 1080, 
+                "top": 200
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "peakcalling_macs", 
+            "tool_state": "{\"gsize\": \"\\\"2700000000.0\\\"\", \"tsize\": \"\\\"25\\\"\", \"futurefdr\": \"\\\"True\\\"\", \"__page__\": 0, \"diag_type\": \"{\\\"diag_type_selector\\\": \\\"no_diag\\\", \\\"__current_case__\\\": 1}\", \"input_type\": \"{\\\"input_control_file1\\\": null, \\\"input_chipseq_file1\\\": null, \\\"input_type_selector\\\": \\\"single_end\\\", \\\"__current_case__\\\": 1}\", \"wig_type\": \"{\\\"wig_type_selector\\\": \\\"no_wig\\\", \\\"__current_case__\\\": 1}\", \"nolambda\": \"\\\"False\\\"\", \"experiment_name\": \"\\\"MACS in Galaxy\\\"\", \"bw\": \"\\\"300\\\"\", \"xls_to_interval\": \"\\\"False\\\"\", \"nomodel_type\": \"{\\\"nomodel_type_selector\\\": \\\"create_model\\\", \\\"__current_case__\\\": 1}\", \"mfold\": \"\\\"32\\\"\", \"lambdaset\": \"\\\"1000,5000,10000\\\"\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/rn4.len\\\"\", \"pvalue\": \"\\\"1e-05\\\"\"}", 
+            "tool_version": "1.0.1", 
+            "type": "tool", 
+            "user_outputs": []
+        }
+    }
+}

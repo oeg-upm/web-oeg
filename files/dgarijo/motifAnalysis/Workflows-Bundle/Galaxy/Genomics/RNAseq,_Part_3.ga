@@ -1,0 +1,75 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "Converts SAM to interval, then calculates coverage values for a given annotation.", 
+    "format-version": "0.1", 
+    "name": "Clone of 'imported: RNAseq, Part 3_test_lj", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "name": "Convert SAM", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "interval"
+                }
+            ], 
+            "position": {
+                "left": 272, 
+                "top": 232.5
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "sam2interval", 
+            "tool_state": "{\"print_all\": \"\\\"-p\\\"\", \"__page__\": 0, \"input1\": \"null\"}", 
+            "tool_version": "1.0.1", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "id": 1, 
+            "input_connections": {
+                "input2": {
+                    "id": 0, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Feature coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "interval"
+                }
+            ], 
+            "position": {
+                "left": 583, 
+                "top": 258.5
+            }, 
+            "post_job_actions": {
+                "RenameDatasetActionoutput": {
+                    "action_arguments": {
+                        "newname": "Gene Coverage Stats"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "featureCoverage1", 
+            "tool_state": "{\"input2\": \"null\", \"__page__\": 0, \"input1\": \"null\"}", 
+            "tool_version": "2.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }
+    }
+}

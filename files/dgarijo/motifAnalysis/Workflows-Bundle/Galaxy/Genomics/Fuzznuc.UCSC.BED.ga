@@ -1,0 +1,434 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "Takes a BED file from \"Get Data>UCSC Main table browser\", converts that to sequence, runs FUZZNUC and then computes the genomic coordinates of the hits and constructs a new UCSC compatible BED file as output. To include upstream/downstream regions, you can use \"Operate on Genomic Intervals>Get flanks\" followed by \"Concatenate\" on your BED before sending it to this workflow.", 
+    "format-version": "0.1", 
+    "name": "Clone of 'imported: Fuzznuc.UCSC.BED'_tests_lj", 
+    "steps": {
+        "0": {
+            "annotation": "This should be a BED file from UCSC.", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "This should be a BED file from UCSC.", 
+                    "name": "UCSC BED of GENEs"
+                }
+            ], 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 244, 
+                "top": 274
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"UCSC BED of GENEs\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "id": 1, 
+            "input_connections": {
+                "input": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Extract Genomic DNA", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 229, 
+                "top": 399
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Extract genomic DNA 1", 
+            "tool_state": "{\"out_format\": \"\\\"fasta\\\"\", \"__page__\": 0, \"interpret_features\": \"\\\"yes\\\"\", \"seq_source\": \"{\\\"index_source\\\": \\\"cached\\\", \\\"__current_case__\\\": 0}\", \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/hg19.len\\\"\"}", 
+            "tool_version": "2.2.1", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "2": {
+            "annotation": "ESRRA: AAGGTCA", 
+            "id": 2, 
+            "input_connections": {
+                "input1": {
+                    "id": 1, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool fuzznuc", 
+                    "name": "pattern"
+                }, 
+                {
+                    "description": "runtime parameter for tool fuzznuc", 
+                    "name": "mismatch"
+                }
+            ], 
+            "name": "fuzznuc", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "fuzznuc"
+                }
+            ], 
+            "position": {
+                "left": 248, 
+                "top": 543
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/emboss_5/EMBOSS: fuzznuc37/5.0.1", 
+            "tool_state": "{\"__page__\": 0, \"input1\": \"null\", \"out_format1\": \"\\\"gff\\\"\", \"pattern\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"complement\": \"\\\"yes\\\"\", \"mismatch\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/hg19.len\\\"\"}", 
+            "tool_version": "5.0.1", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "id": 3, 
+            "input_connections": {
+                "input": {
+                    "id": 2, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "GFF-to-BED", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "bed"
+                }
+            ], 
+            "position": {
+                "left": 241, 
+                "top": 681
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "gff2bed1", 
+            "tool_state": "{\"input\": \"null\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"__page__\": 0}", 
+            "tool_version": "1.0.1", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "id": 4, 
+            "input_connections": {
+                "input": {
+                    "id": 3, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Convert", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 237, 
+                "top": 810
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Convert characters1", 
+            "tool_state": "{\"__page__\": 0, \"convert_from\": \"\\\"U\\\"\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"input\": \"null\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "5": {
+            "annotation": "c12: Compute Genomic Start", 
+            "id": 5, 
+            "input_connections": {
+                "input": {
+                    "id": 4, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Compute", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 589, 
+                "top": 254
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Add_a_column1", 
+            "tool_state": "{\"__page__\": 0, \"cond\": \"\\\"c3+c6 if (c5==\\\\\\\"+\\\\\\\" and c11==\\\\\\\"+\\\\\\\" ) else (c3+c7-1 if (c5==\\\\\\\"+\\\\\\\" and c11==\\\\\\\"-\\\\\\\" ) else (c4-c7 if (c5==\\\\\\\"-\\\\\\\" and c11==\\\\\\\"+\\\\\\\" ) else c4-c6-1))\\\"\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"round\": \"\\\"yes\\\"\", \"input\": \"null\"}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "6": {
+            "annotation": "c13: Compute Genomic End", 
+            "id": 6, 
+            "input_connections": {
+                "input": {
+                    "id": 5, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Compute", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 596, 
+                "top": 367
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Add_a_column1", 
+            "tool_state": "{\"__page__\": 0, \"cond\": \"\\\"c3+c7 if (c5==\\\\\\\"+\\\\\\\" and c11==\\\\\\\"+\\\\\\\" ) else c3+c6+1 if (c5==\\\\\\\"+\\\\\\\" and c11==\\\\\\\"-\\\\\\\" ) else c4-c6 if (c5==\\\\\\\"-\\\\\\\" and c11==\\\\\\\"+\\\\\\\") else c4-c7+1 \\\"\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"round\": \"\\\"yes\\\"\", \"input\": \"null\"}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "7": {
+            "annotation": "c14: score", 
+            "id": 7, 
+            "input_connections": {
+                "input": {
+                    "id": 6, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Add column", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 608, 
+                "top": 477
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "addValue", 
+            "tool_state": "{\"__page__\": 0, \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"exp\": \"\\\"1000\\\"\", \"iterate\": \"\\\"no\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "8": {
+            "annotation": "c15: Compute final strand of match", 
+            "id": 8, 
+            "input_connections": {
+                "input": {
+                    "id": 7, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Compute", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 611, 
+                "top": 616
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Add_a_column1", 
+            "tool_state": "{\"input\": \"null\", \"cond\": \"\\\"\\\\\\\"+\\\\\\\" if (c5==\\\\\\\"+\\\\\\\" and c11==\\\\\\\"+\\\\\\\" ) else \\\\\\\"-\\\\\\\" if (c5==\\\\\\\"+\\\\\\\" and c11==\\\\\\\"-\\\\\\\") else \\\\\\\"-\\\\\\\" if (c5==\\\\\\\"-\\\\\\\" and c11==\\\\\\\"+\\\\\\\") else \\\\\\\"+\\\\\\\"\\\"\", \"round\": \"\\\"no\\\"\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "9": {
+            "annotation": "c16: hit number", 
+            "id": 9, 
+            "input_connections": {
+                "input": {
+                    "id": 8, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Add column", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 606, 
+                "top": 720
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "addValue", 
+            "tool_state": "{\"__page__\": 0, \"input\": \"null\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"exp\": \"\\\"1\\\"\", \"iterate\": \"\\\"yes\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "10": {
+            "annotation": "c17: name (hit number plus strand)", 
+            "id": 10, 
+            "input_connections": {
+                "input": {
+                    "id": 9, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Compute", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 609, 
+                "top": 824
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Add_a_column1", 
+            "tool_state": "{\"input\": \"null\", \"cond\": \"\\\"\\\\\\\"FUZZNUC(\\\\\\\"+c15+\\\\\\\")_\\\\\\\"+str(int(c16))\\\"\", \"round\": \"\\\"no\\\"\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "11": {
+            "annotation": "BED file listing FUZZNUC hits", 
+            "id": 11, 
+            "input_connections": {
+                "input": {
+                    "id": 10, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "Cut", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 906, 
+                "top": 497
+            }, 
+            "post_job_actions": {
+                "ChangeDatatypeActionout_file1": {
+                    "action_arguments": {
+                        "newtype": "bed"
+                    }, 
+                    "action_type": "ChangeDatatypeAction", 
+                    "output_name": "out_file1"
+                }, 
+                "EmailActionout_file1": {
+                    "action_arguments": {
+                        "host": "main.g2.bx.psu.edu"
+                    }, 
+                    "action_type": "EmailAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Cut1", 
+            "tool_state": "{\"columnList\": \"\\\"c2,c12,c13,c17,c14,c15\\\"\", \"input\": \"null\", \"delimiter\": \"\\\"T\\\"\", \"chromInfo\": \"\\\"/galaxy/home/g2main/galaxy_main/tool-data/shared/ucsc/chrom/hg19.len\\\"\", \"__page__\": 0}", 
+            "tool_version": "1.0.1", 
+            "type": "tool", 
+            "user_outputs": []
+        }
+    }
+}

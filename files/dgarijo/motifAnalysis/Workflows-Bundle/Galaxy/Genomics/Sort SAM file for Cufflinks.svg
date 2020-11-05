@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="stroke:black; fill:none; stroke-width:1px; stroke-linejoin:round; text-anchor:left" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, FreeSans, Sans, sans, sans-serif" height="755px" width="1016.0px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1016.0 755">
+
+<g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M279.25 317L382 426"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M279.25 317L384 227"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M485.5 452L577 500"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M487.5 253L791 323"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M653 526L791 339"/>
+
+</g>
+
+</g>
+
+<g>
+
+<path d="M167 277L274.25 277L274.25 307L167 307Z" fill="#EBD9B2"/>
+
+<path d="M167 307L274.25 307L274.25 328L167 328Z" fill="#ffffff"/>
+
+<path d="M387 381L480.5 381L480.5 411L387 411Z" fill="#EBD9B2"/>
+
+<path d="M387 411L480.5 411L480.5 463L387 463Z" fill="#ffffff"/>
+
+<path d="M389 182L482.5 182L482.5 212L389 212Z" fill="#EBD9B2"/>
+
+<path d="M389 212L482.5 212L482.5 264L389 264Z" fill="#ffffff"/>
+
+<path d="M582 455L648 455L648 485L582 485Z" fill="#EBD9B2"/>
+
+<path d="M582 485L648 485L648 537L582 537Z" fill="#ffffff"/>
+
+<path d="M796 278L961 278L961 308L796 308Z" fill="#EBD9B2"/>
+
+<path d="M796 308L961 308L961 376L796 376Z" fill="#ffffff"/>
+
+</g>
+
+<g>
+
+<text y="297" x="172" stroke="none" font-size="14px" fill="black">Input dataset</text>
+
+<text y="322" x="172" stroke="none" font-size="10px" fill="black">output</text>
+
+<text y="401" x="392" stroke="none" font-size="14px" fill="black">Select</text>
+
+<text y="426" x="392" stroke="none" font-size="10px" fill="black">Select lines from</text>
+
+<text y="457" x="392" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<text y="202" x="394" stroke="none" font-size="14px" fill="black">Select</text>
+
+<text y="227" x="394" stroke="none" font-size="10px" fill="black">Select lines from</text>
+
+<text y="258" x="394" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<text y="475" x="587" stroke="none" font-size="14px" fill="black">Sort</text>
+
+<text y="500" x="587" stroke="none" font-size="10px" fill="black">Sort Dataset</text>
+
+<text y="531" x="587" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<text y="298" x="801" stroke="none" font-size="14px" fill="black">Concatenate datasets</text>
+
+<text y="323" x="801" stroke="none" font-size="10px" fill="black">Concatenate Dataset</text>
+
+<text y="339" x="801" stroke="none" font-size="10px" fill="black">Dataset 1 &gt; Select</text>
+
+<text y="370" x="801" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<path d="M387 437L480.5 437"/>
+
+<circle cy="317" cx="274.25" r="5" fill="#ffffff"/>
+
+<path d="M389 238L482.5 238"/>
+
+<circle cy="317" cx="274.25" r="5" fill="#ffffff"/>
+
+<path d="M582 511L648 511"/>
+
+<circle cy="452" cx="480.5" r="5" fill="#ffffff"/>
+
+<path d="M796 350L961 350"/>
+
+<circle cy="253" cx="482.5" r="5" fill="#ffffff"/>
+
+<circle cy="526" cx="648.0" r="5" fill="#ffffff"/>
+
+</g>
+
+</svg>

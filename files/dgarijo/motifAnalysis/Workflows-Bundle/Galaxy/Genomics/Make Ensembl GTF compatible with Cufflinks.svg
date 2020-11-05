@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="stroke:black; fill:none; stroke-width:1px; stroke-linejoin:round; text-anchor:left" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, FreeSans, Sans, sans, sans-serif" height="985px" width="1048.25px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1048.25 985">
+
+<g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M207.25 333L333 254"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M207.25 333L354 730"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M392.5 280L447 364"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M539.5 390L500 493"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M617.25 519L526 587"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M413.5 756L881 552"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M585.5 613L881 536"/>
+
+</g>
+
+</g>
+
+<g>
+
+<path d="M95 293L202.25 293L202.25 323L95 323Z" fill="#EBD9B2"/>
+
+<path d="M95 323L202.25 323L202.25 344L95 344Z" fill="#ffffff"/>
+
+<path d="M338 209L387.5 209L387.5 239L338 239Z" fill="#EBD9B2"/>
+
+<path d="M338 239L387.5 239L387.5 291L338 291Z" fill="#ffffff"/>
+
+<path d="M359 685L408.5 685L408.5 715L359 715Z" fill="#EBD9B2"/>
+
+<path d="M359 715L408.5 715L408.5 767L359 767Z" fill="#ffffff"/>
+
+<path d="M452 319L534.5 319L534.5 349L452 349Z" fill="#EBD9B2"/>
+
+<path d="M452 349L534.5 349L534.5 401L452 401Z" fill="#ffffff"/>
+
+<path d="M505 448L612.25 448L612.25 478L505 478Z" fill="#EBD9B2"/>
+
+<path d="M505 478L612.25 478L612.25 530L505 530Z" fill="#ffffff"/>
+
+<path d="M531 542L580.5 542L580.5 572L531 572Z" fill="#EBD9B2"/>
+
+<path d="M531 572L580.5 572L580.5 624L531 624Z" fill="#ffffff"/>
+
+<path d="M886 491L935.5 491L935.5 521L886 521Z" fill="#EBD9B2"/>
+
+<path d="M886 521L935.5 521L935.5 589L886 589Z" fill="#ffffff"/>
+
+</g>
+
+<g>
+
+<text y="313" x="100" stroke="none" font-size="14px" fill="black">Input dataset</text>
+
+<text y="338" x="100" stroke="none" font-size="10px" fill="black">output</text>
+
+<text y="229" x="343" stroke="none" font-size="14px" fill="black">Cut</text>
+
+<text y="254" x="343" stroke="none" font-size="10px" fill="black">From</text>
+
+<text y="285" x="343" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<text y="705" x="364" stroke="none" font-size="14px" fill="black">Cut</text>
+
+<text y="730" x="364" stroke="none" font-size="10px" fill="black">From</text>
+
+<text y="761" x="364" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<text y="339" x="457" stroke="none" font-size="14px" fill="black">Add column</text>
+
+<text y="364" x="457" stroke="none" font-size="10px" fill="black">to Dataset</text>
+
+<text y="395" x="457" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<text y="468" x="510" stroke="none" font-size="14px" fill="black">Merge Columns</text>
+
+<text y="493" x="510" stroke="none" font-size="10px" fill="black">Select data</text>
+
+<text y="524" x="510" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<text y="562" x="536" stroke="none" font-size="14px" fill="black">Cut</text>
+
+<text y="587" x="536" stroke="none" font-size="10px" fill="black">From</text>
+
+<text y="618" x="536" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<text y="511" x="891" stroke="none" font-size="14px" fill="black">Paste</text>
+
+<text y="536" x="891" stroke="none" font-size="10px" fill="black">Paste</text>
+
+<text y="552" x="891" stroke="none" font-size="10px" fill="black">and</text>
+
+<text y="583" x="891" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<path d="M338 265L387.5 265"/>
+
+<circle cy="333" cx="202.25" r="5" fill="#ffffff"/>
+
+<path d="M359 741L408.5 741"/>
+
+<circle cy="333" cx="202.25" r="5" fill="#ffffff"/>
+
+<path d="M452 375L534.5 375"/>
+
+<circle cy="280" cx="387.5" r="5" fill="#ffffff"/>
+
+<path d="M505 504L612.25 504"/>
+
+<circle cy="390" cx="534.5" r="5" fill="#ffffff"/>
+
+<path d="M531 598L580.5 598"/>
+
+<circle cy="519" cx="612.25" r="5" fill="#ffffff"/>
+
+<path d="M886 563L935.5 563"/>
+
+<circle cy="756" cx="408.5" r="5" fill="#ffffff"/>
+
+<circle cy="613" cx="580.5" r="5" fill="#ffffff"/>
+
+</g>
+
+</svg>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="stroke:black; fill:none; stroke-width:1px; stroke-linejoin:round; text-anchor:left" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, FreeSans, Sans, sans, sans-serif" height="716px" width="729.5px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 729.5 716">
+
+<g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M282.5 271L369 351"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M478 377L554 461"/>
+
+</g>
+
+</g>
+
+<g>
+
+<path d="M195 200L277.5 200L277.5 230L195 230Z" fill="#EBD9B2"/>
+
+<path d="M195 230L277.5 230L277.5 282L195 282Z" fill="#ffffff"/>
+
+<path d="M374 306L473 306L473 336L374 336Z" fill="#EBD9B2"/>
+
+<path d="M374 336L473 336L473 388L374 388Z" fill="#ffffff"/>
+
+<path d="M559 416L674.5 416L674.5 446L559 446Z" fill="#EBD9B2"/>
+
+<path d="M559 446L674.5 446L674.5 498L559 498Z" fill="#ffffff"/>
+
+</g>
+
+<g>
+
+<text y="220" x="200" stroke="none" font-size="14px" fill="black">Clip</text>
+
+<text y="245" x="200" stroke="none" font-size="10px" fill="black">Library to clip</text>
+
+<text y="276" x="200" stroke="none" font-size="10px" fill="black">output</text>
+
+<text y="326" x="379" stroke="none" font-size="14px" fill="black">Filter FASTQ</text>
+
+<text y="351" x="379" stroke="none" font-size="10px" fill="black">FASTQ File</text>
+
+<text y="382" x="379" stroke="none" font-size="10px" fill="black">output_file</text>
+
+<text y="436" x="564" stroke="none" font-size="14px" fill="black">FASTQ to FASTA</text>
+
+<text y="461" x="564" stroke="none" font-size="10px" fill="black">FASTQ file to convert</text>
+
+<text y="492" x="564" stroke="none" font-size="10px" fill="black">output_file</text>
+
+<path d="M195 256L277.5 256"/>
+
+<path d="M374 362L473 362"/>
+
+<circle cy="271" cx="277.5" r="5" fill="#ffffff"/>
+
+<path d="M559 472L674.5 472"/>
+
+<circle cy="377" cx="473.0" r="5" fill="#ffffff"/>
+
+</g>
+
+</svg>

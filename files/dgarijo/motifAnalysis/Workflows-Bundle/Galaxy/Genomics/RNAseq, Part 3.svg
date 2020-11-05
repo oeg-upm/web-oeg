@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="stroke:black; fill:none; stroke-width:1px; stroke-linejoin:round; text-anchor:left" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, FreeSans, Sans, sans, sans-serif" height="558.5px" width="770.5px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 770.5 558.5">
+
+<g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M409.5 303.5L573 319.5"/>
+
+</g>
+
+</g>
+
+<g>
+
+<path d="M267 232.5L404.5 232.5L404.5 262.5L267 262.5Z" fill="#EBD9B2"/>
+
+<path d="M267 262.5L404.5 262.5L404.5 314.5L267 314.5Z" fill="#ffffff"/>
+
+<path d="M578 258.5L710 258.5L710 288.5L578 288.5Z" fill="#EBD9B2"/>
+
+<path d="M578 288.5L710 288.5L710 356.5L578 356.5Z" fill="#ffffff"/>
+
+</g>
+
+<g>
+
+<text y="252.5" x="272" stroke="none" font-size="14px" fill="black">Convert SAM</text>
+
+<text y="277.5" x="272" stroke="none" font-size="10px" fill="black">Select dataset to convert</text>
+
+<text y="308.5" x="272" stroke="none" font-size="10px" fill="black">out_file1</text>
+
+<text y="278.5" x="583" stroke="none" font-size="14px" fill="black">Feature coverage</text>
+
+<text y="303.5" x="583" stroke="none" font-size="10px" fill="black">What portion of</text>
+
+<text y="319.5" x="583" stroke="none" font-size="10px" fill="black">is covered by</text>
+
+<text y="350.5" x="583" stroke="none" font-size="10px" fill="black">output</text>
+
+<path d="M267 288.5L404.5 288.5"/>
+
+<path d="M578 330.5L710 330.5"/>
+
+<circle cy="303.5" cx="404.5" r="5" fill="#ffffff"/>
+
+</g>
+
+</svg>

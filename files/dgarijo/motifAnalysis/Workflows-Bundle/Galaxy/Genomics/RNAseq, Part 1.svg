@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="stroke:black; fill:none; stroke-width:1px; stroke-linejoin:round; text-anchor:left" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, FreeSans, Sans, sans, sans-serif" height="890.999984741px" width="875.5px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 875.5 890.999984741">
+
+<g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M307.25 240L251 393"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M368.25 419L436 542"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M660.5 568L601 636"/>
+
+</g>
+
+</g>
+
+<g>
+
+<path d="M195 200L302.25 200L302.25 230L195 230Z" fill="#EBD9B2"/>
+
+<path d="M195 230L302.25 230L302.25 251L195 251Z" fill="#ffffff"/>
+
+<path d="M256 348L363.25 348L363.25 378L256 378Z" fill="#EBD9B2"/>
+
+<path d="M256 378L363.25 378L363.25 430L256 430Z" fill="#ffffff"/>
+
+<path d="M441 497L655.5 497L655.5 527L441 527Z" fill="#EBD9B2"/>
+
+<path d="M441 527L655.5 527L655.5 579L441 579Z" fill="#ffffff"/>
+
+<path d="M606 591L820.5 591L820.5 621L606 621Z" fill="#EBD9B2"/>
+
+<path d="M606 621L820.5 621L820.5 673L606 673Z" fill="#ffffff"/>
+
+</g>
+
+<g>
+
+<text y="220" x="200" stroke="none" font-size="14px" fill="black">Input dataset</text>
+
+<text y="245" x="200" stroke="none" font-size="10px" fill="black">output</text>
+
+<text y="367.999984741" x="261" stroke="none" font-size="14px" fill="black">FASTQ Groomer</text>
+
+<text y="392.999984741" x="261" stroke="none" font-size="10px" fill="black">File to groom</text>
+
+<text y="423.999984741" x="261" stroke="none" font-size="10px" fill="black">output_file</text>
+
+<text y="516.999984741" x="446" stroke="none" font-size="14px" fill="black">Compute quality statistics</text>
+
+<text y="541.999984741" x="446" stroke="none" font-size="10px" fill="black">Library to analyse</text>
+
+<text y="572.999984741" x="446" stroke="none" font-size="10px" fill="black">output</text>
+
+<text y="610.999984741" x="611" stroke="none" font-size="14px" fill="black">Draw quality score boxplot</text>
+
+<text y="635.999984741" x="611" stroke="none" font-size="10px" fill="black">Statistics report file</text>
+
+<text y="666.999984741" x="611" stroke="none" font-size="10px" fill="black">output</text>
+
+<path d="M256 404L363.25 404"/>
+
+<circle cy="240" cx="302.25" r="5" fill="#ffffff"/>
+
+<path d="M441 553L655.5 553"/>
+
+<circle cy="418.999984741" cx="363.25" r="5" fill="#ffffff"/>
+
+<path d="M606 647L820.5 647"/>
+
+<circle cy="567.999984741" cx="655.5" r="5" fill="#ffffff"/>
+
+</g>
+
+</svg>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="stroke:black; fill:none; stroke-width:1px; stroke-linejoin:round; text-anchor:left" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, FreeSans, Sans, sans, sans-serif" height="674px" width="653.75px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 653.75 674">
+
+<g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M303.25 149L437 178"/>
+
+</g>
+
+<g>
+
+<defs>
+
+<marker refY="3.6" refX="1.5" markerUnits="strokeWidth" viewBox="0 0 10.5 7.2" stroke="none" id="true" markerWidth="10.5" fill="black" orient="auto" markerHeight="7.2">
+
+<path d="M 1.5 3.6 L 0 0 L 10.5 3.6 L 0 7.2 L 1.5 3.6 Z"/>
+
+</marker>
+
+</defs>
+
+<path marker-end="url(#true)" d="M305.25 346L435 419"/>
+
+</g>
+
+</g>
+
+<g>
+
+<path d="M191 109L298.25 109L298.25 139L191 139Z" fill="#EBD9B2"/>
+
+<path d="M191 139L298.25 139L298.25 160L191 160Z" fill="#ffffff"/>
+
+<path d="M193 306L300.25 306L300.25 336L193 336Z" fill="#EBD9B2"/>
+
+<path d="M193 336L300.25 336L300.25 357L193 357Z" fill="#ffffff"/>
+
+<path d="M442 133L598.75 133L598.75 163L442 163Z" fill="#EBD9B2"/>
+
+<path d="M442 163L598.75 163L598.75 263L442 263Z" fill="#ffffff"/>
+
+<path d="M440 374L596.75 374L596.75 404L440 404Z" fill="#EBD9B2"/>
+
+<path d="M440 404L596.75 404L596.75 504L440 504Z" fill="#ffffff"/>
+
+</g>
+
+<g>
+
+<text y="129" x="196" stroke="none" font-size="14px" fill="black">Input dataset</text>
+
+<text y="154" x="196" stroke="none" font-size="10px" fill="black">output</text>
+
+<text y="326" x="198" stroke="none" font-size="14px" fill="black">Input dataset</text>
+
+<text y="351" x="198" stroke="none" font-size="10px" fill="black">output</text>
+
+<text y="153" x="447" stroke="none" font-size="14px" fill="black">Tophat for Illumina</text>
+
+<text y="178" x="447" stroke="none" font-size="10px" fill="black">RNA-Seq FASTQ file</text>
+
+<text y="209" x="447" stroke="none" font-size="10px" fill="black">insertions</text>
+
+<text y="225" x="447" stroke="none" font-size="10px" fill="black">deletions</text>
+
+<text y="241" x="447" stroke="none" font-size="10px" fill="black">junctions</text>
+
+<text y="257" x="447" stroke="none" font-size="10px" fill="black">accepted_hits</text>
+
+<text y="394" x="445" stroke="none" font-size="14px" fill="black">Tophat for Illumina</text>
+
+<text y="419" x="445" stroke="none" font-size="10px" fill="black">RNA-Seq FASTQ file</text>
+
+<text y="450" x="445" stroke="none" font-size="10px" fill="black">insertions</text>
+
+<text y="466" x="445" stroke="none" font-size="10px" fill="black">deletions</text>
+
+<text y="482" x="445" stroke="none" font-size="10px" fill="black">junctions</text>
+
+<text y="498" x="445" stroke="none" font-size="10px" fill="black">accepted_hits</text>
+
+<path d="M442 189L598.75 189"/>
+
+<circle cy="149" cx="298.25" r="5" fill="#ffffff"/>
+
+<path d="M440 430L596.75 430"/>
+
+<circle cy="346" cx="300.25" r="5" fill="#ffffff"/>
+
+</g>
+
+</svg>
