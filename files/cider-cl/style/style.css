@@ -1,0 +1,12 @@
+BODY {font-family: arial, helvetica, tahoma; color: black; background-color: #CAD9E2; font-size:small}
+H1, H2, H3 {color: #306090}
+ADDRESS {font-style: italic}
+
+TABLE.cabecera  { border: 1px outset grey;
+                  border-collapse: separate; 
+                  background-color: #CAD9E2; 
+                  font-weight: bold; 
+                  width: 99%; } 
+TABLE.cabecera th { border: 1px inset grey; 
+                    background-color: white; } 
+TABLE.cabecera td { border: 1px inset grey; }

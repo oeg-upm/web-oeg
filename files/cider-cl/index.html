@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>CIDER-CL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" media="screen" href="style/style.css">
+</head>
+
+<body>
+<div align="left"> 
+
+       
+  
+ <table  border="0" cellspacing="8" cellpadding="8">
+    <tr> 
+      <td style="vertical-align:middle"> <img border="1" width="90" src="img/CIDER_logo_mini.jpg" style="vertical-align:middle" alt="logo CIDER"></td>
+      <td style="vertical-align:middle"> <font size="6"> <strong> <font color="green"> CIDER-CL</strong> </font>
+                                         <br> A system for monolingual and cross-lingual ontology alignment</font> </td>
+			 
+    </tr>   
+ </table>
+ 
+ <p> <b>CIDER-CL</b> (Cross-lingual CIDER) [1]  grounds on <a href="http://sid.cps.unizar.es/SEMANTICWEB/ALIGNMENT">CIDER</a> (Context
+and Inference baseD ontology alignER).
+ In its current version, cross-lingual capabilities have been added by including the use of <b>Cross-Lingual Explicit Semantic Analysis</b> (CL-ESA) [2] between entities documented in different natural languages. 
+ For monolingual comparison we use <b>SoftTFIDF</b> measure [3]. <b>Artificial neural networks</b> are used to combine elementary similarity computations. 
+ 
+ <p>
+CIDER-CL can operate in two modes: 
+<ul>
+<li> Ontology aligner: taking two OWL ontologies as input and giving their alignment as output in RDF.
+<li> Similarity service: taking two ontology entities as input and giving the similarity value between them as output. 
+</ul>
+The type of alignment that CIDER-CL obtains is <i>semantic equivalence</i>. In its current implementation the following languages are covered: English (EN), Spanish (ES), German (DE), and Dutch (NL).
+CIDER-CL is not intedeed to be used with large ontologies, particularly in the cross-lingual case.
+</p>
+ 
+<center> <img border="1" width="750" src="img/scheme.png"> </center>
+<br>
+The ontology alignment process carried  out by CIDER-CL is as follows:
+<ol>
+<li> CIDER-CL receives two ontologies as input (O1, O2 in the figure). The ontological context of each ontology entity is extracted and  enriched by applying a lightweight  inference mechanism.
+<li> Similarities are computed between different features of the ontological context (labels, comments, subterms, superterms, properties, etc.). SoftTFIDF and CL-ESA measures are used for monolingual and cross-lingual comparisons respectively.
+<li> The different similarities are combined within artificial neural networks to provide a final similarity degree for each pair of ontology entities. 
+<li> A matrix (M) with all similarities is obtained. The fnal alignment (A) is then extracted from this matrix, fnding the highest rated one-to-one relationships above a certain threshold.
+</ol>
+
+  <table  border="0" cellspacing="8" cellpadding="8">
+    <tr> 
+      <td background="images/color.gif" width="175"><strong>Prototypes and
+        demos:</strong></td>
+      <td bgcolor="#E6E6E6" style="vertical-align:middle">  CIDER-CL is available for download on <a href="https://github.com/jogracia/cider-cl/" target="_blank"> Github</a> . 
+      The CL-ESA implementation used by CIDER-CL is also available <a href="https://github.com/monnetproject/clesa/" target="_blank"> here </a> </td>
+    </tr>    
+    
+    
+    <tr> 
+      <td width="175"><strong>Experimental evaluation:</strong> </td>
+      <td bgcolor="#E6E6E6" > CIDER-CL participated in the <a href="http://oaei.ontologymatching.org/2013/">OAEI'13</a> evaluation campaign</td>
+    </tr>
+    </tr>
+   
+    <tr> 
+      <td background="images/color.gif" width="175" valign="top"><strong>Related publications:</strong> </td>
+<td bgcolor="#E6E6E6"> Click  
+          <a href="http://ra.cps.unizar.es:8080/PUBLICATIONS/library-show-publications.jsp?advanced=true&keywords=CIDER&entrytypes=Any&otherKeywords=&after=&before=&conditionAuthors=and&authors=&otherAuthors=&idBdi=idbdi+%3C%3E+%27NULL%27+&not1=&valueField1=&fieldConstraint1=Any+Field&joinConstraint1=AND&not2=&valueField2=&fieldConstraint2=Any+Field&joinConstraint2=AND&not3=&valueField3=&fieldConstraint3=Any+Field&presentation=customized&configuration=order+list&order0=year&asc0=DESC&order1=month&asc1=DESC&order2=&asc2=ASC">
+          here</a> 
+      </td>
+    </tr>
+    <tr> 
+      <td background="images/color.gif" width="175" valign="top"><strong>Contact:</strong> </td>
+      <td bgcolor="#E6E6E6"> Jorge Gracia at <img border="0" width="90" src="img/emailUPM.gif" style="vertical-align:middle" alt="jgracia at fi .upm .es">
+      </td>
+    </tr>
+
+   </table>
+
+<h3>References</h3>
+<p>[1] J. Gracia, K. Asooja, "Monolingual and Cross-lingual Ontology Matching with CIDER-CL: Evaluation Report for OAEI 2013", Proc. of OM’11 workshop @ISWC’13. </p>
+<p>[2] P. Sorg and P. Cimiano. “Exploiting wikipedia for cross-lingual and multilingual information retrieval”. Data Knowl. Eng., 74:26–45, Apr. 2012 </p>
+<p>[3] W.W. Cohen, P. Ravikumar, and S. E. Fienberg. “A comparison of string distance metrics for name-matching tasks”. In Proc. of IIWeb-03 workshop @ IJCAI’03 </p>
+
+</div>
+<p>&nbsp;</p>
+<p><small><i> Logotype based on a creation by Bert Dennison (with permission).</small></i></p>
+
+<hr>
+<img border="1" width="90" src="img/Logo_OEG.gif" style="vertical-align:middle" alt="logo OEG"> 	
+Developed at <a href="http://www.oeg-upm.net/">OEG group</a>, Universidad Politécnica de Madrid, 2013
+
+</body>
+</html>
