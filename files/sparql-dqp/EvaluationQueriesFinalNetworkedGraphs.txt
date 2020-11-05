@@ -1,0 +1,68 @@
+Genera un query plan distinto al mío (al de la especificación del SPARQL-WG)
+
+INFO: publishing initial contexts
+03-dic-2010 10:44:31 de.uni_koblenz.isweb.distributedSAIL.DistributedSAIL initialize
+INFO: published initial contexts
+SELECT  ?pubmed ?gene1 ?mesh ?descriptor 
+FROM NAMED <http://bio2rdf.org/sparql-pubmed>
+FROM NAMED <http://bio2rdf.org/pubmed>
+WHERE {
+       GRAPH  <http://bio2rdf.org/sparql-pubmed> {               ?gene1 <http://bio2rdf.org/geneid_resource:pubmed_xref> ?pubmed . }        GRAPH <http://bio2rdf.org/pubmed> {               ?pubmed <http://bio2rdf.org/pubmed_resource:meshref> ?mesh . ?mesh <http://bio2rdf.org/pubmed_resource:descriptor> ?descriptor . }}
+Projection
+   ProjectionElemList
+      ProjectionElem "pubmed"
+      ProjectionElem "gene1"
+      ProjectionElem "mesh"
+      ProjectionElem "descriptor"
+   Join
+      StatementPattern FROM NAMED CONTEXT
+         Var (name=gene1)
+         Var (name=-const-2, value=http://bio2rdf.org/geneid_resource:pubmed_xref, anonymous)
+         Var (name=pubmed)
+         Var (name=-const-1, value=http://bio2rdf.org/sparql-pubmed, anonymous)
+      Join
+         StatementPattern FROM NAMED CONTEXT
+            Var (name=pubmed)
+            Var (name=-const-4, value=http://bio2rdf.org/pubmed_resource:meshref, anonymous)
+            Var (name=mesh)
+            Var (name=-const-3, value=http://bio2rdf.org/pubmed, anonymous)
+         StatementPattern FROM NAMED CONTEXT
+            Var (name=mesh)
+            Var (name=-const-5, value=http://bio2rdf.org/pubmed_resource:descriptor, anonymous)
+            Var (name=descriptor)
+            Var (name=-const-3, value=http://bio2rdf.org/pubmed, anonymous)
+
+Start Time: 1291369471872
+03-dic-2010 10:44:31 de.uni_koblenz.isweb.distributedSAIL.DistributedConnection evaluate
+INFO: evaluate:
+03-dic-2010 10:44:31 de.uni_koblenz.isweb.distributedSAIL.DistributedConnection evaluate
+INFO: SELECT ?pubmed ?gene1 ?mesh ?descriptor  
+FROM NAMED <http://bio2rdf.org/sparql-pubmed>
+FROM NAMED <http://bio2rdf.org/pubmed>
+WHERE {
+	{GRAPH <http://bio2rdf.org/sparql-pubmed> {?gene1 <http://bio2rdf.org/geneid_resource:pubmed_xref> ?pubmed}}.
+	{{GRAPH <http://bio2rdf.org/pubmed> 
+		{?pubmed <http://bio2rdf.org/pubmed_resource:meshref> ?mesh}}.
+	{GRAPH <http://bio2rdf.org/pubmed> 
+		{?mesh <http://bio2rdf.org/pubmed_resource:descriptor> ?descriptor}}}}
+join
+join
+add var: gene1
+add var: pubmed
+add var: pubmed
+add var: mesh
+add var: descriptor
+03-dic-2010 10:44:31 de.uni_koblenz.isweb.distributedSAIL.DistributedConnection pushDownSlice
+INFO: push down slice:Projection
+   ProjectionElemList
+      ProjectionElem "pubmed"
+      ProjectionElem "gene1"
+      ProjectionElem "mesh"
+      ProjectionElem "descriptor"
+   Join
+
+03-dic-2010 10:44:31 info.aduna.lang.service.ServiceRegistry <init>
+INFO: Registered service class org.openrdf.query.resultio.binary.BinaryQueryResultParserFactory
+03-dic-2010 10:44:31 info.aduna.lang.service.ServiceRegistry <init>
+INFO: Registered service class org.openrdf.query.resultio.sparqlxml.SPARQLResultsXMLParserFactory
+total time: 46259
