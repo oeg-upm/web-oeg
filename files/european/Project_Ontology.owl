@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE rdf:RDF
+[
+<!ENTITY rdf  'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+<!ENTITY xsd  'http://www.w3.org/2001/XMLSchema#'>
+<!ENTITY dc   'http://purl.org/dc/elements/1.1/'>
+<!ENTITY owl  'http://www.w3.org/2002/07/owl#'>
+<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xml:base="webode://droz.dia.fi.upm.es/Project+Ontology#" xmlns="webode://droz.dia.fi.upm.es/Project+Ontology#">
+  <!--Ontology description-->
+  <owl:Ontology rdf:about="" />
+  <owl:Class rdf:ID="Milestone">
+    <rdfs:comment>A Milestone is a control point at which progress can be assessed.
+Milestones point at events, when objectives or intermediate goals are to be reached. A milestone is normally connected with the submission of deliverables.
+A milestone, by definition, has duration of zero and no effort. There is no work associated with a milestone. Usually a milestone is used as a project checkpoint to validate how the project is progressing and revalidate work.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Month" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Month" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Actual_Month" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Actual_Month" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_associated" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Deliverable" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_associated_with" />
+	<owl:allValuesFrom rdf:resource="#Workpackage" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_related_to" />
+	<owl:allValuesFrom rdf:resource="#Task" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Project">
+    <rdfs:comment>A Project is a complete programme of work to achieve defined goals and objectives within constraints of resources, time and other conditions. 
+Project means all the work as referred in Annex I to the contract.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Summary" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Summary" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Start_Date" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Start_Date" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Project_URL" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Project_URL" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Objectives" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Objectives" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#IST_Project_Number" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#IST_Project_Number" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Full_Name" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Full_Name" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#End_Date" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#End_Date" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Acronym" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Acronym" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_associated_1" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Documentation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_associated_meeting" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Event+Ontology#Event" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_developed_by" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Project_Participation_Period">
+    <rdfs:label>Project Participation Period</rdfs:label>
+    <rdfs:comment>It represents the period in which an organization participates in a project.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Starting_Date" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Starting_Date" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Ending_Date" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Ending_Date" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_participation_period_on" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_participation_period_on" />
+	<owl:allValuesFrom rdf:resource="#Project" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Task">
+    <rdfs:comment>Workpackages can be further divided into Tasks. Different tasks can proceed in parallel, within a workpackage, and cover one or more reporting periods of the project. A Task should end on a definite milestone and lead to at least one deliverable.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Start_Month" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Start_Month" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Name" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Name" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Duration" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Duration" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#belongs_to" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#belongs_to" />
+	<owl:allValuesFrom rdf:resource="#Workpackage" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_associated_2" />
+	<owl:allValuesFrom rdf:resource="#Milestone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_involved_partner" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_participant_leader" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_participant_leader" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_responsible_person" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_responsible_person" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#team_is_formed_by" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Workpackage">
+    <rdfs:comment>A Workpackage (WP) is a major subdivision of a project which leads to the completion of one of the goals, objectives or major deliverables within the project. Different workpackages can proceed in parallel within a project.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Wiki" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Wiki" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Start_Month_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Start_Month_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#PersonMonths" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#PersonMonths" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Objectives_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Objectives_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Name_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Name_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Measurable_Results" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Measurable_Results" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Mailing_List" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Mailing_List" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#End_Month" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#End_Month" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Description_of_Work" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Description_of_Work" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Abstract" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Abstract" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has" />
+	<owl:allValuesFrom rdf:resource="#Milestone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_associated_3" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Deliverable" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_contractor_leading" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_contractor_leading" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_involved_partner_1" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_participant_with_workload" />
+	<owl:allValuesFrom rdf:resource="#workpackage_workload" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_person_leader" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_person_leader" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_person_participant" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_made_up_of" />
+	<owl:allValuesFrom rdf:resource="#Task" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="workpackage_workload">
+    <rdfs:label>workpackage workload</rdfs:label>
+    <rdfs:comment>This term indicates the workload (that is, the number of person-months) of an organization that participates in a workpackage.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Personmonths" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Personmonths" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_workload_of" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_workload_of" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_workload_on_workpackage" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_workload_on_workpackage" />
+	<owl:allValuesFrom rdf:resource="#Workpackage" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:ID="Summary">
+    <rdfs:comment>Project's summary: objectives, description of work, milestones and expected results.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="End_Month">
+    <rdfs:label>End Month</rdfs:label>
+    <rdfs:comment>Relative end date. The month in which the workpackage finishes.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="End_Date">
+    <rdfs:label>End Date</rdfs:label>
+    <rdfs:comment>The end date of the project.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_related_to">
+    <rdfs:label>is related to</rdfs:label>
+    <rdfs:domain rdf:resource="#Milestone" />
+    <rdfs:range rdf:resource="#Task" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Month">
+    <rdfs:comment>Project month in which the milestone is acomplished.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Milestone" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Number_1">
+    <rdfs:comment>Workpackage number: WP1 .. WPn.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="team_is_formed_by">
+    <rdfs:label>team is formed by</rdfs:label>
+    <rdfs:domain rdf:resource="#Task" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Acronym">
+    <rdfs:comment>Project's acronym or abbreviation.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Start_Month">
+    <rdfs:label>Start Month</rdfs:label>
+    <rdfs:comment>Task's start month</rdfs:comment>
+    <rdfs:domain rdf:resource="#Task" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Objectives_1">
+    <rdfs:comment>Workpackage's objectives.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Mailing_List">
+    <rdfs:label>Mailing List</rdfs:label>
+    <rdfs:comment>The mailing list of the workpackage.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_person_participant">
+    <rdfs:label>has person participant</rdfs:label>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Personmonths">
+    <rdfs:comment>Number of person-months per a participant in a workpackage.</rdfs:comment>
+    <rdfs:domain rdf:resource="#workpackage_workload" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_developed_by">
+    <rdfs:label>is developed by</rdfs:label>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Start_Date">
+    <rdfs:label>Start Date</rdfs:label>
+    <rdfs:comment>The start date of the project.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="belongs_to">
+    <rdfs:label>belongs to</rdfs:label>
+    <rdfs:domain rdf:resource="#Task" />
+    <rdfs:range rdf:resource="#Workpackage" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_associated_meeting">
+    <rdfs:label>has associated meeting</rdfs:label>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Event+Ontology#Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_participant_leader">
+    <rdfs:label>has participant leader</rdfs:label>
+    <rdfs:domain rdf:resource="#Task" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Full_Name">
+    <rdfs:label>Full Name</rdfs:label>
+    <rdfs:comment>Project's full name.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_person_leader">
+    <rdfs:label>has person leader</rdfs:label>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="is_made_up_of">
+    <rdfs:label>is made up of</rdfs:label>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="#Task" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_associated_3">
+    <rdfs:label>has associated</rdfs:label>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Deliverable" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has">
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="#Milestone" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_responsible_person">
+    <rdfs:label>has responsible person</rdfs:label>
+    <rdfs:domain rdf:resource="#Task" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Wiki">
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Duration">
+    <rdfs:comment>The number of months that the task lasts</rdfs:comment>
+    <rdfs:domain rdf:resource="#Task" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_involved_partner_1">
+    <rdfs:label>has involved partner</rdfs:label>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Description_of_Work">
+    <rdfs:label>Description of Work</rdfs:label>
+    <rdfs:comment>A brief description of the work to do in the workpackage.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_participation_period_on">
+    <rdfs:label>is participation period on</rdfs:label>
+    <rdfs:domain rdf:resource="#Project_Participation_Period" />
+    <rdfs:range rdf:resource="#Project" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_associated">
+    <rdfs:label>has associated</rdfs:label>
+    <rdfs:domain rdf:resource="#Milestone" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Deliverable" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_associated_1">
+    <rdfs:label>has associated</rdfs:label>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Documentation" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="IST_Project_Number">
+    <rdfs:label>IST Project Number</rdfs:label>
+    <rdfs:comment>The code which identifies the project.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_workload_of">
+    <rdfs:label>is workload of</rdfs:label>
+    <rdfs:domain rdf:resource="#workpackage_workload" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Abstract">
+    <rdfs:comment>Workpackage's abstract.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_associated_with">
+    <rdfs:label>is associated with</rdfs:label>
+    <rdfs:domain rdf:resource="#Milestone" />
+    <rdfs:range rdf:resource="#Workpackage" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_involved_partner">
+    <rdfs:label>has involved partner</rdfs:label>
+    <rdfs:domain rdf:resource="#Task" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Ending_Date">
+    <rdfs:label>Ending Date</rdfs:label>
+    <rdfs:domain rdf:resource="#Project_Participation_Period" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_associated_2">
+    <rdfs:label>has associated</rdfs:label>
+    <rdfs:domain rdf:resource="#Task" />
+    <rdfs:range rdf:resource="#Milestone" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Name">
+    <rdfs:comment>Task's name</rdfs:comment>
+    <rdfs:domain rdf:resource="#Task" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Start_Month_1">
+    <rdfs:label>Start Month</rdfs:label>
+    <rdfs:comment>Relative start date for the work in a specific workpackage.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_workload_on_workpackage">
+    <rdfs:label>is workload on workpackage</rdfs:label>
+    <rdfs:domain rdf:resource="#workpackage_workload" />
+    <rdfs:range rdf:resource="#Workpackage" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Actual_Month">
+    <rdfs:label>Actual Month</rdfs:label>
+    <rdfs:comment>Actual project month in which the milestone is acomplished.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Milestone" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_participant_with_workload">
+    <rdfs:label>has participant with workload</rdfs:label>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="#workpackage_workload" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Starting_Date">
+    <rdfs:label>Starting Date</rdfs:label>
+    <rdfs:domain rdf:resource="#Project_Participation_Period" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Project_URL">
+    <rdfs:label>Project URL</rdfs:label>
+    <rdfs:comment>Project's web site.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Number">
+    <rdfs:comment>Task's number</rdfs:comment>
+    <rdfs:domain rdf:resource="#Task" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Measurable_Results">
+    <rdfs:label>Measurable Results</rdfs:label>
+    <rdfs:comment>A brief description of the expected results.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Objectives">
+    <rdfs:comment>Project's objectives.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Project" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="PersonMonths">
+    <rdfs:comment>The total number of person-months allocated to a workpackage.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_contractor_leading">
+    <rdfs:label>has contractor leading</rdfs:label>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Name_1">
+    <rdfs:comment>Workpackage's name.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Workpackage" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+</rdf:RDF>
+

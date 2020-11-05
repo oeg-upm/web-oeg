@@ -1,0 +1,233 @@
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://www.upm.es/ontologies/ugcs>
+
+Import: <http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl>
+
+Annotations: 
+    rdfs:comment "This ontology models the input and output data of the each one of the processes making up the method to develop ontologies from user-generated classification systems. "@en,
+    owl:versionInfo "1.0"
+
+AnnotationProperty: owl:versionInfo
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: <http://www.upm.es/ontologies/ugcs#hasNormalizedCateName>
+
+    Domain: 
+        <http://www.upm.es/ontologies/ugcs#NormalizedClasInst>
+    
+    Range: 
+        <http://www.upm.es/ontologies/ugcs#NormalizedCateName>
+    
+    
+ObjectProperty: <http://www.co-ode.org/ontologies/list.owl#hasContents>
+
+    
+ObjectProperty: <http://www.upm.es/ontologies/ugcs#hasCategoryName>
+
+    Domain: 
+        <http://www.upm.es/ontologies/ugcs#ClassificationInst>
+    
+    Range: 
+        <http://www.upm.es/ontologies/ugcs#CategoryName>
+    
+    
+ObjectProperty: <http://www.upm.es/ontologies/ugcs#hasTerm>
+
+    Domain: 
+        <http://www.upm.es/ontologies/ugcs#ContextualizedTerm>
+    
+    Range: 
+        <http://www.upm.es/ontologies/ugcs#Term>
+    
+    
+ObjectProperty: <http://www.upm.es/ontologies/ugcs#hasUser>
+
+    Domain: 
+        <http://www.upm.es/ontologies/ugcs#ClassificationInst>
+    
+    Range: 
+        <http://www.upm.es/ontologies/ugcs#User>
+    
+    
+ObjectProperty: <http://www.upm.es/ontologies/ugcs#partOf>
+
+    InverseOf: 
+        <http://www.upm.es/ontologies/ugcs#hasPart>
+    
+    
+ObjectProperty: <http://www.co-ode.org/ontologies/list.owl#isFollowedBy>
+
+    
+ObjectProperty: <http://www.upm.es/ontologies/ugcs#hasTermContext>
+
+    Domain: 
+        <http://www.upm.es/ontologies/ugcs#ContextualizedTerm>
+    
+    Range: 
+        <http://www.upm.es/ontologies/ugcs#ContextList>
+    
+    
+ObjectProperty: <http://www.upm.es/ontologies/ugcs#hasClassifiedResource>
+
+    Domain: 
+        <http://www.upm.es/ontologies/ugcs#ClassificationInst>
+    
+    Range: 
+        <http://www.upm.es/ontologies/ugcs#ClassifiedResource>
+    
+    
+ObjectProperty: <http://www.upm.es/ontologies/ugcs#hasPart>
+
+    InverseOf: 
+        <http://www.upm.es/ontologies/ugcs#partOf>
+    
+    
+Class: <http://www.upm.es/ontologies/ugcs#CategoryName>
+
+    Annotations: 
+        rdfs:comment "This class represents the category names (e.g., tags or list names) that users assign to classify resources.
+This class is related to the ClassificationInst Class by means of a taxonomy of partOf relations. In addition a ClassificationInst class is related to this class by means of a hasCategoryName object property. 
+"@en,
+        rdfs:label "Category Name"@en
+    
+    SubClassOf: 
+        <http://www.upm.es/ontologies/ugcs#partOf> some <http://www.upm.es/ontologies/ugcs#ClassificationInst>,
+        <http://www.upm.es/ontologies/ugcs#partOf> only <http://www.upm.es/ontologies/ugcs#ClassificationInst>
+    
+    DisjointWith: 
+        <http://www.upm.es/ontologies/ugcs#User>, <http://www.upm.es/ontologies/ugcs#ClassifiedResource>
+    
+    
+Class: <http://www.upm.es/ontologies/ugcs#ContextualizedTerm>
+
+    Annotations: 
+        rdfs:comment "This class represents a term contextualized by means of the classification instances on which it is used as a category name. Therefore this class is related to a Term class by means of a hasTerm object property, and to a list \"ContextList\" of ClassificationInst classes by means of a hasTermContext object property. "@en,
+        rdfs:label "Contextualized Term"@en
+    
+    
+Class: <http://www.upm.es/ontologies/ugcs#Term>
+
+    Annotations: 
+        rdfs:comment "This class represents a term. A term corresponds to a given category name of a normalized category name which has been extracted from the classification system. A term is partOf a ContextualizedTerm class. "@en,
+        rdfs:label "Term"@en
+    
+    SubClassOf: 
+        <http://www.upm.es/ontologies/ugcs#partOf> some <http://www.upm.es/ontologies/ugcs#ContextualizedTerm>,
+        <http://www.upm.es/ontologies/ugcs#partOf> only <http://www.upm.es/ontologies/ugcs#ContextualizedTerm>
+    
+    
+Class: <http://www.upm.es/ontologies/ugcs#User>
+
+    Annotations: 
+        rdfs:label "User"@en,
+        rdfs:comment "This class represents a user in the classification sytems. It is partOf a classification instance. "@en
+    
+    SubClassOf: 
+        <http://www.upm.es/ontologies/ugcs#partOf> some <http://www.upm.es/ontologies/ugcs#ClassificationInst>,
+        <http://www.upm.es/ontologies/ugcs#partOf> only <http://www.upm.es/ontologies/ugcs#ClassificationInst>
+    
+    DisjointWith: 
+        <http://www.upm.es/ontologies/ugcs#CategoryName>, <http://www.upm.es/ontologies/ugcs#ClassifiedResource>
+    
+    
+Class: <http://www.upm.es/ontologies/ugcs#ClassificationSystem>
+
+    Annotations: 
+        rdfs:comment "This class represents a Classification System consisting of a list of ClassificationInstances. Thus, this class is an OWLlist which has as content (hasContents) a classification liist and is followed by (isFollowedBy) another ClassificationSystem class. "@en,
+        rdfs:label "Classification System"@en
+    
+    SubClassOf: 
+        <http://www.co-ode.org/ontologies/list.owl#hasContents> only <http://www.upm.es/ontologies/ugcs#ClassificationInst>,
+        <http://www.co-ode.org/ontologies/list.owl#isFollowedBy> only <http://www.upm.es/ontologies/ugcs#ClassificationSystem>,
+        <http://www.co-ode.org/ontologies/list.owl#OWLList>
+    
+    
+Class: <http://www.upm.es/ontologies/ugcs#NormalizedClasInst>
+
+    Annotations: 
+        rdfs:label "Normalized Clas Inst"@en,
+        rdfs:comment "This class represents the normalized version of a ClassificationInst class where the category name has been turn into a normalized category name. This class is subClassOf the ClassificationInst class. It has been extended with a relation (hasNormalizedCateName) to a NormalizedCateName class which represents the normalized version of the category name. 
+In addition, a taxonomy of PartOf has been defined for the NormalizedCateName and the NormalizedClasInst. From this taxonomy is possible to inferred an inverse taxonomy of hasPart. "@en
+    
+    SubClassOf: 
+        <http://www.upm.es/ontologies/ugcs#ClassificationInst>
+    
+    
+Class: <http://www.co-ode.org/ontologies/list.owl#OWLList>
+
+    
+Class: <http://www.upm.es/ontologies/ugcs#ClassifiedResource>
+
+    Annotations: 
+        rdfs:label "Classified Resource"@en,
+        rdfs:comment "This class represents a classified resource (e.g., Web pages, pictures, and users) that users classifiy. 
+This class is related to the ClassificationInst Class by means of a taxonomy of partOf relations. In addition a ClassificationInst class is related to this class by means of a hasClassifiedResource object property. "@en
+    
+    SubClassOf: 
+        <http://www.upm.es/ontologies/ugcs#partOf> some <http://www.upm.es/ontologies/ugcs#ClassificationInst>,
+        <http://www.upm.es/ontologies/ugcs#partOf> only <http://www.upm.es/ontologies/ugcs#ClassificationInst>
+    
+    DisjointWith: 
+        <http://www.upm.es/ontologies/ugcs#CategoryName>, <http://www.upm.es/ontologies/ugcs#User>
+    
+    
+Class: <http://www.upm.es/ontologies/ugcs#NormalizedCateName>
+
+    Annotations: 
+        rdfs:comment "This class represents the normalized version of a category name. It is related to the NormalizedClasInst by means of a taxonomy of partOf relations. "@en,
+        rdfs:label "Normalized Cate Name"@en
+    
+    SubClassOf: 
+        <http://www.upm.es/ontologies/ugcs#partOf> some <http://www.upm.es/ontologies/ugcs#NormalizedClasInst>,
+        <http://www.upm.es/ontologies/ugcs#partOf> only <http://www.upm.es/ontologies/ugcs#NormalizedClasInst>
+    
+    
+Class: <http://www.upm.es/ontologies/ugcs#TransformationInstance>
+
+    Annotations: 
+        rdfs:comment "This class rerpresents the different ways that a normalizedClassInst can be turn into. According to the defined transformation this class has to be specified."@en,
+        rdfs:label "Transformation Instance"@en
+    
+    
+Class: <http://www.upm.es/ontologies/ugcs#ClassificationInst>
+
+    Annotations: 
+        rdfs:label "Classification Inst"@en,
+        rdfs:comment "This class represents a Classification Instance which is a tuple consisting of a User, a CategoryName, and a ClassifiedResource. Thus it is related by means of the following object properties with the aforementioned classes: hasUser, hasCategoryName, and hasClassifiedResource. 
+In addition, a taxonomy hasPart can be inferred from the inverse relation of the taxonomy PartOf defined between the component classes and the ClassificationInstance class. 
+
+"@en
+    
+    
+Class: <http://www.upm.es/ontologies/ugcs#ContextList>
+
+    Annotations: 
+        rdfs:label "Context List"@en,
+        rdfs:comment "This class represents the context of a given term. The context is defined as a list of ClassificationInst classes on which the term was used as a Category Name. The list is open since the number of members (ClassificationInst) is not predefined. 
+The list is defined by specifying the hasContents object property as ClassificationInst, and the isFollowedBy another ContextList. 
+In addition, this class is related using a taxonomy partOf to the ContextualizedTerm class. "@en
+    
+    SubClassOf: 
+        <http://www.upm.es/ontologies/ugcs#partOf> some <http://www.upm.es/ontologies/ugcs#ContextualizedTerm>,
+        <http://www.co-ode.org/ontologies/list.owl#isFollowedBy> only <http://www.upm.es/ontologies/ugcs#ContextList>,
+        <http://www.co-ode.org/ontologies/list.owl#hasContents> only <http://www.upm.es/ontologies/ugcs#ClassificationInst>,
+        <http://www.upm.es/ontologies/ugcs#partOf> only <http://www.upm.es/ontologies/ugcs#ContextualizedTerm>,
+        <http://www.co-ode.org/ontologies/list.owl#OWLList>
+    
+    

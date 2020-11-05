@@ -1,0 +1,1874 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE rdf:RDF
+[
+<!ENTITY rdf  'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+<!ENTITY xsd  'http://www.w3.org/2001/XMLSchema#'>
+<!ENTITY dc   'http://purl.org/dc/elements/1.1/'>
+<!ENTITY owl  'http://www.w3.org/2002/07/owl#'>
+<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xml:base="webode://droz.dia.fi.upm.es/Documentation+Ontology#" xmlns="webode://droz.dia.fi.upm.es/Documentation+Ontology#">
+  <!--Ontology description-->
+  <owl:Ontology rdf:about="" />
+  <owl:Class rdf:ID="Additional_Documentation">
+    <rdfs:label>Additional Documentation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Additional</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Agenda">
+    <rdfs:subClassOf rdf:resource="#Management_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agenda</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_associated_with" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_associated_with" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Event+Ontology#Event" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Annex">
+    <rdfs:subClassOf rdf:resource="#Project_Proposal" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Proposal" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Proposal" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Proposal" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annex</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Article">
+    <rdfs:comment>This attribute indicates a range of pages</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Publication" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Pages" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Pages" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Publication" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Publication" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Publication" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Article</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Article_in_Book">
+    <rdfs:label>Article in Book</rdfs:label>
+    <rdfs:comment>The book where the article is published</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Article" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Volume" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Volume" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Edition" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Edition" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Chapter" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Chapter" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Book_Name" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Book_Name" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Book</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Article_in_Conference">
+    <rdfs:label>Article in Conference</rdfs:label>
+    <rdfs:comment>The location where the conference took place.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Article" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Name_of_Conference" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Name_of_Conference" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Conference_Place" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Conference_Place" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article_2" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article_2" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article_2" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceeding</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Article_in_Journal">
+    <rdfs:label>Article in Journal</rdfs:label>
+    <rdfs:comment>The journal (magazine) where the article is published</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Article" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Volume_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Volume_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Journal_Name" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Journal_Name" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article_3" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article_3" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article_3" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Journal</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Article_in_Workshop">
+    <rdfs:label>Article in Workshop</rdfs:label>
+    <rdfs:comment>The name of the workshop where the article was presented</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Article" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Workshop_URL" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Workshop_URL" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Name_of_Workshop" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Name_of_Workshop" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Editors_of_Workshop" />
+	<owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Editors_of_Workshop" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Article_1" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Workshop</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="AudioConference_Minutes">
+    <rdfs:label>AudioConference Minutes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Minutes" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Minute" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Minute" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Minute" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AudioConference</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Bimonthly_Report">
+    <rdfs:label>Bimonthly Report</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Periodic_Report" />
+  </owl:Class>
+  <owl:Class rdf:ID="Book">
+    <rdfs:comment>The location where a book has been edited.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Publication" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number_of_Pages" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number_of_Pages" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#ISBN" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#ISBN" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Editorial" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Editorial" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Edition_Place" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Edition_Place" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Edition_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Edition_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Contract">
+    <rdfs:comment>A Contract regulates the rights and obligations of the European Commission (EC) and of the contractors the ones towards the others.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Project_Proposal" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Proposal_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Proposal_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Proposal_1" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contract</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cost_Statement">
+    <rdfs:label>Cost Statement</rdfs:label>
+    <rdfs:comment>It is a document writed by a Partner. This document must be generated every six months.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Management_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Period" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Period" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_6" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_6" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_6" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cost Statement</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Deliverable">
+    <rdfs:comment>A Deliverable is a Project Report.
+A Deliverable is an output of a workpackage in a tangible form.
+A Deliverable is any tangible outcome that is produced by the project.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Technical_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number_2" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Number_2" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Keywords" />
+	<owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Keywords" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Status" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Status" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Security" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Security" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Review_Comments" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Review_Comments" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Project_Month" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Project_Month" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Estimated_PersonMonths" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Estimated_PersonMonths" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Contractual_Date_of_Delivery" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Contractual_Date_of_Delivery" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Attached_software" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Actual_Date_of_Delivery" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Actual_Date_of_Delivery" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Used_personmonths" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Used_personmonths" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Technical_Document_2" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Technical_Document_2" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Technical_Document_2" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliverable</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_authoring_partner" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_authoring_partner" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_contact_person" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_contact_person" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_QA_partner" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_QA_partner" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_associated_with_1" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_associated_with_1" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Project+Ontology#Workpackage" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_delivered_in_1" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_delivered_in_1" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Project+Ontology#Milestone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Documentation">
+    <rdfs:comment>This term identifies the set of documents that are generated during a project.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Version_Number" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Version_Number" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Title" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Title" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Online_Version" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Online_PDF_Version" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Description" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Description" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Audience" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Abstract" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Abstract" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_author" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_associated_with_2" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_associated_with_2" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Project+Ontology#Project" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_generated_by" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="EC_Templates">
+    <rdfs:label>EC Templates</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Management_Documentation" />
+  </owl:Class>
+  <owl:Class rdf:ID="Fax">
+    <rdfs:subClassOf rdf:resource="#Management_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_2" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_2" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_2" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fax</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Final_Report">
+    <rdfs:label>Final Report</rdfs:label>
+    <rdfs:comment>A Final Report is an assessment of the entire project and summarise the work carried out and the results obtained. It may also include other documents or elements according to the circumstances or the particular requirements of a specific programme.
+A Final Report is a document associated with a project, that must be generated when the project finishes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Periodic_Report" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Periodic_Report" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Periodic_Report" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Periodic_Report" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Final Report</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Mail">
+    <rdfs:subClassOf rdf:resource="#Management_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_3" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_3" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_3" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mail</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Management_Documentation">
+    <rdfs:label>Management Documentation</rdfs:label>
+    <rdfs:comment>This terms refers to the set of documents relating to the project management.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_4" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_4" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_4" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Manual">
+    <rdfs:subClassOf rdf:resource="#Technical_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Technical_Document" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Technical_Document" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Technical_Document" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manual</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Master_Thesis">
+    <rdfs:label>Master Thesis</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Thesis" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Thesis" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Thesis" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Thesis" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Meeting_Minutes">
+    <rdfs:label>Meeting Minutes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Minutes" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Minute_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Minute_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Minute_1" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meeting</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Minutes">
+    <rdfs:subClassOf rdf:resource="#Management_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_1" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minute</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#summarize" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#summarize" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Event+Ontology#Project_Meeting" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Outreach_Publication">
+    <rdfs:label>Outreach Publication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Publication" />
+  </owl:Class>
+  <owl:Class rdf:ID="Periodic_Report">
+    <rdfs:label>Periodic Report</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Management_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_5" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_5" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_5" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Periodic Report</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PhD_Thesis">
+    <rdfs:label>PhD Thesis</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Thesis" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Thesis_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Thesis_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Thesis_1" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Press_Release">
+    <rdfs:label>Press Release</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Additional_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Media_Name" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Media_Name" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Date" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Date" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Project_Proposal">
+    <rdfs:label>Project Proposal</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Management_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_4" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_4" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Management_Document_4" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project Proposal</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Proposal">
+    <rdfs:subClassOf rdf:resource="#Project_Proposal" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Proposal_2" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Proposal_2" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Proposal_2" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proposal</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Publication">
+    <rdfs:comment>Set of published documents.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Keywords_1" />
+	<owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Keywords_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#EndDate" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#EndDate" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Date_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Date_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_1" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Publication</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Six_Month_Report">
+    <rdfs:label>Six Month Report</rdfs:label>
+    <rdfs:comment>It is a document which must be generated every six months and it is associated with a workpackage.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Periodic_Report" />
+    <rdfs:subClassOf rdf:resource="#Periodic_Report" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Periodic_Report_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Periodic_Report_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Periodic_Report_1" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Six Month Report</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Slides">
+    <rdfs:subClassOf rdf:resource="#Technical_Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Technical_Document_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Technical_Document_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Technical_Document_1" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slides</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Technical_Documentation">
+    <rdfs:label>Technical Documentation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_2" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_2" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_2" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_associated_with_3" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_associated_with_3" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Event+Ontology#Technical_Meeting" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Templates">
+    <rdfs:subClassOf rdf:resource="#Additional_Documentation" />
+  </owl:Class>
+  <owl:Class rdf:ID="Thesis">
+    <rdfs:subClassOf rdf:resource="#Documentation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_3" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_3" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Document_3" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thesis</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Web_Publication">
+    <rdfs:label>Web Publication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Publication" />
+  </owl:Class>
+  <owl:Class rdf:ID="Year_Report">
+    <rdfs:label>Year Report</rdfs:label>
+    <rdfs:comment>It is a document associated with a project, which must be generated every year.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Periodic_Report" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Periodic_Report_2" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Periodic_Report_2" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Periodic_Report_2" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Year Report</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:ID="Type_of_Document_3">
+    <rdfs:label>Type of Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Thesis" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_contact_person">
+    <rdfs:label>has contact person</rdfs:label>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Attached_software">
+    <rdfs:label>Attached software</rdfs:label>
+    <rdfs:comment>The software code/URLs/executables, etc., attached to the deliverable, if any.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Date_1">
+    <rdfs:comment>Publication date could be: "5-March-2004", "April 2002", etc. In NeOn just dd/mm/yyyy</rdfs:comment>
+    <rdfs:domain rdf:resource="#Publication" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Date">
+    <rdfs:domain rdf:resource="#Press_Release" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Article_2">
+    <rdfs:label>Type of Article</rdfs:label>
+    <rdfs:domain rdf:resource="#Article_in_Conference" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Keywords">
+    <rdfs:comment>Deliverable's keywords</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Periodic_Report">
+    <rdfs:label>Type of Periodic Report</rdfs:label>
+    <rdfs:domain rdf:resource="#Final_Report" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Document_4">
+    <rdfs:label>Type of Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Management_Documentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Management_Document_3">
+    <rdfs:label>Type of Management Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Mail" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Volume_1">
+    <rdfs:domain rdf:resource="#Article_in_Journal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Workshop_URL">
+    <rdfs:label>Workshop URL</rdfs:label>
+    <rdfs:domain rdf:resource="#Article_in_Workshop" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Management_Document_6">
+    <rdfs:label>Type of Management Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Cost_Statement" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Keywords_1">
+    <rdfs:comment>This attribute indicates the publication's keywords</rdfs:comment>
+    <rdfs:domain rdf:resource="#Publication" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="summarize">
+    <rdfs:domain rdf:resource="#Minutes" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Event+Ontology#Project_Meeting" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Number_2">
+    <rdfs:comment>The number of the deliverable</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Edition">
+    <rdfs:domain rdf:resource="#Article_in_Book" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Pages">
+    <rdfs:comment>This attribute indicates a range of pages</rdfs:comment>
+    <rdfs:domain rdf:resource="#Article" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Management_Document_5">
+    <rdfs:label>Type of Management Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Periodic_Report" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Used_personmonths">
+    <rdfs:label>Used person-months</rdfs:label>
+    <rdfs:comment>The number of used person-months</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Conference_Place">
+    <rdfs:label>Conference Place</rdfs:label>
+    <rdfs:comment>The location where the conference took place.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Article_in_Conference" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Minute_1">
+    <rdfs:label>Type of Minute</rdfs:label>
+    <rdfs:domain rdf:resource="#Meeting_Minutes" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Minute">
+    <rdfs:label>Type of Minute</rdfs:label>
+    <rdfs:domain rdf:resource="#AudioConference_Minutes" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Number_1">
+    <rdfs:domain rdf:resource="#Cost_Statement" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Project_Proposal">
+    <rdfs:label>Type of Project Proposal</rdfs:label>
+    <rdfs:domain rdf:resource="#Annex" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Thesis_1">
+    <rdfs:label>Type of Thesis</rdfs:label>
+    <rdfs:domain rdf:resource="#PhD_Thesis" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_associated_with_1">
+    <rdfs:label>is associated with</rdfs:label>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Project+Ontology#Workpackage" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Security">
+    <rdfs:comment>[PU, PP, RE, CO]. 
+(Dissemination level). 
+PU: Public, PP: Restricted to other programme participants, RE: Restricted to a group specified by the consortium, CO: Confidential</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Management_Document_2">
+    <rdfs:label>Type of Management Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Fax" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Chapter">
+    <rdfs:comment>The chapter where the article is published</rdfs:comment>
+    <rdfs:domain rdf:resource="#Article_in_Book" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_authoring_partner">
+    <rdfs:label>has authoring partner</rdfs:label>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Management_Document">
+    <rdfs:label>Type of Management Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Agenda" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Media_Name">
+    <rdfs:label>Media Name</rdfs:label>
+    <rdfs:domain rdf:resource="#Press_Release" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Publication">
+    <rdfs:label>Type of Publication</rdfs:label>
+    <rdfs:domain rdf:resource="#Article" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Editorial">
+    <rdfs:comment>Publishing</rdfs:comment>
+    <rdfs:domain rdf:resource="#Book" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Actual_Date_of_Delivery">
+    <rdfs:label>Actual Date of Delivery</rdfs:label>
+    <rdfs:comment>The actual date of delivery</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Contractual_Date_of_Delivery">
+    <rdfs:label>Contractual Date of Delivery</rdfs:label>
+    <rdfs:comment>The contractual date of delivery</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Editors_of_Workshop">
+    <rdfs:label>Editors of Workshop</rdfs:label>
+    <rdfs:domain rdf:resource="#Article_in_Workshop" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Review_Comments">
+    <rdfs:label>Review Comments</rdfs:label>
+    <rdfs:comment>The file with the comments from the Q.A. partner (using the review form)</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Article_3">
+    <rdfs:label>Type of Article</rdfs:label>
+    <rdfs:domain rdf:resource="#Article_in_Journal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Edition_1">
+    <rdfs:domain rdf:resource="#Book" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Management_Document_1">
+    <rdfs:label>Type of Management Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Minutes" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Book_Name">
+    <rdfs:label>Book Name</rdfs:label>
+    <rdfs:comment>The book where the article is published</rdfs:comment>
+    <rdfs:domain rdf:resource="#Article_in_Book" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Volume">
+    <rdfs:domain rdf:resource="#Article_in_Book" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Title">
+    <rdfs:comment>Documentation's title</rdfs:comment>
+    <rdfs:domain rdf:resource="#Documentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_generated_by">
+    <rdfs:label>is generated by</rdfs:label>
+    <rdfs:domain rdf:resource="#Documentation" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Online_Version">
+    <rdfs:label>On-line Version</rdfs:label>
+    <rdfs:comment>Documentation's on-line version. The format of this on-line version is .doc, .ppt, and so on.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Documentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Periodic_Report_2">
+    <rdfs:label>Type of Periodic Report</rdfs:label>
+    <rdfs:domain rdf:resource="#Year_Report" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type">
+    <rdfs:comment>[R, P, D, O].
+(Nature). 
+R: Report, P: Prototype, D: Demonstrator, O: Other</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Status">
+    <rdfs:comment>The status of the deliverable. [Draft, Q.A. (Quality Assurance), Final]</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Estimated_PersonMonths">
+    <rdfs:label>Estimated Person-Months</rdfs:label>
+    <rdfs:comment>The number of estimated person-months</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Article">
+    <rdfs:label>Type of Article</rdfs:label>
+    <rdfs:domain rdf:resource="#Article_in_Book" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_associated_with_3">
+    <rdfs:label>is associated with</rdfs:label>
+    <rdfs:domain rdf:resource="#Technical_Documentation" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Event+Ontology#Technical_Meeting" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Project_Month">
+    <rdfs:label>Project Month</rdfs:label>
+    <rdfs:comment>The month in which the deliverable will be available (Delivery date).</rdfs:comment>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Periodic_Report_1">
+    <rdfs:label>Type of Periodic Report</rdfs:label>
+    <rdfs:domain rdf:resource="#Six_Month_Report" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Thesis">
+    <rdfs:label>Type of Thesis</rdfs:label>
+    <rdfs:domain rdf:resource="#Master_Thesis" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Document_1">
+    <rdfs:label>Type of Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Publication" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Abstract">
+    <rdfs:comment>Documentation's abstract</rdfs:comment>
+    <rdfs:domain rdf:resource="#Documentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Technical_Document_1">
+    <rdfs:label>Type of Technical Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Slides" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_associated_with">
+    <rdfs:label>is associated with</rdfs:label>
+    <rdfs:domain rdf:resource="#Agenda" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Event+Ontology#Event" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Management_Document_4">
+    <rdfs:label>Type of Management Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Project_Proposal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Description">
+    <rdfs:domain rdf:resource="#Documentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Edition_Place">
+    <rdfs:label>Edition Place</rdfs:label>
+    <rdfs:comment>The location where a book has been edited.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Book" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_author">
+    <rdfs:label>has author</rdfs:label>
+    <rdfs:domain rdf:resource="#Documentation" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Version_Number">
+    <rdfs:label>Version Number</rdfs:label>
+    <rdfs:comment>Documentation's version number</rdfs:comment>
+    <rdfs:domain rdf:resource="#Documentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Journal_Name">
+    <rdfs:label>Journal Name</rdfs:label>
+    <rdfs:comment>The journal (magazine) where the article is published</rdfs:comment>
+    <rdfs:domain rdf:resource="#Article_in_Journal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_associated_with_2">
+    <rdfs:label>is associated with</rdfs:label>
+    <rdfs:domain rdf:resource="#Documentation" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Project+Ontology#Project" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Document">
+    <rdfs:label>Type of Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Additional_Documentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Technical_Document">
+    <rdfs:label>Type of Technical Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Manual" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="EndDate">
+    <rdfs:domain rdf:resource="#Publication" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_delivered_in_1">
+    <rdfs:label>is delivered in</rdfs:label>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Project+Ontology#Milestone" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Project_Proposal_2">
+    <rdfs:label>Type of Project Proposal</rdfs:label>
+    <rdfs:domain rdf:resource="#Proposal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Project_Proposal_1">
+    <rdfs:label>Type of Project Proposal</rdfs:label>
+    <rdfs:domain rdf:resource="#Contract" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Name_of_Conference">
+    <rdfs:label>Name of Conference</rdfs:label>
+    <rdfs:comment>The name of the conference where the article was presented</rdfs:comment>
+    <rdfs:domain rdf:resource="#Article_in_Conference" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Online_PDF_Version">
+    <rdfs:label>On-line PDF Version</rdfs:label>
+    <rdfs:comment>Documentation's on-line version in PDF format.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Documentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Article_1">
+    <rdfs:label>Type of Article</rdfs:label>
+    <rdfs:domain rdf:resource="#Article_in_Workshop" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Name_of_Workshop">
+    <rdfs:label>Name of Workshop</rdfs:label>
+    <rdfs:comment>The name of the workshop where the article was presented</rdfs:comment>
+    <rdfs:domain rdf:resource="#Article_in_Workshop" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Number_of_Pages">
+    <rdfs:label>Number of Pages</rdfs:label>
+    <rdfs:comment>Number of pages</rdfs:comment>
+    <rdfs:domain rdf:resource="#Book" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Period">
+    <rdfs:domain rdf:resource="#Cost_Statement" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Audience">
+    <rdfs:domain rdf:resource="#Documentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="ISBN">
+    <rdfs:comment>The code which identifies a book</rdfs:comment>
+    <rdfs:domain rdf:resource="#Book" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Technical_Document_2">
+    <rdfs:label>Type of Technical Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Document_2">
+    <rdfs:label>Type of Document</rdfs:label>
+    <rdfs:domain rdf:resource="#Technical_Documentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Number">
+    <rdfs:comment>The number of the journal where the article is published</rdfs:comment>
+    <rdfs:domain rdf:resource="#Article_in_Journal" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_QA_partner">
+    <rdfs:label>has Q.A. partner</rdfs:label>
+    <rdfs:domain rdf:resource="#Deliverable" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="#Deliverable">
+    <owl:disjointWith rdf:resource="#Manual" />
+    <owl:disjointWith rdf:resource="#Slides" />
+  </owl:Class>
+  <owl:Class rdf:about="#Manual">
+    <owl:disjointWith rdf:resource="#Slides" />
+  </owl:Class>
+  <owl:Class rdf:about="#Article">
+    <owl:disjointWith rdf:resource="#Book" />
+  </owl:Class>
+  <owl:Class rdf:about="#Final_Report">
+    <owl:disjointWith rdf:resource="#Six_Month_Report" />
+    <owl:disjointWith rdf:resource="#Year_Report" />
+  </owl:Class>
+  <owl:Class rdf:about="#Six_Month_Report">
+    <owl:disjointWith rdf:resource="#Year_Report" />
+  </owl:Class>
+  <owl:Class rdf:about="#Annex">
+    <owl:disjointWith rdf:resource="#Contract" />
+    <owl:disjointWith rdf:resource="#Proposal" />
+  </owl:Class>
+  <owl:Class rdf:about="#Contract">
+    <owl:disjointWith rdf:resource="#Proposal" />
+  </owl:Class>
+  <owl:Class rdf:about="#AudioConference_Minutes">
+    <owl:disjointWith rdf:resource="#Meeting_Minutes" />
+  </owl:Class>
+  <owl:Class rdf:about="#Additional_Documentation">
+    <owl:disjointWith rdf:resource="#Management_Documentation" />
+    <owl:disjointWith rdf:resource="#Publication" />
+    <owl:disjointWith rdf:resource="#Technical_Documentation" />
+    <owl:disjointWith rdf:resource="#Thesis" />
+  </owl:Class>
+  <owl:Class rdf:about="#Management_Documentation">
+    <owl:disjointWith rdf:resource="#Publication" />
+    <owl:disjointWith rdf:resource="#Technical_Documentation" />
+    <owl:disjointWith rdf:resource="#Thesis" />
+  </owl:Class>
+  <owl:Class rdf:about="#Publication">
+    <owl:disjointWith rdf:resource="#Technical_Documentation" />
+    <owl:disjointWith rdf:resource="#Thesis" />
+  </owl:Class>
+  <owl:Class rdf:about="#Technical_Documentation">
+    <owl:disjointWith rdf:resource="#Thesis" />
+  </owl:Class>
+  <owl:Class rdf:about="#Article_in_Book">
+    <owl:disjointWith rdf:resource="#Article_in_Conference" />
+    <owl:disjointWith rdf:resource="#Article_in_Journal" />
+    <owl:disjointWith rdf:resource="#Article_in_Workshop" />
+  </owl:Class>
+  <owl:Class rdf:about="#Article_in_Conference">
+    <owl:disjointWith rdf:resource="#Article_in_Journal" />
+    <owl:disjointWith rdf:resource="#Article_in_Workshop" />
+  </owl:Class>
+  <owl:Class rdf:about="#Article_in_Journal">
+    <owl:disjointWith rdf:resource="#Article_in_Workshop" />
+  </owl:Class>
+  <owl:Class rdf:about="#Agenda">
+    <owl:disjointWith rdf:resource="#Cost_Statement" />
+    <owl:disjointWith rdf:resource="#EC_Templates" />
+    <owl:disjointWith rdf:resource="#Fax" />
+    <owl:disjointWith rdf:resource="#Mail" />
+    <owl:disjointWith rdf:resource="#Minutes" />
+    <owl:disjointWith rdf:resource="#Periodic_Report" />
+    <owl:disjointWith rdf:resource="#Project_Proposal" />
+  </owl:Class>
+  <owl:Class rdf:about="#Cost_Statement">
+    <owl:disjointWith rdf:resource="#EC_Templates" />
+    <owl:disjointWith rdf:resource="#Fax" />
+    <owl:disjointWith rdf:resource="#Mail" />
+    <owl:disjointWith rdf:resource="#Minutes" />
+    <owl:disjointWith rdf:resource="#Periodic_Report" />
+    <owl:disjointWith rdf:resource="#Project_Proposal" />
+  </owl:Class>
+  <owl:Class rdf:about="#EC_Templates">
+    <owl:disjointWith rdf:resource="#Fax" />
+    <owl:disjointWith rdf:resource="#Mail" />
+    <owl:disjointWith rdf:resource="#Minutes" />
+    <owl:disjointWith rdf:resource="#Periodic_Report" />
+    <owl:disjointWith rdf:resource="#Project_Proposal" />
+  </owl:Class>
+  <owl:Class rdf:about="#Fax">
+    <owl:disjointWith rdf:resource="#Mail" />
+    <owl:disjointWith rdf:resource="#Minutes" />
+    <owl:disjointWith rdf:resource="#Periodic_Report" />
+    <owl:disjointWith rdf:resource="#Project_Proposal" />
+  </owl:Class>
+  <owl:Class rdf:about="#Mail">
+    <owl:disjointWith rdf:resource="#Minutes" />
+    <owl:disjointWith rdf:resource="#Periodic_Report" />
+    <owl:disjointWith rdf:resource="#Project_Proposal" />
+  </owl:Class>
+  <owl:Class rdf:about="#Minutes">
+    <owl:disjointWith rdf:resource="#Periodic_Report" />
+    <owl:disjointWith rdf:resource="#Project_Proposal" />
+  </owl:Class>
+  <owl:Class rdf:about="#Periodic_Report">
+    <owl:disjointWith rdf:resource="#Project_Proposal" />
+  </owl:Class>
+  <owl:Class rdf:about="#Thesis">
+    <owl:unionOf rdf:parseType="Collection">
+      <owl:Class rdf:about="#Master_Thesis" />
+      <owl:Class rdf:about="#PhD_Thesis" />
+    </owl:unionOf>
+  </owl:Class>
+</rdf:RDF>
+

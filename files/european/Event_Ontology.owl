@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE rdf:RDF
+[
+<!ENTITY rdf  'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+<!ENTITY xsd  'http://www.w3.org/2001/XMLSchema#'>
+<!ENTITY dc   'http://purl.org/dc/elements/1.1/'>
+<!ENTITY owl  'http://www.w3.org/2002/07/owl#'>
+<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xml:base="webode://droz.dia.fi.upm.es/Event+Ontology#" xmlns="webode://droz.dia.fi.upm.es/Event+Ontology#">
+  <!--Ontology description-->
+  <owl:Ontology rdf:about="" />
+  <owl:Class rdf:ID="Audio_Conference">
+    <rdfs:label>Audio Conference</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Project_Meeting" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Meeting" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Meeting" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Meeting" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AudioConference</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Clustering_Meeting">
+    <rdfs:label>Clustering Meeting</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Event" />
+  </owl:Class>
+  <owl:Class rdf:ID="Concertation_Meeting">
+    <rdfs:label>Concertation Meeting</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Event" />
+  </owl:Class>
+  <owl:Class rdf:ID="Conference">
+    <rdfs:subClassOf rdf:resource="#Event" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#includes_Workshop" />
+	<owl:allValuesFrom rdf:resource="#Workshop" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Course">
+    <rdfs:subClassOf rdf:resource="#Event" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_given_by_1" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_located_at_1" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_located_at_1" />
+	<owl:allValuesFrom rdf:resource="#Event" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Demonstration">
+    <rdfs:comment>[0:00 .. 23:59]</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Event" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Hour" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Hour" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_located_at" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_located_at" />
+	<owl:allValuesFrom rdf:resource="#Event" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_made_by" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Event">
+    <rdfs:comment>This attribute refers to web page, file, or both.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Name" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Name" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Place" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Place" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Start_Date" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Start_Date" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#End_Date" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#End_Date" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Description" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Description" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#About" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Audience" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_agenda" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_agenda" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Agenda" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_participant" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#includes_course" />
+	<owl:allValuesFrom rdf:resource="#Course" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#includes_demonstration" />
+	<owl:allValuesFrom rdf:resource="#Demonstration" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#includes_presentation" />
+	<owl:allValuesFrom rdf:resource="#Presentation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#includes_talk" />
+	<owl:allValuesFrom rdf:resource="#Talk" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_prepared_by" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Flash_Meeting">
+    <rdfs:label>Flash Meeting</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Project_Meeting" />
+  </owl:Class>
+  <owl:Class rdf:ID="Plenary_Meeting">
+    <rdfs:label>Plenary Meeting</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Project_Meeting" />
+  </owl:Class>
+  <owl:Class rdf:ID="Presentation">
+    <rdfs:comment>[0:00 .. 23:59]</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Event" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Hour_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Hour_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_located_at_3" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_located_at_3" />
+	<owl:allValuesFrom rdf:resource="#Event" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_made_by_1" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Project_Meeting">
+    <rdfs:label>Project Meeting</rdfs:label>
+    <rdfs:comment>A Project meetings is a meeting concerning the supervision, monitoring and evaluation of the project.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Event" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Meeting" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Meeting" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Meeting" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project Meeting</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_associated_minutes" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_associated_minutes" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Minutes" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Review">
+    <rdfs:subClassOf rdf:resource="#Project_Meeting" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Meeting_2" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Meeting_2" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Meeting_2" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Review</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Semantic_Web_Event">
+    <rdfs:label>Semantic Web Event</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Event" />
+  </owl:Class>
+  <owl:Class rdf:ID="Sponsorship">
+    <rdfs:subClassOf rdf:resource="#Event" />
+  </owl:Class>
+  <owl:Class rdf:ID="Standardization_Meeting">
+    <rdfs:label>Standardization Meeting</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Event" />
+  </owl:Class>
+  <owl:Class rdf:ID="Summer_School">
+    <rdfs:label>Summer School</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Event" />
+  </owl:Class>
+  <owl:Class rdf:ID="Survey">
+    <rdfs:subClassOf rdf:resource="#Event" />
+  </owl:Class>
+  <owl:Class rdf:ID="Talk">
+    <rdfs:comment>[0:00 .. 23:59]</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Event" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Hour_2" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Hour_2" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_given_by" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_given_by" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_located_at_2" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_located_at_2" />
+	<owl:allValuesFrom rdf:resource="#Event" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Technical_Meeting">
+    <rdfs:label>Technical Meeting</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Project_Meeting" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Meeting_1" />
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Meeting_1" />
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#Type_of_Project_Meeting_1" />
+	<owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#has_associated" />
+	<owl:allValuesFrom rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Technical_Documentation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Tutorial">
+    <rdfs:subClassOf rdf:resource="#Event" />
+  </owl:Class>
+  <owl:Class rdf:ID="Workshop">
+    <rdfs:subClassOf rdf:resource="#Event" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_located_at_Conference" />
+	<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	<owl:onProperty rdf:resource="#is_located_at_Conference" />
+	<owl:allValuesFrom rdf:resource="#Conference" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="has_associated">
+    <rdfs:label>has associated</rdfs:label>
+    <rdfs:domain rdf:resource="#Technical_Meeting" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Technical_Documentation" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Hour">
+    <rdfs:comment>[0:00 .. 23:59]</rdfs:comment>
+    <rdfs:domain rdf:resource="#Demonstration" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_located_at_1">
+    <rdfs:label>is located at</rdfs:label>
+    <rdfs:domain rdf:resource="#Course" />
+    <rdfs:range rdf:resource="#Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_participant">
+    <rdfs:label>has participant</rdfs:label>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="is_made_by">
+    <rdfs:label>is made by</rdfs:label>
+    <rdfs:domain rdf:resource="#Demonstration" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="is_prepared_by">
+    <rdfs:label>is prepared by</rdfs:label>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Organization+Ontology#Organization" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Project_Meeting_1">
+    <rdfs:label>Type of Project Meeting</rdfs:label>
+    <rdfs:domain rdf:resource="#Technical_Meeting" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_located_at_Conference">
+    <rdfs:label>is located at Conference</rdfs:label>
+    <rdfs:domain rdf:resource="#Workshop" />
+    <rdfs:range rdf:resource="#Conference" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Description">
+    <rdfs:comment>Meeting's description</rdfs:comment>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_associated_minutes">
+    <rdfs:label>has associated minutes</rdfs:label>
+    <rdfs:domain rdf:resource="#Project_Meeting" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Minutes" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="End_Date">
+    <rdfs:label>End Date</rdfs:label>
+    <rdfs:comment>The date when the meeting finishes.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Hour_1">
+    <rdfs:comment>[0:00 .. 23:59]</rdfs:comment>
+    <rdfs:domain rdf:resource="#Presentation" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="About">
+    <rdfs:comment>This attribute refers to web page, file, or both.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_given_by_1">
+    <rdfs:label>is given by</rdfs:label>
+    <rdfs:domain rdf:resource="#Course" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="includes_course">
+    <rdfs:label>includes course</rdfs:label>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="#Course" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Name">
+    <rdfs:comment>The name of the meeting</rdfs:comment>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Hour_2">
+    <rdfs:comment>[0:00 .. 23:59]</rdfs:comment>
+    <rdfs:domain rdf:resource="#Talk" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="includes_demonstration">
+    <rdfs:label>includes demonstration</rdfs:label>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="#Demonstration" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="is_located_at">
+    <rdfs:label>is located at</rdfs:label>
+    <rdfs:domain rdf:resource="#Demonstration" />
+    <rdfs:range rdf:resource="#Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="is_made_by_1">
+    <rdfs:label>is made by</rdfs:label>
+    <rdfs:domain rdf:resource="#Presentation" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Project_Meeting_2">
+    <rdfs:label>Type of Project Meeting</rdfs:label>
+    <rdfs:domain rdf:resource="#Review" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Project_Meeting">
+    <rdfs:label>Type of Project Meeting</rdfs:label>
+    <rdfs:domain rdf:resource="#Audio_Conference" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Place">
+    <rdfs:comment>The location where the meeting takes place</rdfs:comment>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Start_Date">
+    <rdfs:label>Start Date</rdfs:label>
+    <rdfs:comment>The date when the meeting starts</rdfs:comment>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_given_by">
+    <rdfs:label>is given by</rdfs:label>
+    <rdfs:domain rdf:resource="#Talk" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Person+Ontology#Person" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="includes_Workshop">
+    <rdfs:label>includes Workshop</rdfs:label>
+    <rdfs:domain rdf:resource="#Conference" />
+    <rdfs:range rdf:resource="#Workshop" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="includes_talk">
+    <rdfs:label>includes talk</rdfs:label>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="#Talk" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Type_of_Meeting">
+    <rdfs:label>Type of Meeting</rdfs:label>
+    <rdfs:domain rdf:resource="#Project_Meeting" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="is_located_at_2">
+    <rdfs:label>is located at</rdfs:label>
+    <rdfs:domain rdf:resource="#Talk" />
+    <rdfs:range rdf:resource="#Event" />
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Audience">
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:ID="has_agenda">
+    <rdfs:label>has agenda</rdfs:label>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="webode://droz.dia.fi.upm.es/Documentation+Ontology#Agenda" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="is_located_at_3">
+    <rdfs:label>is located at</rdfs:label>
+    <rdfs:domain rdf:resource="#Presentation" />
+    <rdfs:range rdf:resource="#Event" />
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="includes_presentation">
+    <rdfs:label>includes presentation</rdfs:label>
+    <rdfs:domain rdf:resource="#Event" />
+    <rdfs:range rdf:resource="#Presentation" />
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="#Audio_Conference">
+    <owl:disjointWith rdf:resource="#Plenary_Meeting" />
+    <owl:disjointWith rdf:resource="#Review" />
+    <owl:disjointWith rdf:resource="#Technical_Meeting" />
+  </owl:Class>
+  <owl:Class rdf:about="#Plenary_Meeting">
+    <owl:disjointWith rdf:resource="#Review" />
+    <owl:disjointWith rdf:resource="#Technical_Meeting" />
+  </owl:Class>
+  <owl:Class rdf:about="#Review">
+    <owl:disjointWith rdf:resource="#Technical_Meeting" />
+  </owl:Class>
+</rdf:RDF>
+
