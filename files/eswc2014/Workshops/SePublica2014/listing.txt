@@ -1,0 +1,29 @@
+This text file is UTF-8 encoded.
+
+ID: 1
+Title: What is in the proceedings? Combining publisher’s and researcher’s perspectives
+Authors: Volha Bryl, Aliaksandr Birukou, Kai Eckert, Mirjam Kessler
+
+ID: 2
+Title: Ornithology Based on Linking Bird Observations with Weather Data
+Authors: Mikko Koho, Eero Hyvönen, Aleksi Lehikoinen
+
+ID: 3
+Title: Supporting Researchers with a Semantic Literature Management Wiki
+Authors: Bahar Sateli, René Witte
+
+ID: 4
+Title: SMART Research using Linked Data - Sharing Research Data for Integrated Water Resources Management in the Lower Jordan Valley
+Authors: Benedikt Kämpgen, David Riepl, Jochen Klinger
+	
+ID: 5
+Title: Describing bibliographic references in RDF
+Authors: Angelo Di Iorio, Andrea Giovanni Nuzzolese, Silvio Peroni, David Shotton, Fabio Vitali
+
+ID: 6
+Title: Supporting Information Sharing for Re-Use and Analysis of Scientific Research Publication Data
+Authors: Fajar J. Ekaputra, Marta Sabou, Estefania Serral, Stefan Biffl
+
+ID: 7
+Title: A review of ontologies for describing scholarly and scientific documents
+Authors: Almudena Ruiz Iniesta, Oscar Corcho

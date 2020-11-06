@@ -1,0 +1,8 @@
+3	Raul Palma, Oscar Corcho, José Manuel Gómez-Pérez and Cezary Mazurek. ROHub – A digital library of Research Objects supporting scientists towards reproducible science
+23	Francesco Ronzano, Gerard Casamayor Del Bosque and Horacio Saggion. Semantify CEUR-WS Proceedings: towards the automatic generation of highly descriptive scholarly publishing Linked Datasets
+26	Maxim Kolchin and Fedor Kozlov. Unstable markup: A template-based information extraction from web sites with unstable markup
+2	Rinke Hoekstra, Paul Groth and Marat Charlaganov. Linkitup: Semantic Publishing of Research Data
+4	Francesco Osborne and Enrico Motta. Understanding Research Dynamics
+6	Iana Atanassova and Marc Bertin. Faceted Semantic Search for Scientific Publications
+30	Anastasia Dimou, Miel Vander Sande, Pieter Colpaert, Laurens De Vocht, Ruben Verborgh, Erik Mannens and Rik Van de Walle. Extraction and Semantic Annotation of Workshop Proceedings in HTML using RML
+21	Marc Bertin and Iana Atanassova. Hybrid Approach for the Semantic Processing of Scientific Papers

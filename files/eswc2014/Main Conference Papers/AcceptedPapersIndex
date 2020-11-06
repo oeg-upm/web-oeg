@@ -1,0 +1,50 @@
+16	Yannis Tzitzikas, Nikos Minadakis, Yannis Marketakis, Pavlos Fafalios, Carlo Allocca, Michalis Mountantonakis and Ioanna Zidianaki	Matware: Constructing and Exploiting Domain Specific Warehouses by Aggregating Semantic Data	
+20	Xin Wang, Thanassis Tiropanis and Hugh C. Davis	Optimising Linked Data Queries Using Runtime Statistics in the Presence of Co-reference	
+26	Danyun Xu, Gong Cheng and Yuzhong Qu	Facilitating Human Intervention in Coreference Resolution with Comparative Entity Summaries	
+31	Dan Scott	Seeding Structured Data by Default via Open Source Library Systems	
+33	Carlos Pedrinaci, Jorge Cardoso and Torsten Leidig	Linked USDL: a Vocabulary for Web-scale Service Trading
+35	Christina Lantzaki, Thanos Yannakis, Yannis Tzitzikas and Anastasia Analyti	Generating Synthetic RDF Data with Connected Blank Nodes for Benchmarking
+36	Ali Khalili, Sören Auer and Axel-Cyrille Ngonga Ngomo	conTEXT -- Lightweight Text Analytics using Linked Data	
+37	Minyi Guo, Yi Liu, Jie Li, Huakang Li and Bei Xu	A Knowledge Based Approach for Tackling Mislabeled Multi-class Big Social Data
+38	Martin Peters, Christopher Brink, Sabine Sachweh and Albert Zündorf	Scaling Parallel Rule-based Reasoning
+39	Dominik Wienand and Heiko Paulheim	Detecting Incorrect Numerical Data in DBpedia
+43	Thomas Gottron and Christian Gottron	Perplexity of Index Models over Evolving Linked Data
+47	Jörg-Uwe Kietz, Floarea Serban, Simon Fischer and Abraham Bernstein	"Semantics Inside!'' But let's not tell the Data Miners: Intelligent Support for Data Mining
+50	Muhammad Saleem and Axel-Cyrille Ngonga Ngomo	HiBISCuS: Hypergraph-Based Source Selection for SPARQL Endpoint Federation
+53	Andreas Wagner, Veli Bicer and Thanh Tran	Pay-as-you-go Approximate Join Top-k Processing for the Web of Data
+65	Benjamin Zapilko and Brigitte Mathiak	Object Property Matching utilizing the Overlap between Imported Ontologies
+67	Johann Schaible, Thomas Gottron and Ansgar Scherp	Survey on Common Strategies of Vocabulary Reuse in Linked Open Data Modeling
+68	Kia Teymourian and Adrian Paschke	Plan-Based Semantic Enrichment of Event Streams
+73	Thomas Gottron, Ansgar Scherp and Stefan Scheglmann	Providing Alternative Declarative Descriptions for Entity Sets using Parallel Concept Lattices
+76	Olivier Curé, Guillaume Blin, Dominique Revuz and David Célestin Faye	WaterFowl: a Compact, Self-indexed and Inference-enabled RDF Store
+80	Andreas Kasten, Ansgar Scherp and Peter Schauß	A Framework for Iterative Signing of Graph Data on the Web
+81	Luca Costabello	Error-Tolerant RDF Subgraph Matching for Adaptive Presentation of Linked Data on Mobile
+82	Axel-Cyrille Ngonga Ngomo, Mohamed Sherif and Klaus Lyko	Unsupervised Link Discovery Through Knowledge Base Repair
+84	Besnik Fetahu, Stefan Dietze, Bernardo Pereira Nunes, Marco Antonio Casanova, Davide Taibi and Wolfgang Nejdl	A Scalable Approach for Efficiently Generating Structured Dataset Topic Profiles
+87	Duy Dinh, Julio Cesar Dos Reis, Cedric Pruski, Marcos Da Silveira and Chantal Reynaud	Identifying change patterns of concept attributes in ontology evolution
+93	Hassan Saif, Miriam Fernandez, Yulan He and Harith Alani	SentiCircles for Contextual and Conceptual Semantic Sentiment Analysis of Twitter
+106	Tobias Kuhn and Michel Dumontier	Trusty URIs: Verifiable, Immutable, and Permanent Digital Artifacts for Linked Data
+108	Saisai Gong, Wei Hu and Yuzhong Qu	Leveraging Distributed Human Computation and Consensus Partition for Entity Coreference
+118	Shen Gao, Thomas Scharrenbach and Abraham Bernstein	The CLOCK Data-Aware Eviction Approach: Towards Processing Linked Data Streams with Limited Resources
+124	Paul Warren, Paul Mulholland, Trevor Collins and Enrico Motta	The usability of Description Logics: Understanding the cognitive difficulties presented by Description Logics
+127	Ilaria Tiddi, Mathieu D'Aquin and Enrico Motta	Dedalo: looking for Clusters Explanations in a Labyrinth of Linked Data
+133	Roberto De Virgilio and Antonio Maccioni	Distributed Keyword Search over RDF via MapReduce
+134	Arnab Dutta, Christian Meilicke and Simone Paolo Ponzetto	A Probabilistic Approach for Integrating Heterogeneous Knowledge Sources
+139	Rakebul Hasan	Generating and Summarizing Explanations for Linked Data
+140	Mauro Dragoni, Alessio Bosca, Matteo Casu and Chiara Di Francescomarino	Using Semantic and Domain-based Information in CLIR Systems
+144	Norberto Fernández García, Jesús Arias Fisteus, Luis Sánchez Fernández, Damaris Fuentes-Lorenzo and Óscar Corcho	RDSZ: An approach for lossless RDF stream compression
+145	Yuan Ren, Artemis Parvizi, Chris Mellish, Jeff Z. Pan, Kees Van Deemter and Robert Stevens	Towards Competency Question-driven Ontology Authoring
+146	Giorgos Stoilos	Ontology-Based Data Access Using Rewriting, OWL 2 RL Systems and Repairing
+154	Francesco Osborne, Giuseppe Scavo and Enrico Motta	Identifying diachronic topic-based research communities by clustering shared research trajectories
+168	Elena Cabrio, Alessio Palmero Aprosio and Serena Villata	These are your rights: A Natural Language Processing Approach to Automated RDF Licenses Generation
+175	Paolo Ciancarini, Angelo Di Iorio, Andrea Giovanni Nuzzolese, Silvio Peroni and Fabio Vitali	Evaluating citation functions in CiTO: cognitive issues
+189	Christoph Pinkel, Carsten Binnig, Peter Haase, Clemens Martin, Kunal Sengupta and Johannes Trame	How to Best Find a Partner? An Evaluation of Editing Approaches to Construct R2RML Mappings
+192	Basil Ell, Andreas Harth and Elena Simperl	SPARQL Query Verbalization for Explaining Semantic Search Engine Queries
+193	László Török and Martin Hepp	Towards Portable Shopping Histories: Using GoodRelations to Expose Ownership Information to E-Commerce Sites
+202	Dimitris Kontokostas, Martin Brümmer, Sebastian Hellmann, Jens Lehmann and Lazaros Ioannidis	NLP data cleansing based on Linguistic Ontology constraints
+205	Freddy Lecue, Robert Tucker, Veli Bicer, Pierpaolo Tommasi, Simone Tallevi-Diotallevi and Marco Luca Sbodio	Predicting Severity of Road Traffic Congestion using Semantic Web Technologies
+210	Anisa Rula, Matteo Palmonari, Axel-Cyrille Ngonga Ngomo, Daniel Gerber, Jens Lehmann and Lorenz Bühmann	Hybrid Acquisition of Temporal Scopes for RDF Data
+211	Khadija Elbedweihy, Suvodeep Mazumdar, Stuart N. Wrigley and Fabio Ciravegna	NL-Graphs: A Hybrid Approach toward Interactively Querying Semantic Data
+224	Benedikt Kämpgen, Tobias Weller, Sean O'Riain, Craig Weber and Andreas Harth	Accepting the XBRL Challenge with Linked Data for Financial Data Integration
+227	Pavan Kapanipathi, Prateek Jain, Chitra Venkataramani and Amit Sheth	User Interests Identification on Twitter Using a Hierarchical Knowledge Base
+244	Alex Stolz, Bene Rodriguez-Castro, Andreas Radinger and Martin Hepp	PCS2OWL: A Generic Approach for Deriving Web Ontologies from Product Classification Systems

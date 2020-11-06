@@ -1,0 +1,6 @@
+7 	Mauro Dragoni, Andrea Tettamanzi and Celia Da Costa Pereira. 	A Fuzzy System For Semantic Sentiment Analysis
+10	Nir Ofek and Lior Rokach.	Lechuzo: Weakly-Supervised System for Fine-Grained Sentiment Analysis
+29	Pablo Mendes, Anni Coden, Daniel Gruhl, Neal Lewis, Meena Nagarajan, Cartic Ramakrishnan, Michael Tannenblatt and Steve Welch.	Semantic Lexicon Induction for Concept-level Sentiment Analysis
+31	Soujanya Poria and Alexander Gelbukh.	Sentic Demo: A Hybrid Concept Level Aspect Based Sentiment Analysis Toolkit
+32	Shafqat Mumtaz Virk, Yann-Huei Lee and Lun-Wei Ku.	Sinica Semantic Parser for ESWC'14 Concept-Level Semantic Analysis Challenge
+33	Jay Kuan-Chieh Chung, Chi-En Wu and Richard Tzong-Han Tsai.	Improve Polarity Detection of Online Reviews with Bag-of-Sentimental-Concepts

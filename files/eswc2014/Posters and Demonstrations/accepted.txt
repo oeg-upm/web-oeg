@@ -1,0 +1,62 @@
+#	title
+5	AnnoMarket – Multilingual Text Analytics at Scale on the Cloud
+9	A Demonstration of a Natural Language Query Interface to an Event-Based Semantic Web Triplestore
+10	Ranking Entities in a Large Semantic Network
+13	A Rule-Based System for Monitoring of Microblogging Disease Reports
+14	Securing Access to Sensitive RDF Data
+16	Publication of RDF streams with Ztreamy
+18	SparqlFilterFlow: SPARQL Query Composition for Everyone
+19	The ProtegeVOWL Plugin: Ontology Visualization for Everyone
+20	Linked Data Finland: A 7-star Model and Platform for Publishing and Re-using Linked Datasets
+29	A Semantic Approach to Support Cross Border e-Justice
+30	Predicting SPARQL Query Performance
+31	Visualizing RDF Data Cubes using the Linked Data Visualization Model
+32	SmarT INsiGhts (STING) - An Intelligence Application for Querying Heterogeneous Databases
+33	Durchblick - A Conference Assistance System for Augmented Reality Devices
+35	FAGI-tr: A tool for aligning geospatial RDF vocabularies
+37	Painless URI dereferencing using The DataTank
+38	Aether – Generating and Viewing Extended VoID Statistical Descriptions of RDF Datasets
+39	Combining a REST Lexical Analysis Web Service with SPARQL for Mashup Semantic Annotation from Text
+40	Geographic Summaries from Crowdsourced Data
+42	CORNER: A Completeness Reasoner for the Semantic Web
+45	Balloon Synopsis: A Modern Node-Centric RDF Viewer and Browser for the Web
+46	SPARQL SAHA, a Configurable Linked Data Editor and Browser as a Service
+47	Towards a Semantic Web Platform for Finite Element Simulations
+49	di.me: A Context-Aware Information System
+52	Annotating Ontologies with Descriptions of Vagueness
+53	Boosting QAKiS with multimedia answer visualization
+54	Dendro: collaborative research data management built on linked open data
+55	TRTML - A Tripleset Recommendation Tool based on Supervised Learning Algorithm
+56	LinkLion: A Link Repository for the Web of Data
+58	Distant Supervision for Relation Extraction using Ontology Class Hierarchy-Based Features
+59	IDE Integrated RDF Exploration, Access and RDF-based Code Typing with LITEQ
+60	Rapid Deployment of a RESTful Service for Data Collected by Oceanographic Research Cruises
+63	Kuphi - An Investigation Tool for Searching for and via Semantic Relations
+65	SPARQL-MM - Extending SPARQL to Media Fragments
+67	RuQAR : Reasoning Framework for OWL 2 RL Ontologies
+70	Making use of Linked Data for Generating Enhanced Snippets
+73	The Normalized Freebase Distance
+74	LinkZoo: A linked data platform for collaborative management of heterogeneous resources
+75	An Investigation of HTTP Header Information for Detecting Changes of Linked Open Data Sources
+77	rdf:SynopsViz - A Framework for Hierarchical Linked Data Visual Exploration and Analysis
+78	Augmenting TV Newscasts via Entity Expansion
+80	Analyzing Linked Data Quality with LiQuate
+83	Big, Linked and Open Data: Applications in the German Aerospace Center
+85	morph-LDP: An R2RML-based Linked Data Platform implementation
+86	Prod-Trees: Semantic Search for Earth Observation Products
+87	UnifiedViews: An ETL Framework for Sustainable RDF Data Processing
+90	Using semantic technologies for scalable multi-channel communication
+92	TMR: A Semantic Recommender System using Topic Maps on the Items' Descriptions
+95	SCS Connector - Quantifying and Visualising Semantic Paths between Entity Pairs
+96	Data Cleansing Consolidation with PatchR
+97	Browsing DBpedia Entities with Summaries
+98	What are the Important Properties of an Entity? Comparing Users and Knowledge Graph Point of View
+101	LiFR: A Lightweight Fuzzy DL Reasoner
+102	Graphium Chrysalis: Exploiting Graph Database Engines to Analyze RDF Graphs
+105	Collaborative Semantic Management and Automated Analysis of Scientific Literature
+107	SemLAV: Querying Deep Web and Linked Open Data with SPARQL
+109	LUMO: The LinkedTV User Model Ontology
+110	Improving the online visibility of touristic service providers by using semantic annotations
+111	A companion screen application for TV broadcasts annotated with Linked Open Data
+112	OLAP4LD - A Framework for Building Analysis Applications over Governmental Statistics
+113	VideoLecturesMashup: using media fragments and semantic annotations to enable topic-centred e-learning

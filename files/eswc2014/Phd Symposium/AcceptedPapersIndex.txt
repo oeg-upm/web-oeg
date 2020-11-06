@@ -1,0 +1,11 @@
+2 Cheikh Kacfah Emani. Automatic Detection and Semantic Formalisation of Business Rules
+5 John Samuel. Towards a Data Warehouse fed with Web Services
+6 Ricardo Usbeck. Combining Linked Data and Statistical Information Retrieval
+8 Sergio Oramas. Harvesting and Structuring Social Data in Music Information Retrieval
+10 Ehsan Asgarian. Designing an integrated semantic framework for structured opinion summarization
+12 Rakebul Hasan. Predicting SPARQL Query Performance and Explaining Linked Data
+13 Kai Barkschat. Semantic Information Extraction on Domain Specific Data Sheets
+14 Guillermo Palma. On The Discovery of Relational Patterns in Semantically Similar Annotated Linked Data
+15 Pieter Colpaert. Route planning using Linked Open Data
+16 Mohamed Lamine Mouhoub. Searching Linked Data and services with a single query
+17 Behshid Behkamal. Metrics-driven Framework for LOD Quality Assessment

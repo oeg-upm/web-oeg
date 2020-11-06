@@ -1,0 +1,28 @@
+1	Andre Freitas and Ratnesh Sahay. SIFEM: Using semantic technologies to support Finite Element biosimulations
+2	Thomas Gottron and Steffen Staab. Managing Risks and Opportunities in Online Business Communities: The ROBUST Project
+4	Michael Kaschesky. Fusepool (SME) for Information Pooling for Product/Service Development and Research
+5	Ioan Toma, Irini Fundulaki and Vladimir Alexiev. The Linked Data Benchmark Council (LDBC)
+6	Grigoris Antoniou and Sotiris Batsakis. PRELIDA - Preserving Linked Data
+7	Philipp Cimiano. LIDER: Linked Data as an enabler of cross-media and multilingual content analytics for enterprises across Europe
+9	Marin Dimitrov, Helen Lippell, Ian Roberts, Petar Kostov, Hamish Cunningham and Philippe Rigaux. AnnoMarket – Multilingual Text Analytics at Scale on the Cloud
+10	Marin Dimitrov, Dumitru Roman, Bill Roberts, Tony Lee, Tom Heath and Momchill Zarev. DaPaaS – A Data- and Platform-as-a-Service Approach to Efficient Open Data Publication and Consumption
+11	Achim Rettinger. xLiMe: Cross-lingual Cross-media Knowledge Extraction
+12	Lars Schmidt-Thieme and Achim Rettinger. EPPICS: Event Prediction and Decision Support based on Huge Data from Physical-Social Systems
+13	Marko Grobelnik and Achim Rettinger. XLike: Cross-lingual Knowledge Extraction
+14	Manolis Koubarakis and Ioannis Vlachopoulos. Linked Open Earth Observation Data: The LEO Project
+15	Efstratios Kontopoulos, Fabio Corubolo, Anna Grit Eggers, Jens Ludwig, Philipp Wieder, Mark Hedges, Simon Waddington, Jean-Pierre Chanod, Jean-Yves Vion-Dury, Adil Hasan, Paul Watry, Sándor Darányi, Rani Pinchuk, Pip Laurenson, Christian Muller, Odysseas Spyroglou and Ioannis Kompatsiaris. PERICLES EU Integrated Project: Research Strategy and First Results
+16	Irini Fundulaki. PlanetData: A European Network of Excellence on Large-Scale Data Management
+17	Payam Barnaghi, Ralf Tönjes, Jan Holler, Manfred Hauswirth, Amit Sheth and Pramod Anantharam. CityPulse: Real-Time IoT Stream Processing and Large-scale Data Analytics for Smart City Applications
+18	José María García, Kush Wadhwa, Hans Lammerant, Lorenzo Bigagli, Arild Waaler, Edward Curry, Peter Stefan, Scott Cunningham, Stéphane Grumbach, Grunde Løvoll and Sebnem Rusitschka. BYTE - Big data roadmap and cross disciplinarY community for addressing socieTal Externalities
+19	Gaelle Lortal, Christophe Gouguenheim, David Faure, Claire Laudy and Rethinkbig Consortium Dissemination Lead. ReThinkBig Collaborative Support Action
+20	Georgios Paliouras, Yannis Almirantis, Michael Alvers, Ion Androutsopoulos, Thierry Artieres, Georgios Balikas, Liliana Barrio-Alvers, Nicolas Baskiotis, Norman Heino, Patrick Gallinari, Eric Gaussier, Anastasia Krithara, Prodromos Malakasiotis, Axel-Cyrille Ngonga Ngomo, Ioannis Partalas, John Pavlopoulos, Dimitris Polychronopoulos, Michael Schroeder, George Tsatsaronis, Dirk Weissenborn and Matthias Zschunke.BioASQ: A challenge on large-scale biomedical semantic indexing and question answering
+21	Angelos Charalambidis and Stasinos Konstantopoulos. SemaGrow: Data Intensive Techniques to Boost the Real-Time Performance of Global Agricultural Data Infrastructures
+22	Marco Schorlemmer, Alan Smaill, Kai-Uwe Kuehnberger, Oliver Kutz, Simon Colton, Emilios Cambouropoulos and Alison Pease. COINVENT: Concept Invention Theory - Ontologies and Semantic Web Technologies for Concept Invention
+23	Jens Lehmann and Axel-Cyrille Ngonga Ngomo. The GeoKnow Project
+24	Stefanos Vrochidis, Ioannis Kompatsiaris, Vladimir Alexiev, Gerard Casamayor, Enric Staromiejski, Ioannis Arapakis, Reinhard Busch, Michael Jugov, Nicolaus Heise, Teresa Forrellat, Anastasia Moumtzidou, Maurice Grinberg, Leo Wanner, Alan Mas Soro, Iris Miliaraki, Vera Aleksić, Mirja Eckhoff, Tilman Wagner and Sara Pedraz. MULTISENSOR: Mining and Understanding of multilinguaL contenT for Intelligent Sentiment Enriched coNtext and Social Oriented inteRpretation
+25	Leandro Madrazo, Alvaro Sicilia and German Nemirovski. SEMANCO Semantic Tools for Carbon Reduction in Urban Planning
+26	Lyndon Nixon and Raphaël Troncy. LinkedTV: Web and TV seamlessly interlinked using semantic technology
+27	Andrea Maurino. COMSODE: Component Supporting the Open
+28	Raúl García-Castro, Asunción Gómez-Pérez and Oscar Corcho. READY4SmartCities: ICT Roadmap and Data Interoperability for Energy Systems in Smart Cities
+29	Elena Simperl. EUCLID: EdUcational Curriculum for the usage of LInked Data
+30	Henning Müller, Allan Hanbury, Angus Roberts, Konstantin Pentchev and Vassil Momtchev. Khresmoi: semantics in medical search

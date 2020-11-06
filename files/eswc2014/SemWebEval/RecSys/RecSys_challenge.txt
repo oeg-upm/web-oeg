@@ -1,0 +1,11 @@
+16	Aggregation Strategies for Linked Open Data-enabled Recommender Systems
+12	A Hybrid Multi-Strategy Recommender System Using Linked Open Data
+14	Exploring Semantic Features for Producing Top-N Recommendation Lists from Binary User Feedback
+25	Hybrid model rating prediction with Linked Open Data for Recommender Systems
+27	Deep Learning of Semantic Word Representations to Implement a Content-based Recommender for the RecSys Challenge'14
+17	SemStim at the LOD-RecSys 2014 challenge
+8	Hybrid Recommending Exploiting Multiple DBPedia Language Editions
+20	Semantic Pattern-based Recommender
+24	Increasing Top-20 diversity through recommendation post-processing
+18	LODify: A Hybrid Recommender System based on Linked Open Data
+19	Popular Books and Linked Data: Some Results for the ESWC’14 RecSys Challenge
